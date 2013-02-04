@@ -15,6 +15,8 @@
 
 #pragma mark - HelloWorldLayer
 
+#define TESTING 1
+
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
