@@ -10,6 +10,7 @@
 
 #import "AppDelegate.h"
 #import "IntroLayer.h"
+#import "CCBReader.h"
 
 @implementation AppController
 
@@ -73,8 +74,11 @@
 	// Assume that PVR images have premultiplied alpha
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
-	// and add the scene to the stack. The director will run it when it automatically when the view is displayed.
-	[director_ pushScene: [IntroLayer scene]]; 
+	// Load the main menu scene from the ccbi-file
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenuScene.ccbi"];
+    
+    // Then add the scene to the stack. The director will run it when it automatically when the view is displayed.
+    [director_ pushScene: mainScene];
 
 	
 	// Create a Navigation Controller with the Director
@@ -94,7 +98,7 @@
 // Supported orientations: Landscape. Customize it for your own needs
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
+    return UIInterfaceOrientationIsLandscape(interfaceOrientation);
 }
 
 

@@ -133,6 +133,17 @@
 		3856E1CD16BF6221000760D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1CC16BF6221000760D0 /* AppDelegate.m */; };
 		3856E1D016BF6221000760D0 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */; };
 		3856E1D316BF6221000760D0 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1D216BF6221000760D0 /* IntroLayer.m */; };
+		38CF188C16C1DF1400EA0E88 /* HelloCocosBuilder.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188816C1DF1400EA0E88 /* HelloCocosBuilder.ccbi */; };
+		38CF188E16C1DF1400EA0E88 /* play-button-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188A16C1DF1400EA0E88 /* play-button-down.png */; };
+		38CF188F16C1DF1400EA0E88 /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188B16C1DF1400EA0E88 /* play-button.png */; };
+		38CF189B16C1E1D700EA0E88 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */; };
+		38CF18A916C1E24200EA0E88 /* CCBAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF189E16C1E24200EA0E88 /* CCBAnimationManager.m */; };
+		38CF18AA16C1E24200EA0E88 /* CCBKeyframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF18A016C1E24200EA0E88 /* CCBKeyframe.m */; };
+		38CF18AB16C1E24200EA0E88 /* CCBReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF18A216C1E24200EA0E88 /* CCBReader.m */; };
+		38CF18AC16C1E24200EA0E88 /* CCBsequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF18A416C1E24200EA0E88 /* CCBsequence.m */; };
+		38CF18AD16C1E24200EA0E88 /* CCBSequenceProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF18A616C1E24200EA0E88 /* CCBSequenceProperty.m */; };
+		38CF18AE16C1E24200EA0E88 /* CCNode+CCBRelativePositioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF18A816C1E24200EA0E88 /* CCNode+CCBRelativePositioning.m */; };
+		38CF18B016C1E45400EA0E88 /* MainMenuScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 38CF18AF16C1E45400EA0E88 /* MainMenuScene.ccbi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +409,24 @@
 		3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		3856E1D116BF6221000760D0 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		3856E1D216BF6221000760D0 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		38CF188816C1DF1400EA0E88 /* HelloCocosBuilder.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelloCocosBuilder.ccbi; path = Resources/HelloCocosBuilder.ccbi; sourceTree = "<group>"; };
+		38CF188A16C1DF1400EA0E88 /* play-button-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button-down.png"; path = "Resources/play-button-down.png"; sourceTree = "<group>"; };
+		38CF188B16C1DF1400EA0E88 /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button.png"; path = "Resources/play-button.png"; sourceTree = "<group>"; };
+		38CF189916C1E1D700EA0E88 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
+		38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuScene.m; sourceTree = "<group>"; };
+		38CF189D16C1E24200EA0E88 /* CCBAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBAnimationManager.h; sourceTree = "<group>"; };
+		38CF189E16C1E24200EA0E88 /* CCBAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBAnimationManager.m; sourceTree = "<group>"; };
+		38CF189F16C1E24200EA0E88 /* CCBKeyframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBKeyframe.h; sourceTree = "<group>"; };
+		38CF18A016C1E24200EA0E88 /* CCBKeyframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBKeyframe.m; sourceTree = "<group>"; };
+		38CF18A116C1E24200EA0E88 /* CCBReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBReader.h; sourceTree = "<group>"; };
+		38CF18A216C1E24200EA0E88 /* CCBReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBReader.m; sourceTree = "<group>"; };
+		38CF18A316C1E24200EA0E88 /* CCBSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBSequence.h; sourceTree = "<group>"; };
+		38CF18A416C1E24200EA0E88 /* CCBsequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBsequence.m; sourceTree = "<group>"; };
+		38CF18A516C1E24200EA0E88 /* CCBSequenceProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBSequenceProperty.h; sourceTree = "<group>"; };
+		38CF18A616C1E24200EA0E88 /* CCBSequenceProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBSequenceProperty.m; sourceTree = "<group>"; };
+		38CF18A716C1E24200EA0E88 /* CCNode+CCBRelativePositioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+CCBRelativePositioning.h"; sourceTree = "<group>"; };
+		38CF18A816C1E24200EA0E88 /* CCNode+CCBRelativePositioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+CCBRelativePositioning.m"; sourceTree = "<group>"; };
+		38CF18AF16C1E45400EA0E88 /* MainMenuScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = MainMenuScene.ccbi; path = Resources/MainMenuScene.ccbi; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +485,9 @@
 		3856E05316BF621E000760D0 /* NumberNoms */ = {
 			isa = PBXGroup;
 			children = (
+				38CF189C16C1E24200EA0E88 /* CCBReader */,
+				38CF189916C1E1D700EA0E88 /* MainMenuScene.h */,
+				38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */,
 				3856E1CB16BF6220000760D0 /* AppDelegate.h */,
 				3856E1CC16BF6221000760D0 /* AppDelegate.m */,
 				3856E1CE16BF6221000760D0 /* HelloWorldLayer.h */,
@@ -472,6 +504,10 @@
 		3856E05416BF621F000760D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				38CF18AF16C1E45400EA0E88 /* MainMenuScene.ccbi */,
+				38CF188816C1DF1400EA0E88 /* HelloCocosBuilder.ccbi */,
+				38CF188A16C1DF1400EA0E88 /* play-button-down.png */,
+				38CF188B16C1DF1400EA0E88 /* play-button.png */,
 				3856E05516BF621F000760D0 /* Default.png */,
 				3856E05716BF621F000760D0 /* Default-Landscape~ipad.png */,
 				3856E05916BF621F000760D0 /* fps_images.png */,
@@ -832,6 +868,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		38CF189C16C1E24200EA0E88 /* CCBReader */ = {
+			isa = PBXGroup;
+			children = (
+				38CF189D16C1E24200EA0E88 /* CCBAnimationManager.h */,
+				38CF189E16C1E24200EA0E88 /* CCBAnimationManager.m */,
+				38CF189F16C1E24200EA0E88 /* CCBKeyframe.h */,
+				38CF18A016C1E24200EA0E88 /* CCBKeyframe.m */,
+				38CF18A116C1E24200EA0E88 /* CCBReader.h */,
+				38CF18A216C1E24200EA0E88 /* CCBReader.m */,
+				38CF18A316C1E24200EA0E88 /* CCBSequence.h */,
+				38CF18A416C1E24200EA0E88 /* CCBsequence.m */,
+				38CF18A516C1E24200EA0E88 /* CCBSequenceProperty.h */,
+				38CF18A616C1E24200EA0E88 /* CCBSequenceProperty.m */,
+				38CF18A716C1E24200EA0E88 /* CCNode+CCBRelativePositioning.h */,
+				38CF18A816C1E24200EA0E88 /* CCNode+CCBRelativePositioning.m */,
+			);
+			path = CCBReader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -895,6 +950,10 @@
 				3856E06A16BF621F000760D0 /* Icon@2x.png in Resources */,
 				3856E06D16BF621F000760D0 /* iTunesArtwork in Resources */,
 				3856E1AB16BF6220000760D0 /* ChangeLog in Resources */,
+				38CF188C16C1DF1400EA0E88 /* HelloCocosBuilder.ccbi in Resources */,
+				38CF188E16C1DF1400EA0E88 /* play-button-down.png in Resources */,
+				38CF188F16C1DF1400EA0E88 /* play-button.png in Resources */,
+				38CF18B016C1E45400EA0E88 /* MainMenuScene.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1068,13 @@
 				3856E1CD16BF6221000760D0 /* AppDelegate.m in Sources */,
 				3856E1D016BF6221000760D0 /* HelloWorldLayer.m in Sources */,
 				3856E1D316BF6221000760D0 /* IntroLayer.m in Sources */,
+				38CF189B16C1E1D700EA0E88 /* MainMenuScene.m in Sources */,
+				38CF18A916C1E24200EA0E88 /* CCBAnimationManager.m in Sources */,
+				38CF18AA16C1E24200EA0E88 /* CCBKeyframe.m in Sources */,
+				38CF18AB16C1E24200EA0E88 /* CCBReader.m in Sources */,
+				38CF18AC16C1E24200EA0E88 /* CCBsequence.m in Sources */,
+				38CF18AD16C1E24200EA0E88 /* CCBSequenceProperty.m in Sources */,
+				38CF18AE16C1E24200EA0E88 /* CCNode+CCBRelativePositioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1112,6 +1178,7 @@
 				3856E1D816BF6221000760D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
