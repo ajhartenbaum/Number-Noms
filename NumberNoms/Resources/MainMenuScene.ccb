@@ -279,8 +279,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -288,6 +286,78 @@
 				<key>children</key>
 				<array>
 					<dict>
+						<key>animatedProperties</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>position</key>
+								<dict>
+									<key>keyframes</key>
+									<array>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>opt</key>
+												<real>2</real>
+												<key>type</key>
+												<integer>2</integer>
+											</dict>
+											<key>name</key>
+											<string>position</string>
+											<key>time</key>
+											<real>0.0</real>
+											<key>type</key>
+											<integer>3</integer>
+											<key>value</key>
+											<array>
+												<real>4</real>
+												<real>92</real>
+											</array>
+										</dict>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>opt</key>
+												<real>2</real>
+												<key>type</key>
+												<integer>2</integer>
+											</dict>
+											<key>time</key>
+											<real>1</real>
+											<key>type</key>
+											<integer>3</integer>
+											<key>value</key>
+											<array>
+												<real>4</real>
+												<real>12</real>
+											</array>
+										</dict>
+										<dict>
+											<key>easing</key>
+											<dict>
+												<key>type</key>
+												<integer>1</integer>
+											</dict>
+											<key>name</key>
+											<string>position</string>
+											<key>time</key>
+											<real>2</real>
+											<key>type</key>
+											<integer>3</integer>
+											<key>value</key>
+											<array>
+												<real>4</real>
+												<real>92</real>
+											</array>
+										</dict>
+									</array>
+									<key>name</key>
+									<string>position</string>
+									<key>type</key>
+									<integer>3</integer>
+								</dict>
+							</dict>
+						</dict>
 						<key>baseClass</key>
 						<string>CCMenuItemImage</string>
 						<key>children</key>
@@ -303,6 +373,11 @@
 						<key>properties</key>
 						<array>
 							<dict>
+								<key>baseValue</key>
+								<array>
+									<real>4</real>
+									<real>92</real>
+								</array>
 								<key>name</key>
 								<string>position</string>
 								<key>type</key>
@@ -399,6 +474,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>seqExpanded</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -418,9 +495,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>520</real>
-							<real>362</real>
-							<integer>0</integer>
+							<real>50</real>
+							<real>50</real>
+							<integer>4</integer>
 						</array>
 					</dict>
 					<dict>
@@ -602,13 +679,13 @@
 			<key>centeredOrigin</key>
 			<false/>
 			<key>ext</key>
-			<string>ipad hd</string>
+			<string>ipad</string>
 			<key>height</key>
 			<integer>768</integer>
 			<key>name</key>
 			<string>iPad Landscape</string>
 			<key>scale</key>
-			<real>2</real>
+			<real>1</real>
 			<key>width</key>
 			<integer>1024</integer>
 		</dict>
@@ -619,19 +696,19 @@
 			<key>autoPlay</key>
 			<true/>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>length</key>
-			<real>4</real>
+			<real>2</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>2</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
-			<real>128</real>
+			<real>32</real>
 			<key>sequenceId</key>
 			<integer>0</integer>
 		</dict>

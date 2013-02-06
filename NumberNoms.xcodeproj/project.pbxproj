@@ -1131,11 +1131,13 @@
 				GCC_PREFIX_HEADER = NumberNoms/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"NumberNoms/libs/kazmath/include\"";
 				INFOPLIST_FILE = NumberNoms/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1149,11 +1151,13 @@
 				GCC_PREFIX_HEADER = NumberNoms/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"NumberNoms/libs/kazmath/include\"";
 				INFOPLIST_FILE = NumberNoms/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
