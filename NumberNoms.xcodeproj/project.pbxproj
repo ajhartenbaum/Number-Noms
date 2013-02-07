@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3812B3A716C457150040136C /* MainMenu2Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3812B3A616C457150040136C /* MainMenu2Scene.m */; };
+		3812B3AF16C457BD0040136C /* MainMenu2Scene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3A816C457BD0040136C /* MainMenu2Scene.ccbi */; };
+		3812B3B016C457BD0040136C /* logowithbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3A916C457BD0040136C /* logowithbg.png */; };
+		3812B3B116C457BD0040136C /* play-sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3AA16C457BD0040136C /* play-sprite.png */; };
+		3812B3B216C457BD0040136C /* NomsLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3AB16C457BD0040136C /* NomsLogo.png */; };
+		3812B3B316C457BD0040136C /* BrokenShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3AC16C457BD0040136C /* BrokenShip.png */; };
+		3812B3B416C457BD0040136C /* EscapePod.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3AD16C457BD0040136C /* EscapePod.png */; };
+		3812B3B516C457BD0040136C /* Rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3AE16C457BD0040136C /* Rocket.png */; };
 		3856E04216BF621E000760D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3856E04116BF621E000760D0 /* QuartzCore.framework */; };
 		3856E04416BF621E000760D0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3856E04316BF621E000760D0 /* OpenGLES.framework */; };
 		3856E04616BF621E000760D0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3856E04516BF621E000760D0 /* OpenAL.framework */; };
@@ -133,7 +141,6 @@
 		3856E1CD16BF6221000760D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1CC16BF6221000760D0 /* AppDelegate.m */; };
 		3856E1D016BF6221000760D0 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */; };
 		3856E1D316BF6221000760D0 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1D216BF6221000760D0 /* IntroLayer.m */; };
-		38CF188C16C1DF1400EA0E88 /* HelloCocosBuilder.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188816C1DF1400EA0E88 /* HelloCocosBuilder.ccbi */; };
 		38CF188E16C1DF1400EA0E88 /* play-button-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188A16C1DF1400EA0E88 /* play-button-down.png */; };
 		38CF188F16C1DF1400EA0E88 /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188B16C1DF1400EA0E88 /* play-button.png */; };
 		38CF189B16C1E1D700EA0E88 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */; };
@@ -147,6 +154,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3812B3A516C457150040136C /* MainMenu2Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu2Scene.h; sourceTree = "<group>"; };
+		3812B3A616C457150040136C /* MainMenu2Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenu2Scene.m; sourceTree = "<group>"; };
+		3812B3A816C457BD0040136C /* MainMenu2Scene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = MainMenu2Scene.ccbi; path = Resources/MainMenu2Scene.ccbi; sourceTree = "<group>"; };
+		3812B3A916C457BD0040136C /* logowithbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logowithbg.png; path = Resources/logowithbg.png; sourceTree = "<group>"; };
+		3812B3AA16C457BD0040136C /* play-sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-sprite.png"; path = "Resources/play-sprite.png"; sourceTree = "<group>"; };
+		3812B3AB16C457BD0040136C /* NomsLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NomsLogo.png; path = Resources/NomsLogo.png; sourceTree = "<group>"; };
+		3812B3AC16C457BD0040136C /* BrokenShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BrokenShip.png; path = Resources/BrokenShip.png; sourceTree = "<group>"; };
+		3812B3AD16C457BD0040136C /* EscapePod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EscapePod.png; path = Resources/EscapePod.png; sourceTree = "<group>"; };
+		3812B3AE16C457BD0040136C /* Rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rocket.png; path = Resources/Rocket.png; sourceTree = "<group>"; };
 		3856E03E16BF621E000760D0 /* NumberNoms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberNoms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3856E04116BF621E000760D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3856E04316BF621E000760D0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -409,7 +425,6 @@
 		3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		3856E1D116BF6221000760D0 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		3856E1D216BF6221000760D0 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
-		38CF188816C1DF1400EA0E88 /* HelloCocosBuilder.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = HelloCocosBuilder.ccbi; path = Resources/HelloCocosBuilder.ccbi; sourceTree = "<group>"; };
 		38CF188A16C1DF1400EA0E88 /* play-button-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button-down.png"; path = "Resources/play-button-down.png"; sourceTree = "<group>"; };
 		38CF188B16C1DF1400EA0E88 /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button.png"; path = "Resources/play-button.png"; sourceTree = "<group>"; };
 		38CF189916C1E1D700EA0E88 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
@@ -490,6 +505,8 @@
 				38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */,
 				3856E1CB16BF6220000760D0 /* AppDelegate.h */,
 				3856E1CC16BF6221000760D0 /* AppDelegate.m */,
+				3812B3A516C457150040136C /* MainMenu2Scene.h */,
+				3812B3A616C457150040136C /* MainMenu2Scene.m */,
 				3856E1CE16BF6221000760D0 /* HelloWorldLayer.h */,
 				3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */,
 				3856E1D116BF6221000760D0 /* IntroLayer.h */,
@@ -504,8 +521,14 @@
 		3856E05416BF621F000760D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3812B3A816C457BD0040136C /* MainMenu2Scene.ccbi */,
+				3812B3A916C457BD0040136C /* logowithbg.png */,
+				3812B3AA16C457BD0040136C /* play-sprite.png */,
+				3812B3AB16C457BD0040136C /* NomsLogo.png */,
+				3812B3AC16C457BD0040136C /* BrokenShip.png */,
+				3812B3AD16C457BD0040136C /* EscapePod.png */,
+				3812B3AE16C457BD0040136C /* Rocket.png */,
 				38CF18AF16C1E45400EA0E88 /* MainMenuScene.ccbi */,
-				38CF188816C1DF1400EA0E88 /* HelloCocosBuilder.ccbi */,
 				38CF188A16C1DF1400EA0E88 /* play-button-down.png */,
 				38CF188B16C1DF1400EA0E88 /* play-button.png */,
 				3856E05516BF621F000760D0 /* Default.png */,
@@ -950,10 +973,16 @@
 				3856E06A16BF621F000760D0 /* Icon@2x.png in Resources */,
 				3856E06D16BF621F000760D0 /* iTunesArtwork in Resources */,
 				3856E1AB16BF6220000760D0 /* ChangeLog in Resources */,
-				38CF188C16C1DF1400EA0E88 /* HelloCocosBuilder.ccbi in Resources */,
 				38CF188E16C1DF1400EA0E88 /* play-button-down.png in Resources */,
 				38CF188F16C1DF1400EA0E88 /* play-button.png in Resources */,
 				38CF18B016C1E45400EA0E88 /* MainMenuScene.ccbi in Resources */,
+				3812B3AF16C457BD0040136C /* MainMenu2Scene.ccbi in Resources */,
+				3812B3B016C457BD0040136C /* logowithbg.png in Resources */,
+				3812B3B116C457BD0040136C /* play-sprite.png in Resources */,
+				3812B3B216C457BD0040136C /* NomsLogo.png in Resources */,
+				3812B3B316C457BD0040136C /* BrokenShip.png in Resources */,
+				3812B3B416C457BD0040136C /* EscapePod.png in Resources */,
+				3812B3B516C457BD0040136C /* Rocket.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1075,6 +1104,7 @@
 				38CF18AC16C1E24200EA0E88 /* CCBsequence.m in Sources */,
 				38CF18AD16C1E24200EA0E88 /* CCBSequenceProperty.m in Sources */,
 				38CF18AE16C1E24200EA0E88 /* CCNode+CCBRelativePositioning.m in Sources */,
+				3812B3A716C457150040136C /* MainMenu2Scene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

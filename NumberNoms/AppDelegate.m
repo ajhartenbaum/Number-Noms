@@ -75,7 +75,7 @@
 	[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
 
 	// Load the main menu scene from the ccbi-file
-    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenuScene.ccbi"];
+    CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"];
     
     // Then add the scene to the stack. The director will run it when it automatically when the view is displayed.
     [director_ pushScene: mainScene];
