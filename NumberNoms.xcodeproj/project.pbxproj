@@ -15,6 +15,10 @@
 		3812B3B316C457BD0040136C /* BrokenShip.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3AC16C457BD0040136C /* BrokenShip.png */; };
 		3812B3B416C457BD0040136C /* EscapePod.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3AD16C457BD0040136C /* EscapePod.png */; };
 		3812B3B516C457BD0040136C /* Rocket.png in Resources */ = {isa = PBXBuildFile; fileRef = 3812B3AE16C457BD0040136C /* Rocket.png */; };
+		382182F716C60D3500E82563 /* SpaceGameLevel.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 382182F516C60D3500E82563 /* SpaceGameLevel.ccbi */; };
+		382182F816C60D3500E82563 /* spacebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 382182F616C60D3500E82563 /* spacebackground.png */; };
+		382182FB16C60D5300E82563 /* SpaceGameLayer.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 382182F916C60D5300E82563 /* SpaceGameLayer.ccbi */; };
+		382182FC16C60D5300E82563 /* SpaceRocket.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 382182FA16C60D5300E82563 /* SpaceRocket.ccbi */; };
 		3856E04216BF621E000760D0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3856E04116BF621E000760D0 /* QuartzCore.framework */; };
 		3856E04416BF621E000760D0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3856E04316BF621E000760D0 /* OpenGLES.framework */; };
 		3856E04616BF621E000760D0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3856E04516BF621E000760D0 /* OpenAL.framework */; };
@@ -163,6 +167,10 @@
 		3812B3AC16C457BD0040136C /* BrokenShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BrokenShip.png; path = Resources/BrokenShip.png; sourceTree = "<group>"; };
 		3812B3AD16C457BD0040136C /* EscapePod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = EscapePod.png; path = Resources/EscapePod.png; sourceTree = "<group>"; };
 		3812B3AE16C457BD0040136C /* Rocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rocket.png; path = Resources/Rocket.png; sourceTree = "<group>"; };
+		382182F516C60D3500E82563 /* SpaceGameLevel.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = SpaceGameLevel.ccbi; path = Resources/SpaceGameLevel.ccbi; sourceTree = "<group>"; };
+		382182F616C60D3500E82563 /* spacebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spacebackground.png; path = Resources/spacebackground.png; sourceTree = "<group>"; };
+		382182F916C60D5300E82563 /* SpaceGameLayer.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = SpaceGameLayer.ccbi; path = Resources/SpaceGameLayer.ccbi; sourceTree = "<group>"; };
+		382182FA16C60D5300E82563 /* SpaceRocket.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = SpaceRocket.ccbi; path = Resources/SpaceRocket.ccbi; sourceTree = "<group>"; };
 		3856E03E16BF621E000760D0 /* NumberNoms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberNoms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3856E04116BF621E000760D0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3856E04316BF621E000760D0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -521,6 +529,10 @@
 		3856E05416BF621F000760D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				382182F916C60D5300E82563 /* SpaceGameLayer.ccbi */,
+				382182FA16C60D5300E82563 /* SpaceRocket.ccbi */,
+				382182F516C60D3500E82563 /* SpaceGameLevel.ccbi */,
+				382182F616C60D3500E82563 /* spacebackground.png */,
 				3812B3A816C457BD0040136C /* MainMenu2Scene.ccbi */,
 				3812B3A916C457BD0040136C /* logowithbg.png */,
 				3812B3AA16C457BD0040136C /* play-sprite.png */,
@@ -983,6 +995,10 @@
 				3812B3B316C457BD0040136C /* BrokenShip.png in Resources */,
 				3812B3B416C457BD0040136C /* EscapePod.png in Resources */,
 				3812B3B516C457BD0040136C /* Rocket.png in Resources */,
+				382182F716C60D3500E82563 /* SpaceGameLevel.ccbi in Resources */,
+				382182F816C60D3500E82563 /* spacebackground.png in Resources */,
+				382182FB16C60D5300E82563 /* SpaceGameLayer.ccbi in Resources */,
+				382182FC16C60D5300E82563 /* SpaceRocket.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
