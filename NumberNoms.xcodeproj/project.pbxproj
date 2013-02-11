@@ -145,6 +145,7 @@
 		3856E1CD16BF6221000760D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1CC16BF6221000760D0 /* AppDelegate.m */; };
 		3856E1D016BF6221000760D0 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */; };
 		3856E1D316BF6221000760D0 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1D216BF6221000760D0 /* IntroLayer.m */; };
+		38A742B816C8B3340015AE04 /* SpaceGameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A742B716C8B3340015AE04 /* SpaceGameLevel.m */; };
 		38CF188E16C1DF1400EA0E88 /* play-button-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188A16C1DF1400EA0E88 /* play-button-down.png */; };
 		38CF188F16C1DF1400EA0E88 /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188B16C1DF1400EA0E88 /* play-button.png */; };
 		38CF189B16C1E1D700EA0E88 /* MainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */; };
@@ -433,6 +434,8 @@
 		3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		3856E1D116BF6221000760D0 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		3856E1D216BF6221000760D0 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		38A742B616C8B3340015AE04 /* SpaceGameLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceGameLevel.h; sourceTree = "<group>"; };
+		38A742B716C8B3340015AE04 /* SpaceGameLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceGameLevel.m; sourceTree = "<group>"; };
 		38CF188A16C1DF1400EA0E88 /* play-button-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button-down.png"; path = "Resources/play-button-down.png"; sourceTree = "<group>"; };
 		38CF188B16C1DF1400EA0E88 /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button.png"; path = "Resources/play-button.png"; sourceTree = "<group>"; };
 		38CF189916C1E1D700EA0E88 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
@@ -511,12 +514,14 @@
 				38CF189C16C1E24200EA0E88 /* CCBReader */,
 				38CF189916C1E1D700EA0E88 /* MainMenuScene.h */,
 				38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */,
-				3856E1CB16BF6220000760D0 /* AppDelegate.h */,
-				3856E1CC16BF6221000760D0 /* AppDelegate.m */,
 				3812B3A516C457150040136C /* MainMenu2Scene.h */,
 				3812B3A616C457150040136C /* MainMenu2Scene.m */,
+				3856E1CB16BF6220000760D0 /* AppDelegate.h */,
+				3856E1CC16BF6221000760D0 /* AppDelegate.m */,
 				3856E1CE16BF6221000760D0 /* HelloWorldLayer.h */,
 				3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */,
+				38A742B616C8B3340015AE04 /* SpaceGameLevel.h */,
+				38A742B716C8B3340015AE04 /* SpaceGameLevel.m */,
 				3856E1D116BF6221000760D0 /* IntroLayer.h */,
 				3856E1D216BF6221000760D0 /* IntroLayer.m */,
 				3856E05416BF621F000760D0 /* Resources */,
@@ -1121,6 +1126,7 @@
 				38CF18AD16C1E24200EA0E88 /* CCBSequenceProperty.m in Sources */,
 				38CF18AE16C1E24200EA0E88 /* CCNode+CCBRelativePositioning.m in Sources */,
 				3812B3A716C457150040136C /* MainMenu2Scene.m in Sources */,
+				38A742B816C8B3340015AE04 /* SpaceGameLevel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

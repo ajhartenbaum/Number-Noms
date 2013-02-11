@@ -37,18 +37,6 @@
 				<array>
 					<dict>
 						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>492</real>
-							<real>398</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>anchorPoint</string>
 						<key>type</key>
 						<string>Point</string>
@@ -105,18 +93,6 @@
 		<array>
 			<dict>
 				<key>name</key>
-				<string>contentSize</string>
-				<key>type</key>
-				<string>Size</string>
-				<key>value</key>
-				<array>
-					<real>100</real>
-					<real>100</real>
-					<integer>1</integer>
-				</array>
-			</dict>
-			<dict>
-				<key>name</key>
 				<string>anchorPoint</string>
 				<key>type</key>
 				<string>Point</string>
@@ -159,13 +135,13 @@
 			<key>ext</key>
 			<string>ipad hd</string>
 			<key>height</key>
-			<integer>768</integer>
+			<integer>0</integer>
 			<key>name</key>
-			<string>iPad Landscape</string>
+			<string>iPad</string>
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>
-			<integer>1024</integer>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>sequences</key>
@@ -192,6 +168,6 @@
 		</dict>
 	</array>
 	<key>stageBorder</key>
-	<integer>0</integer>
+	<integer>3</integer>
 </dict>
 </plist>
