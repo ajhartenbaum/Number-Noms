@@ -8,7 +8,7 @@
 
 #import "GameObject.h"
 
-@interface PlayerSprite : GameObject
+@interface ThiefSprite : GameObject
 {
     float xSpeed;
     float ySpeed;

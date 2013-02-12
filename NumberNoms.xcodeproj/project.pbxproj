@@ -157,7 +157,7 @@
 		38CF18B016C1E45400EA0E88 /* MainMenuScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 38CF18AF16C1E45400EA0E88 /* MainMenuScene.ccbi */; };
 		38F22CB716C99E8D005B940E /* GameScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 38F22CB616C99E8D005B940E /* GameScene.ccbi */; };
 		38F22CBA16C9A1CC005B940E /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F22CB916C9A1CC005B940E /* GameObject.m */; };
-		38F22CBD16C9A2C2005B940E /* PlayerSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F22CBC16C9A2C2005B940E /* PlayerSprite.m */; };
+		38F22CBD16C9A2C2005B940E /* ThiefSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F22CBC16C9A2C2005B940E /* ThiefSprite.m */; };
 		38F22CC016C9B8AF005B940E /* Catchable.m in Sources */ = {isa = PBXBuildFile; fileRef = 38F22CBF16C9B8AF005B940E /* Catchable.m */; };
 /* End PBXBuildFile section */
 
@@ -458,8 +458,8 @@
 		38F22CB616C99E8D005B940E /* GameScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = GameScene.ccbi; path = Resources/GameScene.ccbi; sourceTree = "<group>"; };
 		38F22CB816C9A1CC005B940E /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
 		38F22CB916C9A1CC005B940E /* GameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObject.m; sourceTree = "<group>"; };
-		38F22CBB16C9A2C2005B940E /* PlayerSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSprite.h; sourceTree = "<group>"; };
-		38F22CBC16C9A2C2005B940E /* PlayerSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerSprite.m; sourceTree = "<group>"; };
+		38F22CBB16C9A2C2005B940E /* ThiefSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThiefSprite.h; sourceTree = "<group>"; };
+		38F22CBC16C9A2C2005B940E /* ThiefSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThiefSprite.m; sourceTree = "<group>"; };
 		38F22CBE16C9B8AF005B940E /* Catchable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Catchable.h; sourceTree = "<group>"; };
 		38F22CBF16C9B8AF005B940E /* Catchable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Catchable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -533,8 +533,8 @@
 				38A742B716C8B3340015AE04 /* SpaceGameLayer.m */,
 				38F22CB816C9A1CC005B940E /* GameObject.h */,
 				38F22CB916C9A1CC005B940E /* GameObject.m */,
-				38F22CBB16C9A2C2005B940E /* PlayerSprite.h */,
-				38F22CBC16C9A2C2005B940E /* PlayerSprite.m */,
+				38F22CBB16C9A2C2005B940E /* ThiefSprite.h */,
+				38F22CBC16C9A2C2005B940E /* ThiefSprite.m */,
 				38F22CBE16C9B8AF005B940E /* Catchable.h */,
 				38F22CBF16C9B8AF005B940E /* Catchable.m */,
 				3856E1D116BF6221000760D0 /* IntroLayer.h */,
@@ -1143,7 +1143,7 @@
 				3812B3A716C457150040136C /* MainMenu2Scene.m in Sources */,
 				38A742B816C8B3340015AE04 /* SpaceGameLayer.m in Sources */,
 				38F22CBA16C9A1CC005B940E /* GameObject.m in Sources */,
-				38F22CBD16C9A2C2005B940E /* PlayerSprite.m in Sources */,
+				38F22CBD16C9A2C2005B940E /* ThiefSprite.m in Sources */,
 				38F22CC016C9B8AF005B940E /* Catchable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

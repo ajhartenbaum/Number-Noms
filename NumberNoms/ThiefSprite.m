@@ -6,7 +6,7 @@
 //
 //
 
-#import "PlayerSprite.h"
+#import "ThiefSprite.h"
 #import "SpaceGameLayer.h"
 #import "CCBAnimationManager.h"
 
@@ -14,7 +14,7 @@
 #define STARTTARGETY 0
 #define STARTSPEED 5
 
-@implementation PlayerSprite
+@implementation ThiefSprite
 
 @synthesize xTarget;
 @synthesize yTarget;
