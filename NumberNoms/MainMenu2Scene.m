@@ -14,7 +14,7 @@
 - (void) pressedPlay:(id)sender
 {
     // Load the game scene
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SpaceGameLevel.ccbi"];
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"SpaceGameLayer.ccbi"];
     
     // Go to the game scene
     [[CCDirector sharedDirector] replaceScene:gameScene];

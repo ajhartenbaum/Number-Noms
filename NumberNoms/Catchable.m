@@ -1,13 +1,13 @@
 //
-//  SpaceLevel.h
+//  Catchable.m
 //  NumberNoms
 //
 //  Created by Alissa Hartenbaum on 2/11/13.
 //
 //
 
-#import "CCLayer.h"
+#import "Catchable.h"
 
-@interface SpaceGameLevel : CCLayer
+@implementation Catchable
 
 @end
