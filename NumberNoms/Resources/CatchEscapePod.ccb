@@ -17,7 +17,7 @@
 	<key>nodeGraph</key>
 	<dict>
 		<key>baseClass</key>
-		<string>CCLayer</string>
+		<string>CCNode</string>
 		<key>children</key>
 		<array>
 			<dict>
@@ -37,18 +37,6 @@
 				<array>
 					<dict>
 						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>508</real>
-							<real>376</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>anchorPoint</string>
 						<key>type</key>
 						<string>Point</string>
@@ -65,8 +53,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.3254818916320801</real>
-							<real>1.4929615259170532</real>
+							<real>1</real>
+							<real>1</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -87,45 +75,22 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>spacebackground.png</string>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>blendFunc</string>
-						<key>type</key>
-						<string>Blendmode</string>
-						<key>value</key>
-						<array>
-							<integer>770</integer>
-							<integer>771</integer>
+							<string>EscapePod.png</string>
 						</array>
 					</dict>
 				</array>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>SpaceGameLayer</string>
+		<string>CatchEscapePod</string>
 		<key>displayName</key>
-		<string>CCLayer</string>
+		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
-		<string>spaceLevelLayer</string>
+		<string></string>
 		<key>memberVarAssignmentType</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>properties</key>
 		<array>
-			<dict>
-				<key>name</key>
-				<string>contentSize</string>
-				<key>type</key>
-				<string>Size</string>
-				<key>value</key>
-				<array>
-					<real>100</real>
-					<real>100</real>
-					<integer>1</integer>
-				</array>
-			</dict>
 			<dict>
 				<key>name</key>
 				<string>anchorPoint</string>
@@ -133,8 +98,8 @@
 				<string>Point</string>
 				<key>value</key>
 				<array>
-					<real>0.5</real>
-					<real>0.5</real>
+					<real>0.0</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -156,46 +121,6 @@
 				<key>type</key>
 				<string>Check</string>
 				<key>value</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>isTouchEnabled</string>
-				<key>platform</key>
-				<string>iOS</string>
-				<key>type</key>
-				<string>Check</string>
-				<key>value</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>isAccelerometerEnabled</string>
-				<key>platform</key>
-				<string>iOS</string>
-				<key>type</key>
-				<string>Check</string>
-				<key>value</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>mouseEnabled</string>
-				<key>platform</key>
-				<string>Mac</string>
-				<key>type</key>
-				<string>Check</string>
-				<key>value</key>
-				<true/>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>isKeyboardEnabled</string>
-				<key>platform</key>
-				<string>Mac</string>
-				<key>type</key>
-				<string>Check</string>
-				<key>value</key>
 				<false/>
 			</dict>
 		</array>
@@ -210,13 +135,13 @@
 			<key>ext</key>
 			<string>ipad hd</string>
 			<key>height</key>
-			<integer>768</integer>
+			<integer>0</integer>
 			<key>name</key>
-			<string>iPad Landscape</string>
+			<string>iPad</string>
 			<key>scale</key>
 			<real>1</real>
 			<key>width</key>
-			<integer>1024</integer>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>sequences</key>
@@ -243,6 +168,6 @@
 		</dict>
 	</array>
 	<key>stageBorder</key>
-	<integer>0</integer>
+	<integer>3</integer>
 </dict>
 </plist>

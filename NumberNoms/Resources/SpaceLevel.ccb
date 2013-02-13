@@ -22,95 +22,6 @@
 		<array>
 			<dict>
 				<key>baseClass</key>
-				<string>CCLayer</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCLayer</string>
-				<key>memberVarAssignmentName</key>
-				<string>levelLayer</string>
-				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>isTouchEnabled</string>
-						<key>platform</key>
-						<string>iOS</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>isAccelerometerEnabled</string>
-						<key>platform</key>
-						<string>iOS</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>mouseEnabled</string>
-						<key>platform</key>
-						<string>Mac</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<true/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>isKeyboardEnabled</string>
-						<key>platform</key>
-						<string>Mac</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
@@ -131,9 +42,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>9.1796875</real>
-							<real>50</real>
-							<integer>4</integer>
+							<real>524</real>
+							<real>388</real>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -154,8 +65,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.2474591732025146</real>
-							<real>1.2961170673370361</real>
+							<real>1.2624506950378418</real>
+							<real>1.3320822715759277</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -176,150 +87,33 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Sidebar.png</string>
+							<string>spacebackground.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>blendFunc</string>
+						<key>type</key>
+						<string>Blendmode</string>
+						<key>value</key>
+						<array>
+							<integer>770</integer>
+							<integer>771</integer>
 						</array>
 					</dict>
 				</array>
 			</dict>
 			<dict>
 				<key>baseClass</key>
-				<string>CCLabelTTF</string>
+				<string>CCBFile</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCLabelTTF</string>
+				<string>CatchEscapePod</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>102</real>
-							<real>692</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>1</real>
-							<real>1</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
-						<key>type</key>
-						<string>Check</string>
-						<key>value</key>
-						<false/>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontName</string>
-						<key>type</key>
-						<string>FontTTF</string>
-						<key>value</key>
-						<string>Helvetica</string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontSize</string>
-						<key>type</key>
-						<string>FloatScale</string>
-						<key>value</key>
-						<array>
-							<real>60</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>color</string>
-						<key>type</key>
-						<string>Color3</string>
-						<key>value</key>
-						<array>
-							<integer>0</integer>
-							<integer>0</integer>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>dimensions</string>
-						<key>type</key>
-						<string>Size</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>horizontalAlignment</string>
-						<key>type</key>
-						<string>IntegerLabeled</string>
-						<key>value</key>
-						<integer>0</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>verticalAlignment</string>
-						<key>type</key>
-						<string>IntegerLabeled</string>
-						<key>value</key>
-						<integer>0</integer>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>string</string>
-						<key>type</key>
-						<string>Text</string>
-						<key>value</key>
-						<string>Catch</string>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCLabelTTF</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCLabelTTF</string>
-				<key>memberVarAssignmentName</key>
-				<string>goalLabel</string>
+				<string>ep3</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -331,20 +125,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>102</real>
-							<real>630</real>
+							<real>502</real>
+							<real>314</real>
 							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.52555149793624878</real>
 						</array>
 					</dict>
 					<dict>
@@ -362,78 +145,161 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
+						<string>ccbFile</string>
 						<key>type</key>
-						<string>Check</string>
+						<string>CCBFile</string>
 						<key>value</key>
-						<false/>
+						<string>CatchEscapePod.ccb</string>
 					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CatchEscapePod</string>
+				<key>memberVarAssignmentName</key>
+				<string>ep4</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
 					<dict>
 						<key>name</key>
-						<string>fontName</string>
+						<string>position</string>
 						<key>type</key>
-						<string>FontTTF</string>
-						<key>value</key>
-						<string>Helvetica</string>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>fontSize</string>
-						<key>type</key>
-						<string>FloatScale</string>
+						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>70</real>
+							<real>756</real>
+							<real>158</real>
 							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>color</string>
+						<string>scale</string>
 						<key>type</key>
-						<string>Color3</string>
+						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<integer>0</integer>
-							<integer>0</integer>
+							<real>1</real>
+							<real>1</real>
+							<false/>
 							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>dimensions</string>
+						<string>ccbFile</string>
 						<key>type</key>
-						<string>Size</string>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>CatchEscapePod.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CatchEscapePod</string>
+				<key>memberVarAssignmentName</key>
+				<string>ep1</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>536</real>
+							<real>582</real>
 							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>horizontalAlignment</string>
+						<string>scale</string>
 						<key>type</key>
-						<string>IntegerLabeled</string>
+						<string>ScaleLock</string>
 						<key>value</key>
-						<integer>0</integer>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>verticalAlignment</string>
+						<string>ccbFile</string>
 						<key>type</key>
-						<string>IntegerLabeled</string>
+						<string>CCBFile</string>
 						<key>value</key>
-						<integer>0</integer>
+						<string>CatchEscapePod.ccb</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCBFile</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CatchEscapePod</string>
+				<key>memberVarAssignmentName</key>
+				<string>ep2</string>
+				<key>memberVarAssignmentType</key>
+				<integer>1</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>842</real>
+							<real>482</real>
+							<integer>0</integer>
+						</array>
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>string</string>
+						<string>scale</string>
 						<key>type</key>
-						<string>Text</string>
+						<string>ScaleLock</string>
 						<key>value</key>
-						<string>1</string>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ccbFile</string>
+						<key>type</key>
+						<string>CCBFile</string>
+						<key>value</key>
+						<string>CatchEscapePod.ccb</string>
 					</dict>
 				</array>
 			</dict>
@@ -447,7 +313,7 @@
 				<key>displayName</key>
 				<string>CCSprite</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>binArea</string>
 				<key>memberVarAssignmentType</key>
 				<integer>0</integer>
 				<key>properties</key>
@@ -459,9 +325,9 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>11.5234375</real>
-							<real>17.96875</real>
-							<integer>4</integer>
+							<real>108</real>
+							<real>130</real>
+							<integer>0</integer>
 						</array>
 					</dict>
 					<dict>
@@ -498,71 +364,7 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>displayFrame</string>
-						<key>type</key>
-						<string>SpriteFrame</string>
-						<key>value</key>
-						<array>
-							<string></string>
-							<string>SampleBin.png</string>
-						</array>
-					</dict>
-				</array>
-			</dict>
-			<dict>
-				<key>baseClass</key>
-				<string>CCSprite</string>
-				<key>children</key>
-				<array/>
-				<key>customClass</key>
-				<string></string>
-				<key>displayName</key>
-				<string>CCSprite</string>
-				<key>memberVarAssignmentName</key>
-				<string></string>
-				<key>memberVarAssignmentType</key>
-				<integer>0</integer>
-				<key>properties</key>
-				<array>
-					<dict>
-						<key>name</key>
-						<string>position</string>
-						<key>type</key>
-						<string>Position</string>
-						<key>value</key>
-						<array>
-							<real>10.546875</real>
-							<real>56.510417938232422</real>
-							<integer>4</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>anchorPoint</string>
-						<key>type</key>
-						<string>Point</string>
-						<key>value</key>
-						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>scale</string>
-						<key>type</key>
-						<string>ScaleLock</string>
-						<key>value</key>
-						<array>
-							<real>0.6110680103302002</real>
-							<real>0.74927228689193726</real>
-							<false/>
-							<integer>0</integer>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>ignoreAnchorPointForPosition</string>
+						<string>visible</string>
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
@@ -576,14 +378,14 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>DoneButton.png</string>
+							<string>SampleBin.png</string>
 						</array>
 					</dict>
 				</array>
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string>GameScene</string>
+		<string>SpaceLevel</string>
 		<key>displayName</key>
 		<string>CCLayer</string>
 		<key>memberVarAssignmentName</key>
@@ -721,6 +523,6 @@
 		</dict>
 	</array>
 	<key>stageBorder</key>
-	<integer>1</integer>
+	<integer>3</integer>
 </dict>
 </plist>

@@ -142,8 +142,14 @@
 		3856E1C516BF6220000760D0 /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1C416BF6220000760D0 /* vec4.c */; };
 		3856E1CA16BF6220000760D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1C916BF6220000760D0 /* main.m */; };
 		3856E1CD16BF6221000760D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1CC16BF6221000760D0 /* AppDelegate.m */; };
-		3856E1D016BF6221000760D0 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */; };
-		3856E1D316BF6221000760D0 /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3856E1D216BF6221000760D0 /* IntroLayer.m */; };
+		386AA59D16CB46D5002F64EF /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 386AA59C16CB46D5002F64EF /* GameScene.m */; };
+		386AA5A016CB4B10002F64EF /* SpaceLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 386AA59F16CB4B10002F64EF /* SpaceLevel.m */; };
+		386AA5A616CB504D002F64EF /* SpaceLevel.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 386AA5A116CB504D002F64EF /* SpaceLevel.ccbi */; };
+		386AA5A716CB504D002F64EF /* CatchEscapePod.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 386AA5A216CB504D002F64EF /* CatchEscapePod.ccbi */; };
+		386AA5A816CB504D002F64EF /* SampleBin.png in Resources */ = {isa = PBXBuildFile; fileRef = 386AA5A316CB504D002F64EF /* SampleBin.png */; };
+		386AA5A916CB504D002F64EF /* Sidebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 386AA5A416CB504D002F64EF /* Sidebar.png */; };
+		386AA5AA16CB504D002F64EF /* DoneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 386AA5A516CB504D002F64EF /* DoneButton.png */; };
+		386AA5AD16CB5832002F64EF /* CatchEscapePod.m in Sources */ = {isa = PBXBuildFile; fileRef = 386AA5AC16CB5832002F64EF /* CatchEscapePod.m */; };
 		38A742B816C8B3340015AE04 /* SpaceGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A742B716C8B3340015AE04 /* SpaceGameLayer.m */; };
 		38CF188E16C1DF1400EA0E88 /* play-button-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188A16C1DF1400EA0E88 /* play-button-down.png */; };
 		38CF188F16C1DF1400EA0E88 /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188B16C1DF1400EA0E88 /* play-button.png */; };
@@ -432,10 +438,17 @@
 		3856E1C916BF6220000760D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3856E1CB16BF6220000760D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3856E1CC16BF6221000760D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3856E1CE16BF6221000760D0 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
-		3856E1D116BF6221000760D0 /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
-		3856E1D216BF6221000760D0 /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		386AA59B16CB46D5002F64EF /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		386AA59C16CB46D5002F64EF /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		386AA59E16CB4B10002F64EF /* SpaceLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceLevel.h; sourceTree = "<group>"; };
+		386AA59F16CB4B10002F64EF /* SpaceLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceLevel.m; sourceTree = "<group>"; };
+		386AA5A116CB504D002F64EF /* SpaceLevel.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = SpaceLevel.ccbi; path = Resources/SpaceLevel.ccbi; sourceTree = "<group>"; };
+		386AA5A216CB504D002F64EF /* CatchEscapePod.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = CatchEscapePod.ccbi; path = Resources/CatchEscapePod.ccbi; sourceTree = "<group>"; };
+		386AA5A316CB504D002F64EF /* SampleBin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SampleBin.png; path = Resources/SampleBin.png; sourceTree = "<group>"; };
+		386AA5A416CB504D002F64EF /* Sidebar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sidebar.png; path = Resources/Sidebar.png; sourceTree = "<group>"; };
+		386AA5A516CB504D002F64EF /* DoneButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneButton.png; path = Resources/DoneButton.png; sourceTree = "<group>"; };
+		386AA5AB16CB5832002F64EF /* CatchEscapePod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchEscapePod.h; sourceTree = "<group>"; };
+		386AA5AC16CB5832002F64EF /* CatchEscapePod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchEscapePod.m; sourceTree = "<group>"; };
 		38A742B616C8B3340015AE04 /* SpaceGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceGameLayer.h; sourceTree = "<group>"; };
 		38A742B716C8B3340015AE04 /* SpaceGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceGameLayer.m; sourceTree = "<group>"; };
 		38CF188A16C1DF1400EA0E88 /* play-button-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button-down.png"; path = "Resources/play-button-down.png"; sourceTree = "<group>"; };
@@ -521,24 +534,26 @@
 			isa = PBXGroup;
 			children = (
 				38CF189C16C1E24200EA0E88 /* CCBReader */,
-				38CF189916C1E1D700EA0E88 /* MainMenuScene.h */,
-				38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */,
-				3812B3A516C457150040136C /* MainMenu2Scene.h */,
-				3812B3A616C457150040136C /* MainMenu2Scene.m */,
 				3856E1CB16BF6220000760D0 /* AppDelegate.h */,
 				3856E1CC16BF6221000760D0 /* AppDelegate.m */,
-				3856E1CE16BF6221000760D0 /* HelloWorldLayer.h */,
-				3856E1CF16BF6221000760D0 /* HelloWorldLayer.m */,
-				38A742B616C8B3340015AE04 /* SpaceGameLayer.h */,
-				38A742B716C8B3340015AE04 /* SpaceGameLayer.m */,
+				3812B3A516C457150040136C /* MainMenu2Scene.h */,
+				3812B3A616C457150040136C /* MainMenu2Scene.m */,
+				386AA59B16CB46D5002F64EF /* GameScene.h */,
+				386AA59C16CB46D5002F64EF /* GameScene.m */,
+				386AA59E16CB4B10002F64EF /* SpaceLevel.h */,
+				386AA59F16CB4B10002F64EF /* SpaceLevel.m */,
 				38F22CB816C9A1CC005B940E /* GameObject.h */,
 				38F22CB916C9A1CC005B940E /* GameObject.m */,
 				38F22CBB16C9A2C2005B940E /* ThiefSprite.h */,
 				38F22CBC16C9A2C2005B940E /* ThiefSprite.m */,
 				38F22CBE16C9B8AF005B940E /* Catchable.h */,
 				38F22CBF16C9B8AF005B940E /* Catchable.m */,
-				3856E1D116BF6221000760D0 /* IntroLayer.h */,
-				3856E1D216BF6221000760D0 /* IntroLayer.m */,
+				386AA5AB16CB5832002F64EF /* CatchEscapePod.h */,
+				386AA5AC16CB5832002F64EF /* CatchEscapePod.m */,
+				38CF189916C1E1D700EA0E88 /* MainMenuScene.h */,
+				38CF189A16C1E1D700EA0E88 /* MainMenuScene.m */,
+				38A742B616C8B3340015AE04 /* SpaceGameLayer.h */,
+				38A742B716C8B3340015AE04 /* SpaceGameLayer.m */,
 				3856E05416BF621F000760D0 /* Resources */,
 				3856E06E16BF621F000760D0 /* libs */,
 				3856E1C716BF6220000760D0 /* Supporting Files */,
@@ -549,6 +564,11 @@
 		3856E05416BF621F000760D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				386AA5A116CB504D002F64EF /* SpaceLevel.ccbi */,
+				386AA5A216CB504D002F64EF /* CatchEscapePod.ccbi */,
+				386AA5A316CB504D002F64EF /* SampleBin.png */,
+				386AA5A416CB504D002F64EF /* Sidebar.png */,
+				386AA5A516CB504D002F64EF /* DoneButton.png */,
 				38F22CB616C99E8D005B940E /* GameScene.ccbi */,
 				382182F916C60D5300E82563 /* SpaceGameLayer.ccbi */,
 				382182FA16C60D5300E82563 /* SpaceRocket.ccbi */,
@@ -1019,6 +1039,11 @@
 				382182FB16C60D5300E82563 /* SpaceGameLayer.ccbi in Resources */,
 				382182FC16C60D5300E82563 /* SpaceRocket.ccbi in Resources */,
 				38F22CB716C99E8D005B940E /* GameScene.ccbi in Resources */,
+				386AA5A616CB504D002F64EF /* SpaceLevel.ccbi in Resources */,
+				386AA5A716CB504D002F64EF /* CatchEscapePod.ccbi in Resources */,
+				386AA5A816CB504D002F64EF /* SampleBin.png in Resources */,
+				386AA5A916CB504D002F64EF /* Sidebar.png in Resources */,
+				386AA5AA16CB504D002F64EF /* DoneButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,8 +1156,6 @@
 				3856E1C516BF6220000760D0 /* vec4.c in Sources */,
 				3856E1CA16BF6220000760D0 /* main.m in Sources */,
 				3856E1CD16BF6221000760D0 /* AppDelegate.m in Sources */,
-				3856E1D016BF6221000760D0 /* HelloWorldLayer.m in Sources */,
-				3856E1D316BF6221000760D0 /* IntroLayer.m in Sources */,
 				38CF189B16C1E1D700EA0E88 /* MainMenuScene.m in Sources */,
 				38CF18A916C1E24200EA0E88 /* CCBAnimationManager.m in Sources */,
 				38CF18AA16C1E24200EA0E88 /* CCBKeyframe.m in Sources */,
@@ -1145,6 +1168,9 @@
 				38F22CBA16C9A1CC005B940E /* GameObject.m in Sources */,
 				38F22CBD16C9A2C2005B940E /* ThiefSprite.m in Sources */,
 				38F22CC016C9B8AF005B940E /* Catchable.m in Sources */,
+				386AA59D16CB46D5002F64EF /* GameScene.m in Sources */,
+				386AA5A016CB4B10002F64EF /* SpaceLevel.m in Sources */,
+				386AA5AD16CB5832002F64EF /* CatchEscapePod.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

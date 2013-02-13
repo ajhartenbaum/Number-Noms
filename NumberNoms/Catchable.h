@@ -9,5 +9,13 @@
 #import "GameObject.h"
 
 @interface Catchable : GameObject
+{
+    float cxTarget;
+    float cyTarget;
+}
+
+@property (nonatomic,assign) float cxTarget;
+@property (nonatomic,assign) float cyTarget;
+
 
 @end
