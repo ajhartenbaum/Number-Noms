@@ -150,6 +150,27 @@
 		386AA5A916CB504D002F64EF /* Sidebar.png in Resources */ = {isa = PBXBuildFile; fileRef = 386AA5A416CB504D002F64EF /* Sidebar.png */; };
 		386AA5AA16CB504D002F64EF /* DoneButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 386AA5A516CB504D002F64EF /* DoneButton.png */; };
 		386AA5AD16CB5832002F64EF /* CatchEscapePod.m in Sources */ = {isa = PBXBuildFile; fileRef = 386AA5AC16CB5832002F64EF /* CatchEscapePod.m */; };
+		389DB33516CD7FB700A20C25 /* HighScoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 389DB33416CD7FB700A20C25 /* HighScoreScene.m */; };
+		389DB33816CD7FC200A20C25 /* OptionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 389DB33716CD7FC200A20C25 /* OptionScene.m */; };
+		389DB34816CD809F00A20C25 /* OptionScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 389DB33916CD809F00A20C25 /* OptionScene.ccbi */; };
+		389DB34916CD809F00A20C25 /* HighScoreScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 389DB33A16CD809F00A20C25 /* HighScoreScene.ccbi */; };
+		389DB34A16CD809F00A20C25 /* sheep-fill-only.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB33B16CD809F00A20C25 /* sheep-fill-only.png */; };
+		389DB34B16CD809F00A20C25 /* sheep-filled-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB33C16CD809F00A20C25 /* sheep-filled-outline.png */; };
+		389DB34C16CD809F00A20C25 /* sheep-outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB33D16CD809F00A20C25 /* sheep-outline.png */; };
+		389DB34D16CD809F00A20C25 /* sheep.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB33E16CD809F00A20C25 /* sheep.png */; };
+		389DB34E16CD809F00A20C25 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB33F16CD809F00A20C25 /* check.png */; };
+		389DB34F16CD809F00A20C25 /* checkpressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB34016CD809F00A20C25 /* checkpressed.png */; };
+		389DB35016CD809F00A20C25 /* high-score-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB34116CD809F00A20C25 /* high-score-1.png */; };
+		389DB35116CD809F00A20C25 /* high-score.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB34216CD809F00A20C25 /* high-score.png */; };
+		389DB35216CD809F00A20C25 /* high-scorepressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB34316CD809F00A20C25 /* high-scorepressed.png */; };
+		389DB35316CD809F00A20C25 /* options.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB34416CD809F00A20C25 /* options.png */; };
+		389DB35416CD809F00A20C25 /* optionspressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB34516CD809F00A20C25 /* optionspressed.png */; };
+		389DB35516CD809F00A20C25 /* play-spritepressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB34616CD809F00A20C25 /* play-spritepressed.png */; };
+		389DB35616CD809F00A20C25 /* sheepbackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389DB34716CD809F00A20C25 /* sheepbackground.jpg */; };
+		389DB35A16CD878B00A20C25 /* sheep-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB35716CD878B00A20C25 /* sheep-1.png */; };
+		389DB35B16CD878B00A20C25 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389DB35816CD878B00A20C25 /* background.jpg */; };
+		389DB35C16CD878B00A20C25 /* pen.png in Resources */ = {isa = PBXBuildFile; fileRef = 389DB35916CD878B00A20C25 /* pen.png */; };
+		389DB35F16CD8AAD00A20C25 /* Sheep.m in Sources */ = {isa = PBXBuildFile; fileRef = 389DB35E16CD8AAD00A20C25 /* Sheep.m */; };
 		38A742B816C8B3340015AE04 /* SpaceGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A742B716C8B3340015AE04 /* SpaceGameLayer.m */; };
 		38CF188E16C1DF1400EA0E88 /* play-button-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188A16C1DF1400EA0E88 /* play-button-down.png */; };
 		38CF188F16C1DF1400EA0E88 /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CF188B16C1DF1400EA0E88 /* play-button.png */; };
@@ -449,6 +470,30 @@
 		386AA5A516CB504D002F64EF /* DoneButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoneButton.png; path = Resources/DoneButton.png; sourceTree = "<group>"; };
 		386AA5AB16CB5832002F64EF /* CatchEscapePod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatchEscapePod.h; sourceTree = "<group>"; };
 		386AA5AC16CB5832002F64EF /* CatchEscapePod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatchEscapePod.m; sourceTree = "<group>"; };
+		389DB33316CD7FB700A20C25 /* HighScoreScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoreScene.h; sourceTree = "<group>"; };
+		389DB33416CD7FB700A20C25 /* HighScoreScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoreScene.m; sourceTree = "<group>"; };
+		389DB33616CD7FC200A20C25 /* OptionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionScene.h; sourceTree = "<group>"; };
+		389DB33716CD7FC200A20C25 /* OptionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionScene.m; sourceTree = "<group>"; };
+		389DB33916CD809F00A20C25 /* OptionScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = OptionScene.ccbi; path = Resources/OptionScene.ccbi; sourceTree = "<group>"; };
+		389DB33A16CD809F00A20C25 /* HighScoreScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = HighScoreScene.ccbi; path = Resources/HighScoreScene.ccbi; sourceTree = "<group>"; };
+		389DB33B16CD809F00A20C25 /* sheep-fill-only.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sheep-fill-only.png"; path = "Resources/sheep-fill-only.png"; sourceTree = "<group>"; };
+		389DB33C16CD809F00A20C25 /* sheep-filled-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sheep-filled-outline.png"; path = "Resources/sheep-filled-outline.png"; sourceTree = "<group>"; };
+		389DB33D16CD809F00A20C25 /* sheep-outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sheep-outline.png"; path = "Resources/sheep-outline.png"; sourceTree = "<group>"; };
+		389DB33E16CD809F00A20C25 /* sheep.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sheep.png; path = Resources/sheep.png; sourceTree = "<group>"; };
+		389DB33F16CD809F00A20C25 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = Resources/check.png; sourceTree = "<group>"; };
+		389DB34016CD809F00A20C25 /* checkpressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkpressed.png; path = Resources/checkpressed.png; sourceTree = "<group>"; };
+		389DB34116CD809F00A20C25 /* high-score-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "high-score-1.png"; path = "Resources/high-score-1.png"; sourceTree = "<group>"; };
+		389DB34216CD809F00A20C25 /* high-score.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "high-score.png"; path = "Resources/high-score.png"; sourceTree = "<group>"; };
+		389DB34316CD809F00A20C25 /* high-scorepressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "high-scorepressed.png"; path = "Resources/high-scorepressed.png"; sourceTree = "<group>"; };
+		389DB34416CD809F00A20C25 /* options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = options.png; path = Resources/options.png; sourceTree = "<group>"; };
+		389DB34516CD809F00A20C25 /* optionspressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = optionspressed.png; path = Resources/optionspressed.png; sourceTree = "<group>"; };
+		389DB34616CD809F00A20C25 /* play-spritepressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-spritepressed.png"; path = "Resources/play-spritepressed.png"; sourceTree = "<group>"; };
+		389DB34716CD809F00A20C25 /* sheepbackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sheepbackground.jpg; path = Resources/sheepbackground.jpg; sourceTree = "<group>"; };
+		389DB35716CD878B00A20C25 /* sheep-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sheep-1.png"; path = "Resources/sheep-1.png"; sourceTree = "<group>"; };
+		389DB35816CD878B00A20C25 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = background.jpg; path = Resources/background.jpg; sourceTree = "<group>"; };
+		389DB35916CD878B00A20C25 /* pen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pen.png; path = Resources/pen.png; sourceTree = "<group>"; };
+		389DB35D16CD8AAD00A20C25 /* Sheep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sheep.h; sourceTree = "<group>"; };
+		389DB35E16CD8AAD00A20C25 /* Sheep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sheep.m; sourceTree = "<group>"; };
 		38A742B616C8B3340015AE04 /* SpaceGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceGameLayer.h; sourceTree = "<group>"; };
 		38A742B716C8B3340015AE04 /* SpaceGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceGameLayer.m; sourceTree = "<group>"; };
 		38CF188A16C1DF1400EA0E88 /* play-button-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button-down.png"; path = "Resources/play-button-down.png"; sourceTree = "<group>"; };
@@ -538,12 +583,18 @@
 				3856E1CC16BF6221000760D0 /* AppDelegate.m */,
 				3812B3A516C457150040136C /* MainMenu2Scene.h */,
 				3812B3A616C457150040136C /* MainMenu2Scene.m */,
+				389DB33316CD7FB700A20C25 /* HighScoreScene.h */,
+				389DB33416CD7FB700A20C25 /* HighScoreScene.m */,
+				389DB33616CD7FC200A20C25 /* OptionScene.h */,
+				389DB33716CD7FC200A20C25 /* OptionScene.m */,
 				386AA59B16CB46D5002F64EF /* GameScene.h */,
 				386AA59C16CB46D5002F64EF /* GameScene.m */,
 				386AA59E16CB4B10002F64EF /* SpaceLevel.h */,
 				386AA59F16CB4B10002F64EF /* SpaceLevel.m */,
 				38F22CB816C9A1CC005B940E /* GameObject.h */,
 				38F22CB916C9A1CC005B940E /* GameObject.m */,
+				389DB35D16CD8AAD00A20C25 /* Sheep.h */,
+				389DB35E16CD8AAD00A20C25 /* Sheep.m */,
 				38F22CBB16C9A2C2005B940E /* ThiefSprite.h */,
 				38F22CBC16C9A2C2005B940E /* ThiefSprite.m */,
 				38F22CBE16C9B8AF005B940E /* Catchable.h */,
@@ -564,6 +615,24 @@
 		3856E05416BF621F000760D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				389DB35716CD878B00A20C25 /* sheep-1.png */,
+				389DB35816CD878B00A20C25 /* background.jpg */,
+				389DB35916CD878B00A20C25 /* pen.png */,
+				389DB33916CD809F00A20C25 /* OptionScene.ccbi */,
+				389DB33A16CD809F00A20C25 /* HighScoreScene.ccbi */,
+				389DB33B16CD809F00A20C25 /* sheep-fill-only.png */,
+				389DB33C16CD809F00A20C25 /* sheep-filled-outline.png */,
+				389DB33D16CD809F00A20C25 /* sheep-outline.png */,
+				389DB33E16CD809F00A20C25 /* sheep.png */,
+				389DB33F16CD809F00A20C25 /* check.png */,
+				389DB34016CD809F00A20C25 /* checkpressed.png */,
+				389DB34116CD809F00A20C25 /* high-score-1.png */,
+				389DB34216CD809F00A20C25 /* high-score.png */,
+				389DB34316CD809F00A20C25 /* high-scorepressed.png */,
+				389DB34416CD809F00A20C25 /* options.png */,
+				389DB34516CD809F00A20C25 /* optionspressed.png */,
+				389DB34616CD809F00A20C25 /* play-spritepressed.png */,
+				389DB34716CD809F00A20C25 /* sheepbackground.jpg */,
 				386AA5A116CB504D002F64EF /* SpaceLevel.ccbi */,
 				386AA5A216CB504D002F64EF /* CatchEscapePod.ccbi */,
 				386AA5A316CB504D002F64EF /* SampleBin.png */,
@@ -1044,6 +1113,24 @@
 				386AA5A816CB504D002F64EF /* SampleBin.png in Resources */,
 				386AA5A916CB504D002F64EF /* Sidebar.png in Resources */,
 				386AA5AA16CB504D002F64EF /* DoneButton.png in Resources */,
+				389DB34816CD809F00A20C25 /* OptionScene.ccbi in Resources */,
+				389DB34916CD809F00A20C25 /* HighScoreScene.ccbi in Resources */,
+				389DB34A16CD809F00A20C25 /* sheep-fill-only.png in Resources */,
+				389DB34B16CD809F00A20C25 /* sheep-filled-outline.png in Resources */,
+				389DB34C16CD809F00A20C25 /* sheep-outline.png in Resources */,
+				389DB34D16CD809F00A20C25 /* sheep.png in Resources */,
+				389DB34E16CD809F00A20C25 /* check.png in Resources */,
+				389DB34F16CD809F00A20C25 /* checkpressed.png in Resources */,
+				389DB35016CD809F00A20C25 /* high-score-1.png in Resources */,
+				389DB35116CD809F00A20C25 /* high-score.png in Resources */,
+				389DB35216CD809F00A20C25 /* high-scorepressed.png in Resources */,
+				389DB35316CD809F00A20C25 /* options.png in Resources */,
+				389DB35416CD809F00A20C25 /* optionspressed.png in Resources */,
+				389DB35516CD809F00A20C25 /* play-spritepressed.png in Resources */,
+				389DB35616CD809F00A20C25 /* sheepbackground.jpg in Resources */,
+				389DB35A16CD878B00A20C25 /* sheep-1.png in Resources */,
+				389DB35B16CD878B00A20C25 /* background.jpg in Resources */,
+				389DB35C16CD878B00A20C25 /* pen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1171,6 +1258,9 @@
 				386AA59D16CB46D5002F64EF /* GameScene.m in Sources */,
 				386AA5A016CB4B10002F64EF /* SpaceLevel.m in Sources */,
 				386AA5AD16CB5832002F64EF /* CatchEscapePod.m in Sources */,
+				389DB33516CD7FB700A20C25 /* HighScoreScene.m in Sources */,
+				389DB33816CD7FC200A20C25 /* OptionScene.m in Sources */,
+				389DB35F16CD8AAD00A20C25 /* Sheep.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

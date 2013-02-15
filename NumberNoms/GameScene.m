@@ -24,7 +24,7 @@ static GameScene* sharedScene;
 {
     sharedScene = self;
     
-    self.score = 0;
+    self.score = 3;
     
     // Load the level
     level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
@@ -38,6 +38,13 @@ static GameScene* sharedScene;
     score = s;
     [goalLabel setString:[NSString stringWithFormat:@"%d",s]];
 }
+
+- (void) pressedCheck:(id)sender
+{
+    
+    
+}
+
 
 - (void) handleGameOver
 {

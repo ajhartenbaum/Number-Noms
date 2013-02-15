@@ -9,10 +9,12 @@
 #import "CCLayer.h"
 
 @class Catchable;
+@class CatchEscapePod;
 
 @interface SpaceLevel : CCLayer
 {
     Catchable* escapePod;
+    CatchEscapePod* ep1;
     //CCLayer* binArea;
 }
 

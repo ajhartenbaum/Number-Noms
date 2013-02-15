@@ -8,6 +8,7 @@
 
 #import "SpaceLevel.h"
 #import "Catchable.h"
+#import "CatchEscapePod.h"
 #import "GameObject.h"
 
 @implementation SpaceLevel
@@ -22,6 +23,9 @@
     
     // Make sure touches are enabled
     self.isTouchEnabled = YES;
+    
+    CatchEscapePod *ep1 = nil;
+    
 }
 
 - (void) onExit

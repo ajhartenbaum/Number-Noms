@@ -22,6 +22,8 @@
 
 + (GameScene*) sharedScene;
 
+//- (void) pressedCheck;
+
 - (void) handleGameOver;
 - (void) handleLevelComplete;
 

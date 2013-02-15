@@ -1,4 +1,12 @@
 //
+//  Sheep.m
+//  NumberNoms
+//
+//  Created by Alissa Hartenbaum on 2/14/13.
+//
+//
+
+//
 //  CatchEscapePod.m
 //  NumberNoms
 //
@@ -6,14 +14,14 @@
 //
 //
 
-#import "CatchEscapePod.h"
+#import "Sheep.h"
 #import "GameScene.h"
 #import "CCBAnimationManager.h"
 
 #define XSTART 1024
 #define YSTART 600
 
-@implementation CatchEscapePod
+@implementation Sheep
 
 @synthesize epxSpeed;
 @synthesize epySpeed;
@@ -30,11 +38,11 @@
     epxSpeed=arc4random_uniform(6);
     epySpeed=arc4random_uniform(6);
     
-    CCSprite *epPic = [CCSprite spriteWithFile:@"sheep.png"];
+    /*CCSprite *epPic = [CCSprite spriteWithFile:@"sheep.png"];
     epPic.position = ccp(XSTART,YSTART);
-    [self addChild: epPic];
+    [self addChild: epPic];*/
     
-    return self; 
+    return self;
 }
 
 - (void) update
