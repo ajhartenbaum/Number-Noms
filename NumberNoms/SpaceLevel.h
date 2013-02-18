@@ -7,15 +7,17 @@
 //
 
 #import "CCLayer.h"
+#import "CatchSheep.h"
 
-@class Catchable;
-@class CatchEscapePod;
+//@class Catchable;
+//@class CatchEscapePod;
 
 @interface SpaceLevel : CCLayer
 {
-    Catchable* escapePod;
-    CatchEscapePod* ep1;
+    //Catchable* escapePod;
+    //CatchEscapePod* ep1;
     //CCLayer* binArea;
+    //CatchSheep* sheepy;
 }
 
 @end
