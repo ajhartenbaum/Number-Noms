@@ -14,14 +14,14 @@
 //
 //
 
-#import "Sheep.h"
+#import "CatchSheep.h"
 #import "GameScene.h"
 #import "CCBAnimationManager.h"
 
 #define XSTART 1024
 #define YSTART 600
 
-@implementation Sheep
+@implementation CatchSheep
 
 @synthesize epxSpeed;
 @synthesize epySpeed;

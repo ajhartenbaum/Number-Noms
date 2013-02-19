@@ -8,7 +8,7 @@
 
 #import "GameObject.h"
 
-@interface Sheep : GameObject
+@interface CatchSheep : GameObject
 {
     float epxSpeed;
     float epySpeed;
