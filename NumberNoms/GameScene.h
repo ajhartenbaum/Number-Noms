@@ -16,6 +16,7 @@
     CCLabelTTF* goalLabel;
     CCNode* level;
     int score;
+    CCLabelTTF* blahLabel;
 }
 
 @property (nonatomic,assign) int score;
