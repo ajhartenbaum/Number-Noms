@@ -25,7 +25,12 @@
     // Make sure touches are enabled
     self.isTouchEnabled = YES;
     
-   // CatchSheep *ep1 = nil;
+    [self addChild: [[CatchEscapePod alloc] init]];
+    [self addChild: [[CatchEscapePod alloc] init]];
+    [self addChild: [[CatchEscapePod alloc] init]];
+
+    
+    // CatchSheep *ep1 = nil;
     
 }
 
@@ -51,16 +56,17 @@
             // Update all game objects
             [gameObject update];
             
-            // Check for collisions with dragon
-           /* if (gameObject != dragon)
-            {
-                if (ccpDistance(gameObject.position, dragon.position) < gameObject.radius + dragon.radius)
+            if ([child isKindOfClass:[CatchEscapePod class]]) {
+                CatchEscapePod* escapePod = (CatchEscapePod*)gameObject;
+                if (((escapePod.position.x + escapePod.radius * 2) > 804) || ((escapePod.position.x) < 0))
                 {
-                    // Notify the game objects that they have collided
-                    [gameObject handleCollisionWith:dragon];
-                    [dragon handleCollisionWith:gameObject];
+                    [escapePod xSpeedReverse];
                 }
-            }*/
+                else if (((escapePod.position.y + escapePod.radius * 2) > 768) || ((escapePod.position.y) < 0))
+                {
+                    [escapePod ySpeedReverse];
+                }
+            }
         }
     }
     

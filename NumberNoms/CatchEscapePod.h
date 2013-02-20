@@ -12,15 +12,9 @@
 {
     float epxSpeed;
     float epySpeed;
-    float epxTarget;
-    float epyTarget;
 }
 
-@property (nonatomic,assign) float epxSpeed;
-@property (nonatomic,assign) float epySpeed;
-
-@property (nonatomic,assign) float epxTarget;
-@property (nonatomic,assign) float epyTarget;
-
+- (void) xSpeedReverse;
+- (void) ySpeedReverse;
 
 @end
