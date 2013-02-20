@@ -10,46 +10,28 @@
 #import "GameScene.h"
 #import "CCBAnimationManager.h"
 
-#define XSTART 1024
-#define YSTART 600
-
 @implementation CatchEscapePod
-
-@synthesize epxSpeed;
-@synthesize epySpeed;
-@synthesize epxTarget;
-@synthesize epyTarget;
-
-@synthesize value;
 
 - (id) init
 {
     self = [super init];
     if (!self) return NULL;
-        
-    epxTarget = XSTART;
-    epyTarget = YSTART;
-    epxSpeed=arc4random_uniform(6);
-    epySpeed=arc4random_uniform(6);
     
-    self.value = 3;
-    //[podLabel setString:[NSString stringWithFormat:@"%d",value]];
-
-
+    epxSpeed=(float)(arc4random()%3);
+    epySpeed=(float)(arc4random()%3);
+    
+    CCSprite *epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+    epPic.position = ccp(self.radius+220,self.radius);
+    [self addChild: epPic];
+    
     return self; 
 }
 
 - (void) update
 {
     // Calculate new position
-    CGPoint oldPosition = self.position;
     
-    //self.value = 3;
-    [podLabel setString:[NSString stringWithFormat:@"%d",value]];
-    
-    
-    //self.position = ccp(xNew,yNew);
-    
+    self.position = ccp(self.position.x + epxSpeed ,self.position.y + epySpeed);
     
     // Check for game over
     /*if (ySpeed < kCJGameOverSpeed)
@@ -83,11 +65,12 @@
     return 25;
 }
 
--(void) setPodValue: (int) v
-{
-    self.value = v;
-    [podLabel setString:[NSString stringWithFormat:@"%d",v]];
+- (void) xSpeedReverse {
+    epxSpeed = -epxSpeed;
 }
 
+- (void) ySpeedReverse {
+    epySpeed = -epySpeed;
+}
 
 @end
