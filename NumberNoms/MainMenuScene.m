@@ -6,6 +6,10 @@
 //
 //
 
+//***************************
+//DO NOT USE!!!! Use MainMenu2Scene instead for now!
+//***************************
+
 #import "MainMenuScene.h"
 #import "CCBReader.h"
 
