@@ -38,13 +38,13 @@
     [[CCDirector sharedDirector] replaceScene:optScene];
 }
 
--(void) pressedCredits:(id)sender
+- (void) pressedCredits:(id)sender
 {
-    CCScene* creditScene = [CCBReader sceneWithNodeGraphFromFile:@"CreditScene.ccbi"];
+    // Load the game scene
+    CCScene* credScene = [CCBReader sceneWithNodeGraphFromFile:@"CreditsScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:creditScene];
-    
+    [[CCDirector sharedDirector] replaceScene:credScene];
 }
 
 @end

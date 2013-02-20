@@ -1,15 +1,15 @@
 //
-//  OptionScene.m
+//  CreditsScene.m
 //  NumberNoms
 //
-//  Created by Alissa Hartenbaum on 2/14/13.
+//  Created by Alissa Hartenbaum on 2/20/13.
 //
 //
 
-#import "OptionScene.h"
+#import "CreditsScene.h"
 #import "CCBReader.h"
 
-@implementation OptionScene
+@implementation CreditsScene
 
 - (void) pressedBack:(id)sender
 {
