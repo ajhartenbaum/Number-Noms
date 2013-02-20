@@ -20,20 +20,22 @@
 @synthesize epxTarget;
 @synthesize epyTarget;
 
+@synthesize value;
+
 - (id) init
 {
     self = [super init];
     if (!self) return NULL;
-    
+        
     epxTarget = XSTART;
     epyTarget = YSTART;
     epxSpeed=arc4random_uniform(6);
     epySpeed=arc4random_uniform(6);
     
-    CCSprite *epPic = [CCSprite spriteWithFile:@"sheep.png"];
-    epPic.position = ccp(XSTART,YSTART);
-    [self addChild: epPic];
-    
+    self.value = 3;
+    //[podLabel setString:[NSString stringWithFormat:@"%d",value]];
+
+
     return self; 
 }
 
@@ -41,6 +43,9 @@
 {
     // Calculate new position
     CGPoint oldPosition = self.position;
+    
+    //self.value = 3;
+    [podLabel setString:[NSString stringWithFormat:@"%d",value]];
     
     
     //self.position = ccp(xNew,yNew);
@@ -77,5 +82,12 @@
 {
     return 25;
 }
+
+-(void) setPodValue: (int) v
+{
+    self.value = v;
+    [podLabel setString:[NSString stringWithFormat:@"%d",v]];
+}
+
 
 @end
