@@ -9,6 +9,8 @@
 #import "CatchEscapePod.h"
 #import "GameScene.h"
 #import "CCBAnimationManager.h"
+#import "CCBReader.h"
+//#import "CCLabelTTF.h"
 
 @implementation CatchEscapePod
 
@@ -22,7 +24,14 @@
     
     CCSprite *epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
     epPic.position = ccp(self.radius+220,self.radius);
-    [self addChild: epPic];
+    [self addChild:epPic];
+    
+
+    CCLabelTTF *label = [CCLabelTTF labelWithString:@"42" fontName:@"Times New Roman" fontSize:64];
+    label.position = ccp(245,30);
+    label.color = ccc3(0,0,0);
+    [self addChild: label];
+    
     
     return self; 
 }
