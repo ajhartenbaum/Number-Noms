@@ -1,1 +1,14 @@
-NumberNoms.xcodeproj/*
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+*.bak*
+
+#Xcode files
+#This ignores everything inside a *.xcodeproj except the project.pbxproj
+*.xcodeproj/
+!*.xcodeproj/project.pbxproj
+*.log
+xcuserdata
+
+#Project files
+[Bb]uild/

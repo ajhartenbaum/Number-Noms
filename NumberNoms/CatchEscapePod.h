@@ -16,5 +16,6 @@
 
 - (void) xSpeedReverse;
 - (void) ySpeedReverse;
+- (void) setLabel:(int)num;
 
 @end

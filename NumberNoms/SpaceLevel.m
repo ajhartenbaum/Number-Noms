@@ -12,6 +12,8 @@
 #import "GameObject.h"
 //#import "CatchSheep.h"
 
+#define NUM_TO_SPAWN 5
+
 @implementation SpaceLevel
 
 
@@ -25,10 +27,12 @@
     // Make sure touches are enabled
     self.isTouchEnabled = YES;
     
-    [self addChild: [[CatchEscapePod alloc] init]];
-    [self addChild: [[CatchEscapePod alloc] init]];
-    [self addChild: [[CatchEscapePod alloc] init]];
-
+    for (int i = 1; i <= NUM_TO_SPAWN; i++)
+    {
+        CatchEscapePod* cep = [[CatchEscapePod alloc] init];
+        [cep setLabel:i];
+        [self addChild:cep];
+    }
     
     // CatchSheep *ep1 = nil;
     
