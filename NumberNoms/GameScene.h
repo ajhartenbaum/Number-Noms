@@ -15,15 +15,19 @@
     CCLayer* levelLayer;
     CCLabelTTF* goalLabel;
     CCNode* level;
+    NSMutableArray *dotsArray;
     int score;
     CCLabelTTF* blahLabel;
 }
 
 @property (nonatomic,assign) int score;
+@property (nonatomic, retain) NSMutableArray *dotsArray;
+
 
 + (GameScene*) sharedScene;
+- (void) handleTimer:(NSTimer *) theTimer;
 
-//- (void) pressedCheck;
+
 
 - (void) handleGameOver;
 - (void) handleLevelComplete;
