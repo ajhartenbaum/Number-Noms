@@ -12,7 +12,7 @@
 #import "GameObject.h"
 //#import "CatchSheep.h"
 
-#define NUM_TO_SPAWN 5
+#define NUM_TO_SPAWN 10
 
 @implementation SpaceLevel
 
