@@ -10,7 +10,6 @@
 #import "CCBReader.h"
 
 static GameScene* sharedScene;
-NSTimer *timer;
 
 #define XSTART 22
 #define XGAP 19
@@ -22,16 +21,74 @@ NSTimer *timer;
 @synthesize score;
 @synthesize dotsArray;
 
+CCLabelTTF *afterShipLabel;
+CCLabelTTF *incomingAfterShipLabel;
+CCSprite *incomingEpPic;
+CCSprite *sidebarEpPic;
+float xIncomingEPSpeed;
+float yIncomingEPSpeed;
+#define INCOMING_COLLECTED_SPEED 18
+
+- (int) interfaceBarWidth
+{
+    return 220;
+}
 
 + (GameScene*) sharedScene
 {
     return sharedScene;
 }
 
-- (void) handleTimer:(NSTimer *) theTimer
+- (void) changeAfterShipBasedOnIncomingShip
 {
-    // NSLog(@"timerFired @ %@", [theTimer fireDate]);
-    [self setScore:score+4];
+    xIncomingEPSpeed = yIncomingEPSpeed = 0.0;
+    
+    [sidebarEpPic removeChild:afterShipLabel cleanup:YES];
+    afterShipLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%@",[incomingAfterShipLabel string] ] fontName:@"Times New Roman" fontSize:64];
+    afterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5,
+                                  sidebarEpPic.boundingBox.size.height*0.5);
+    afterShipLabel.color = ccc3(0,0,0);
+    [sidebarEpPic addChild: afterShipLabel];
+    
+    incomingEpPic.visible = false;
+}
+
+- (void) moveIncoming
+{
+    float dx = sidebarEpPic.position.x - incomingEpPic.position.x;
+    float dy = sidebarEpPic.position.y - incomingEpPic.position.y;
+    float dist = sqrt(dx*dx + dy*dy);
+    
+    if(dist < INCOMING_COLLECTED_SPEED) {
+        [self changeAfterShipBasedOnIncomingShip];
+    } else {
+        dx /= dist;
+        dy /= dist;
+        xIncomingEPSpeed = dx * INCOMING_COLLECTED_SPEED;
+        yIncomingEPSpeed = dy * INCOMING_COLLECTED_SPEED;
+    }
+    
+    incomingEpPic.position = ccp(incomingEpPic.position.x + xIncomingEPSpeed ,incomingEpPic.position.y + yIncomingEPSpeed);
+}
+
+- (void) gotShipNumber:(int)numberToAnimate startAtX:(float)atX  startAtY:(float)atY
+{
+    if(incomingEpPic.visible) {
+        [self changeAfterShipBasedOnIncomingShip];
+    }
+    
+    [self setScore:numberToAnimate+1]; // when it says "After 9" we want to show 10 dots
+    
+    [incomingEpPic removeChild:incomingAfterShipLabel cleanup:YES];
+    incomingAfterShipLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%i", numberToAnimate] fontName:@"Times New Roman" fontSize:64];
+    
+    incomingAfterShipLabel.position = ccp(incomingEpPic.boundingBox.size.width*0.5,
+                                          incomingEpPic.boundingBox.size.height*0.5);
+    incomingAfterShipLabel.color = ccc3(0,0,0);
+    [incomingEpPic addChild: incomingAfterShipLabel];
+
+    incomingEpPic.position = ccp(atX,atY);
+    incomingEpPic.visible = true;
 }
 
 - (void) didLoadFromCCB
@@ -46,7 +103,6 @@ NSTimer *timer;
     // And add it to the game scene
     [levelLayer addChild:level];
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
     dotsArray = [[NSMutableArray alloc] initWithCapacity:50];
    
     for(int ii=0; ii<5; ii++) {
@@ -57,6 +113,33 @@ NSTimer *timer;
             [dotsArray addObject:dotPic];
         }
     }
+    
+    sidebarEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+    sidebarEpPic.position = ccp(100.0,300.0);
+    [self addChild:sidebarEpPic];
+    
+    afterShipLabel = [CCLabelTTF labelWithString:@"1" fontName:@"Times New Roman" fontSize:64];
+    afterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5,
+                                  sidebarEpPic.boundingBox.size.height*0.5);
+    afterShipLabel.color = ccc3(0,0,0);
+    [sidebarEpPic addChild: afterShipLabel];    
+
+    incomingEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+    incomingEpPic.position = ccp(175.0,200.0);
+    [self addChild:incomingEpPic];
+    
+    incomingAfterShipLabel = [CCLabelTTF labelWithString:@"2" fontName:@"Times New Roman" fontSize:64];
+    incomingAfterShipLabel.position = ccp(incomingEpPic.boundingBox.size.width*0.5,
+                                            incomingEpPic.boundingBox.size.height*0.5);
+    incomingAfterShipLabel.color = ccc3(0,0,0);
+    [incomingEpPic addChild: incomingAfterShipLabel];
+
+    incomingEpPic.visible = false; // hide it until it's needed
+    
+    CCLabelTTF *afterLabel = [CCLabelTTF labelWithString:@"After" fontName:@"Times New Roman" fontSize:64];
+    afterLabel.position = ccp(100,400);
+    afterLabel.color = ccc3(0,0,0);
+    [self addChild: afterLabel];
 }
 
 - (void) setScore:(int)s
@@ -78,8 +161,6 @@ NSTimer *timer;
         counter++;
     }
 }
-
-
 
 - (void) handleGameOver
 {

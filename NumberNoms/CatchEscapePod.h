@@ -12,10 +12,16 @@
 {
     float epxSpeed;
     float epySpeed;
+    int myNumber;
+    CCLabelTTF *label;
 }
 
+- (void) collectThisShip;
 - (void) xSpeedReverse;
 - (void) ySpeedReverse;
+- (void) zeroSpeed;
+- (int) getMyNumber;
+- (CGPoint) getPos;
 - (void) setLabel:(int)num;
 
 @end

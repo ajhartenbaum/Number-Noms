@@ -18,6 +18,9 @@
     //CatchEscapePod* ep1;
     //CCLayer* binArea;
     //CatchSheep* sheepy;
+    NSMutableArray *escapePodArray;
 }
+
+@property (nonatomic, retain) NSMutableArray *escapePodArray;
 
 @end

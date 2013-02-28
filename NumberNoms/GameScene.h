@@ -23,12 +23,12 @@
 @property (nonatomic,assign) int score;
 @property (nonatomic, retain) NSMutableArray *dotsArray;
 
+- (int) interfaceBarWidth;
 
 + (GameScene*) sharedScene;
-- (void) handleTimer:(NSTimer *) theTimer;
+- (void) gotShipNumber:(int)numberToAnimate startAtX:(float)atX  startAtY:(float)atY;
 
-
-
+- (void) moveIncoming;
 - (void) handleGameOver;
 - (void) handleLevelComplete;
 

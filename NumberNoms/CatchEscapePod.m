@@ -13,7 +13,11 @@
 //#import "CCLabelTTF.h"
 
 @implementation CatchEscapePod
-CCLabelTTF *label;
+
+- (void) resetPosition
+{
+    self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius, self.radius);
+}
 
 - (id) init
 {
@@ -23,16 +27,18 @@ CCLabelTTF *label;
     epxSpeed=(float)rand() / RAND_MAX * 1.5 + .15;
     epySpeed=(float)rand() / RAND_MAX * 1.5 + .15;
     
+    [self resetPosition];
+    
     CCSprite *epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
-    epPic.position = ccp(self.radius+220,self.radius);
+    epPic.position = ccp(0,0);
     [self addChild:epPic];
     
-
     label = [CCLabelTTF labelWithString:@"" fontName:@"Times New Roman" fontSize:64];
-    label.position = ccp(245,30);
+    label.position = ccp(0,0);
     label.color = ccc3(0,0,0);
     [self addChild: label];
     
+    myNumber = -1;
     
     return self; 
 }
@@ -42,12 +48,6 @@ CCLabelTTF *label;
     // Calculate new position
     
     self.position = ccp(self.position.x + epxSpeed ,self.position.y + epySpeed);
-    
-    // Check for game over
-    /*if (ySpeed < kCJGameOverSpeed)
-     {
-     [[GameScene sharedScene] handleGameOver];
-     }*/
 }
 
 - (void) handleCollisionWith:(GameObject *)gameObject
@@ -75,6 +75,19 @@ CCLabelTTF *label;
     return 25;
 }
 
+- (void) collectThisShip
+{
+    //visible_ = false;
+    
+    [self setLabel:myNumber+10];
+    [self resetPosition];
+}
+
+- (void) zeroSpeed
+{
+    epxSpeed = epySpeed = 0.0;
+}
+
 - (void) xSpeedReverse
 {
     epxSpeed = -epxSpeed;
@@ -85,8 +98,19 @@ CCLabelTTF *label;
     epySpeed = -epySpeed;
 }
 
+- (int) getMyNumber
+{
+    return myNumber;
+}
+
+- (CGPoint) getPos
+{
+    return position_;
+}
+
 - (void) setLabel:(int)num
 {
+    myNumber = num;
     label.string =[[NSNumber numberWithInt:num] stringValue];
 }
 

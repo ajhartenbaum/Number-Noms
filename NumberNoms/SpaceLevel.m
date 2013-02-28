@@ -6,6 +6,7 @@
 //
 //
 
+#import "GameScene.h"
 #import "SpaceLevel.h"
 #import "Catchable.h"
 #import "CatchEscapePod.h"
@@ -17,7 +18,29 @@
 
 @implementation SpaceLevel
 
+@synthesize escapePodArray;
+
+NSTimer *timer;
 ThiefSprite* thfspr;
+int makeVisibleThisOne = 0;
+
+- (void) handleTimer:(NSTimer *) theTimer
+{
+    if( makeVisibleThisOne >= [escapePodArray count]) {
+        makeVisibleThisOne = 0;
+    }
+    
+    if( makeVisibleThisOne < [escapePodArray count]) {
+        CatchEscapePod *shipToAffect = [escapePodArray objectAtIndex:makeVisibleThisOne];
+        if(shipToAffect) {
+            CGPoint shipPos = [shipToAffect getPos];
+            [[GameScene sharedScene] gotShipNumber:[shipToAffect getMyNumber] startAtX:shipPos.x startAtY:shipPos.y];
+
+            [shipToAffect collectThisShip];
+        }
+        makeVisibleThisOne++;
+    }
+}
 
 - (void) onEnter
 {
@@ -29,16 +52,19 @@ ThiefSprite* thfspr;
     // Make sure touches are enabled
     self.isTouchEnabled = YES;
     
+    thfspr = [[ThiefSprite alloc] init];
+    [self addChild:thfspr];
+    
+    timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
+    escapePodArray = [[NSMutableArray alloc] initWithCapacity:10];
+
     for (int i = 1; i <= NUM_TO_SPAWN; i++)
     {
         CatchEscapePod* cep = [[CatchEscapePod alloc] init];
         [cep setLabel:i];
         [self addChild:cep];
+        [escapePodArray addObject:cep];
     }
-    
-    thfspr = [[ThiefSprite alloc] init];
-    [self addChild:thfspr];
-    
     // CatchSheep *ep1 = nil;
     
 }
@@ -114,11 +140,11 @@ ThiefSprite* thfspr;
     UITouch* touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInView: [touch view]];
     
-    [thfspr setXTarget:touchLocation.x-250.0];
+    [thfspr setXTarget:touchLocation.x];
 
     CGSize s = [[CCDirector sharedDirector] winSize];
     [thfspr setYTarget:-touchLocation.y+s.height];
-    NSLog(@"%f,%f",touchLocation.x,touchLocation.y);
+    // NSLog(@"%f,%f",touchLocation.x,touchLocation.y);
     
    /* dragon.xTarget = touchLocation.x;
     dragon.yTarget = touchLocation.y;*/

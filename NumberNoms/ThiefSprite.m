@@ -6,6 +6,7 @@
 //
 //
 
+#import "GameScene.h"
 #import "ThiefSprite.h"
 #import "SpaceGameLayer.h"
 #import "CCBAnimationManager.h"
@@ -26,13 +27,15 @@ CCLabelTTF *label;
     self = [super init];
     if (!self) return NULL;
     
+    self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius, self.radius);
+    
     CCSprite *epPic = [CCSprite spriteWithFile:@"sheep-1.png"];
-    epPic.position = ccp(self.radius+220,self.radius);
+    epPic.position = ccp(0,0);
     epPic.scale = 0.3;
     [self addChild:epPic];
     
     label = [CCLabelTTF labelWithString:@"player" fontName:@"Times New Roman" fontSize:20];
-    label.position = ccp(245,30);
+    label.position = ccp(0,0);
     label.color = ccc3(0,0,0);
     [self addChild: label];
     
@@ -49,7 +52,7 @@ CCLabelTTF *label;
     float dy = yTarget - self.position.y;
     float dist = sqrt(dx*dx + dy*dy);
     
-    if(dist < 20.0) {
+    if(dist < 5.0) {
         xSpeed = ySpeed = 0.0;
     } else {
         dx /= dist;
@@ -59,6 +62,8 @@ CCLabelTTF *label;
     }
     
     self.position = ccp(self.position.x + xSpeed ,self.position.y + ySpeed);
+    
+    [[GameScene sharedScene] moveIncoming];
 }
 
 - (void) handleCollisionWith:(GameObject *)gameObject
