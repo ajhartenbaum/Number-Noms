@@ -19,10 +19,22 @@
 @synthesize xTarget;
 @synthesize yTarget;
 
+CCLabelTTF *label;
+
 - (id) init
 {
     self = [super init];
     if (!self) return NULL;
+    
+    CCSprite *epPic = [CCSprite spriteWithFile:@"sheep-1.png"];
+    epPic.position = ccp(self.radius+220,self.radius);
+    epPic.scale = 0.3;
+    [self addChild:epPic];
+    
+    label = [CCLabelTTF labelWithString:@"player" fontName:@"Times New Roman" fontSize:20];
+    label.position = ccp(245,30);
+    label.color = ccc3(0,0,0);
+    [self addChild: label];
     
     xTarget = STARTTARGETX;
     yTarget = STARTTARGETY;
@@ -33,26 +45,20 @@
 
 - (void) update
 {
-    // Calculate new position
-    //CGPoint oldPosition = self.position;
+    float dx = xTarget - self.position.x;
+    float dy = yTarget - self.position.y;
+    float dist = sqrt(dx*dx + dy*dy);
     
-    float xNew = xTarget;
-    float yNew = yTarget;
-    //float yNew = oldPosition.y +ySpeed;
-    //**************************
-    //**************************
-    //THIS LINE IS THE PROBLEM! DRAGON KEEPS GOING UP
-    //**************************
-    //**************************
+    if(dist < 20.0) {
+        xSpeed = ySpeed = 0.0;
+    } else {
+        dx /= dist;
+        dy /= dist;
+        xSpeed = dx * STARTSPEED;
+        ySpeed = dy * STARTSPEED;
+    }
     
-    
-    self.position = ccp(xNew,yNew);
-    
-    // Check for game over
-    /*if (ySpeed < kCJGameOverSpeed)
-     {
-     [[GameScene sharedScene] handleGameOver];
-     }*/
+    self.position = ccp(self.position.x + xSpeed ,self.position.y + ySpeed);
 }
 
 - (void) handleCollisionWith:(GameObject *)gameObject

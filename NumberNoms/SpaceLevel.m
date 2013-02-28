@@ -9,6 +9,7 @@
 #import "SpaceLevel.h"
 #import "Catchable.h"
 #import "CatchEscapePod.h"
+#import "ThiefSprite.h"
 #import "GameObject.h"
 //#import "CatchSheep.h"
 
@@ -16,6 +17,7 @@
 
 @implementation SpaceLevel
 
+ThiefSprite* thfspr;
 
 - (void) onEnter
 {
@@ -33,6 +35,9 @@
         [cep setLabel:i];
         [self addChild:cep];
     }
+    
+    thfspr = [[ThiefSprite alloc] init];
+    [self addChild:thfspr];
     
     // CatchSheep *ep1 = nil;
     
@@ -108,6 +113,12 @@
 {
     UITouch* touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInView: [touch view]];
+    
+    [thfspr setXTarget:touchLocation.x-250.0];
+
+    CGSize s = [[CCDirector sharedDirector] winSize];
+    [thfspr setYTarget:-touchLocation.y+s.height];
+    NSLog(@"%f,%f",touchLocation.x,touchLocation.y);
     
    /* dragon.xTarget = touchLocation.x;
     dragon.yTarget = touchLocation.y;*/
