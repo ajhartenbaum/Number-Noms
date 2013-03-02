@@ -114,6 +114,8 @@ float yIncomingEPSpeed;
         }
     }
     
+    [self setScore:1];
+    
     sidebarEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
     sidebarEpPic.position = ccp(100.0,300.0);
     [self addChild:sidebarEpPic];
