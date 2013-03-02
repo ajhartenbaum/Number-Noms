@@ -50,6 +50,8 @@ int makeVisibleThisOne = 1;
             
         [pod collectThisShip];
         makeVisibleThisOne++;
+    } else {
+        // Make them lose
     }
 }
 
