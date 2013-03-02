@@ -26,5 +26,15 @@
     return 0;
 }
 
+// Returns a point representing the center of the object since position is based off the
+// bottom left
+- (CGPoint) getCenter
+{
+    CGPoint center = self.position;
+    center.x += [self radius];
+    center.y += [self radius];
+    return center;
+    
+}
 
 @end

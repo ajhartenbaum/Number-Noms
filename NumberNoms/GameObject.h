@@ -20,4 +20,6 @@
 
 - (void) handleCollisionWith:(GameObject*)gameObject;
 
+- (CGPoint) getCenter;
+
 @end
