@@ -11,8 +11,8 @@
 #import "SpaceGameLayer.h"
 #import "CCBAnimationManager.h"
 
-#define STARTTARGETX 0
-#define STARTTARGETY 0
+#define STARTTARGETX 200
+#define STARTTARGETY 200
 #define STARTSPEED 5
 
 @implementation ThiefSprite
@@ -27,7 +27,7 @@ CCLabelTTF *label;
     self = [super init];
     if (!self) return NULL;
     
-    self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius, self.radius);
+    self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius+STARTTARGETX, self.radius+STARTTARGETY);
     
     CCSprite *epPic = [CCSprite spriteWithFile:@"sheep-1.png"];
     epPic.position = ccp(0,0);

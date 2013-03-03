@@ -22,10 +22,10 @@
 
 NSTimer *timer;
 ThiefSprite* thfspr;
-int makeVisibleThisOne = 0;
+int makeVisibleThisOne = 1;
 
 - (void) handleTimer:(NSTimer *) theTimer
-{
+{/*
     if( makeVisibleThisOne >= [escapePodArray count]) {
         makeVisibleThisOne = 0;
     }
@@ -39,6 +39,19 @@ int makeVisibleThisOne = 0;
             [shipToAffect collectThisShip];
         }
         makeVisibleThisOne++;
+    }*/
+}
+
+- (void) caughtShip:(CatchEscapePod*)pod
+{    
+    if([pod getMyNumber] == makeVisibleThisOne) {
+        CGPoint shipPos = [pod getPos];
+        [[GameScene sharedScene] gotShipNumber:[pod getMyNumber] startAtX:shipPos.x startAtY:shipPos.y];
+            
+        [pod collectThisShip];
+        makeVisibleThisOne++;
+    } else {
+        // Make them lose
     }
 }
 
@@ -55,7 +68,7 @@ int makeVisibleThisOne = 0;
     thfspr = [[ThiefSprite alloc] init];
     [self addChild:thfspr];
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
+    //timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
     escapePodArray = [[NSMutableArray alloc] initWithCapacity:10];
 
     for (int i = 1; i <= NUM_TO_SPAWN; i++)
@@ -93,7 +106,13 @@ int makeVisibleThisOne = 0;
             
             if ([child isKindOfClass:[CatchEscapePod class]]) {
                 CatchEscapePod* escapePod = (CatchEscapePod*)gameObject;
-                if (((escapePod.position.x + escapePod.radius * 2) > 804) || ((escapePod.position.x) < 0))
+                
+                if (ccpDistance([escapePod getCenter], thfspr.position) < (escapePod.radius + thfspr.radius))
+                {
+                    [self caughtShip:escapePod];
+                }
+                
+                if (((escapePod.position.x + escapePod.radius * 2) > 1028) || ((escapePod.position.x) < 240))
                 {
                     [escapePod xSpeedReverse];
                 }

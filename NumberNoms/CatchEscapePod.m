@@ -72,7 +72,7 @@
 
 - (float) radius
 {
-    return 25;
+    return 30;
 }
 
 - (void) collectThisShip

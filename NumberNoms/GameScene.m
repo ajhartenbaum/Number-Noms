@@ -105,14 +105,10 @@ float yIncomingEPSpeed;
     
     dotsArray = [[NSMutableArray alloc] initWithCapacity:50];
    
-    for(int ii=0; ii<5; ii++) {
-        for(int i=0; i<10; i++) {
-            CCSprite *dotPic = [CCSprite spriteWithFile:@"this-many-dot.png"];
-            dotPic.position = ccp(XSTART+i*XGAP,YSTART-ii*YGAP);
-            [self addChild: dotPic];
-            [dotsArray addObject:dotPic];
-        }
-    }
+    CCSprite *dotPic = [CCSprite spriteWithFile:@"this-many-dot.png"];
+    dotPic.position = ccp(XSTART,YSTART);
+    [self addChild: dotPic];
+    [dotsArray addObject:dotPic];
     
     [self setScore:1];
     
@@ -120,7 +116,7 @@ float yIncomingEPSpeed;
     sidebarEpPic.position = ccp(100.0,300.0);
     [self addChild:sidebarEpPic];
     
-    afterShipLabel = [CCLabelTTF labelWithString:@"1" fontName:@"Times New Roman" fontSize:64];
+    afterShipLabel = [CCLabelTTF labelWithString:@"0" fontName:@"Times New Roman" fontSize:64];
     afterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5,
                                   sidebarEpPic.boundingBox.size.height*0.5);
     afterShipLabel.color = ccc3(0,0,0);
@@ -130,7 +126,7 @@ float yIncomingEPSpeed;
     incomingEpPic.position = ccp(175.0,200.0);
     [self addChild:incomingEpPic];
     
-    incomingAfterShipLabel = [CCLabelTTF labelWithString:@"2" fontName:@"Times New Roman" fontSize:64];
+    incomingAfterShipLabel = [CCLabelTTF labelWithString:@"1" fontName:@"Times New Roman" fontSize:64];
     incomingAfterShipLabel.position = ccp(incomingEpPic.boundingBox.size.width*0.5,
                                             incomingEpPic.boundingBox.size.height*0.5);
     incomingAfterShipLabel.color = ccc3(0,0,0);
@@ -157,7 +153,7 @@ float yIncomingEPSpeed;
     // [goalLabel setString:[NSString stringWithFormat:@"%d",s]];
      [goalLabel setString:[NSString stringWithFormat:@""]]; // don't use the label!
     
-   int counter = 0;
+   int counter = 1;
     for (CCSprite *i in dotsArray) {
         i.visible = counter < score;
         counter++;
