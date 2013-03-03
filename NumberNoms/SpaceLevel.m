@@ -112,7 +112,7 @@ int makeVisibleThisOne = 1;
                     [self caughtShip:escapePod];
                 }
                 
-                if (((escapePod.position.x + escapePod.radius * 2) > 1028) || ((escapePod.position.x) < 0))
+                if (((escapePod.position.x + escapePod.radius * 2) > 1028) || ((escapePod.position.x) < 240))
                 {
                     [escapePod xSpeedReverse];
                 }
