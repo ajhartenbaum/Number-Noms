@@ -42,8 +42,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>49.609375</real>
-							<real>105.20833587646484</real>
+							<real>49.4140625</real>
+							<real>105.46875</real>
 							<integer>4</integer>
 						</array>
 					</dict>
@@ -131,8 +131,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>58</real>
-									<real>704</real>
+									<real>82</real>
+									<real>694</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -154,8 +154,8 @@
 								<string>ScaleLock</string>
 								<key>value</key>
 								<array>
-									<real>0.16313865780830383</real>
-									<real>0.17139187455177307</real>
+									<real>0.12999999523162842</real>
+									<real>0.12999999523162842</real>
 									<false/>
 									<integer>0</integer>
 								</array>
@@ -195,7 +195,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>play-sprite.png</string>
+									<string>backsprite.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -206,7 +206,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>play-button-down.png</string>
+									<string>backspritepresed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -217,7 +217,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>play-button-down.png</string>
+									<string>backspritepresed.png</string>
 								</array>
 							</dict>
 						</array>
