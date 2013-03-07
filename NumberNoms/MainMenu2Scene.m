@@ -14,10 +14,10 @@
 - (void) pressedPlay:(id)sender
 {
     // Load the game scene
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
+    CCScene* themeScene = [CCBReader sceneWithNodeGraphFromFile:@"ThemeSelectScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+    [[CCDirector sharedDirector] replaceScene:themeScene];
 }
 
 - (void) pressedHighScore:(id)sender
