@@ -188,4 +188,10 @@ float yIncomingEPSpeed;
     [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
 }
 
+- (void) pressedClose:(id)sender
+{
+    
+    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+}
+
 @end

@@ -194,7 +194,7 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>play-sprite.png</string>
+									<string>play-spritepressed.png</string>
 								</array>
 							</dict>
 							<dict>
@@ -205,10 +205,12 @@
 								<key>value</key>
 								<array>
 									<string></string>
-									<string>play-sprite.png</string>
+									<string>play-spritepressed.png</string>
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
