@@ -31,8 +31,8 @@
 - (CGPoint) getCenter
 {
     CGPoint center = self.position;
-    center.x += [self radius];
-    center.y += [self radius];
+    /*center.x += [self radius];
+    center.y += [self radius];*/
     return center;
     
 }
