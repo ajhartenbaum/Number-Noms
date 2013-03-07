@@ -88,7 +88,7 @@ CCLabelTTF *label;
 
 - (float) radius
 {
-    return 25;
+    return 50;
 }
 
 @end
