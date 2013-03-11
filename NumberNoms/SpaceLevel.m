@@ -151,6 +151,26 @@ CGPoint entryPoint;
         }
     }
     
+    for (int i = 0; i < [self.children count]; i++)
+    {
+        GameObject* current = [self.children objectAtIndex:i];
+        if ([current isKindOfClass:[CatchEscapePod class]]) {
+            CatchEscapePod *currentPod = (CatchEscapePod*) current;
+            for (int j = i+1; j < [self.children count]; j++)
+            {
+                GameObject* next = [self.children objectAtIndex:i];
+                if ([next isKindOfClass:[CatchEscapePod class]])
+                {
+                    CatchEscapePod* nextPod = (CatchEscapePod*) next;
+                    if (ccpDistance([currentPod getCenter], [nextPod getCenter]) < (currentPod.radius * 2))
+                    {
+                        // Make them bounce here
+                    }   
+                }
+            }
+        }
+    }
+    
     if (entryZoneClear && [entryQueue count]) {
         [self addChild:[self pop:entryQueue]];
     }
