@@ -20,9 +20,11 @@
 
 @synthesize escapePodArray;
 
+NSMutableArray *entryQueue;
 NSTimer *timer;
 ThiefSprite* thfspr;
 int makeVisibleThisOne = 1;
+CGPoint entryPoint;
 
 - (void) handleTimer:(NSTimer *) theTimer
 {/*
@@ -49,10 +51,24 @@ int makeVisibleThisOne = 1;
         [[GameScene sharedScene] gotShipNumber:[pod getMyNumber] startAtX:shipPos.x startAtY:shipPos.y];
             
         [pod collectThisShip];
+        [entryQueue addObject:pod];
+        [self removeChild:pod cleanup:false];
         makeVisibleThisOne++;
     } else {
         // Make them lose
     }
+}
+
+- (CCNode*) pop: (NSMutableArray*) queue
+{
+    if (![queue count]) return nil;
+    
+    CCNode* head = [queue objectAtIndex:0];
+    if (head != nil) {
+        [[head retain] autorelease];
+        [queue removeObjectAtIndex:0];
+    }
+    return head;
 }
 
 - (void) onEnter
@@ -70,16 +86,22 @@ int makeVisibleThisOne = 1;
     
     //timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
     escapePodArray = [[NSMutableArray alloc] initWithCapacity:10];
-
+    entryQueue = [[NSMutableArray alloc] initWithCapacity:10];    
+    
     for (int i = 1; i <= NUM_TO_SPAWN; i++)
     {
         CatchEscapePod* cep = [[CatchEscapePod alloc] init];
         [cep setLabel:i];
-        [self addChild:cep];
+        //[self addChild:cep];
         [escapePodArray addObject:cep];
+        [entryQueue addObject:cep];
     }
+    
+    [self addChild:[self pop:entryQueue]];
     // CatchSheep *ep1 = nil;
     
+    int shipRadius = [entryQueue[0] radius];
+    entryPoint = ccp(shipRadius + 240, shipRadius);
 }
 
 - (void) onExit
@@ -94,6 +116,7 @@ int makeVisibleThisOne = 1;
 {
     // Iterate through all objects in the level layer
     CCNode* child;
+    Boolean entryZoneClear = true;
     CCARRAY_FOREACH(self.children, child)
     {
         // Check if the child is a game object
@@ -107,6 +130,10 @@ int makeVisibleThisOne = 1;
             if ([child isKindOfClass:[CatchEscapePod class]]) {
                 CatchEscapePod* escapePod = (CatchEscapePod*)gameObject;
                 
+                if (ccpDistance([escapePod getCenter], entryPoint) < (escapePod.radius * 2))
+                {
+                    entryZoneClear = false;
+                }
                 if (ccpDistance([escapePod getCenter], thfspr.position) < (escapePod.radius + thfspr.radius))
                 {
                     [self caughtShip:escapePod];
@@ -122,6 +149,10 @@ int makeVisibleThisOne = 1;
                 }
             }
         }
+    }
+    
+    if (entryZoneClear && [entryQueue count]) {
+        [self addChild:[self pop:entryQueue]];
     }
     
     // Check for objects to remove
