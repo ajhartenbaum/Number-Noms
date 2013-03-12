@@ -86,9 +86,25 @@
     [self resetPosition];
 }
 
+- (float) getXSpeed
+{
+    return epxSpeed;
+}
+
+- (float) getYSpeed
+{
+    return epySpeed;
+}
+
+- (void) newSpeed:(float)xSpeed :(float)ySpeed
+{
+    epxSpeed = xSpeed;
+    epySpeed = ySpeed;
+}
+
 - (void) zeroSpeed
 {
-    epxSpeed = epySpeed = 0.0;
+    [self newSpeed:0.0:0.0];
 }
 
 - (void) xSpeedReverse
