@@ -19,6 +19,9 @@
 - (void) collectThisShip;
 - (void) xSpeedReverse;
 - (void) ySpeedReverse;
+- (float) getXSpeed;
+- (float) getYSpeed;
+- (void) newSpeed:(float)xSpeed :(float)ySpeed;
 - (void) zeroSpeed;
 - (int) getMyNumber;
 - (CGPoint) getPos;

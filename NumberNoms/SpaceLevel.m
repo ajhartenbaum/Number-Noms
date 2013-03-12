@@ -130,7 +130,7 @@ CGPoint entryPoint;
             if ([child isKindOfClass:[CatchEscapePod class]]) {
                 CatchEscapePod* escapePod = (CatchEscapePod*)gameObject;
                 
-                if (ccpDistance([escapePod getCenter], entryPoint) < (escapePod.radius * 2))
+                if (ccpDistance([escapePod getCenter], entryPoint) < (escapePod.radius * 4)) //TODO Should be 2, but radius needs fixed
                 {
                     entryZoneClear = false;
                 }
@@ -158,14 +158,42 @@ CGPoint entryPoint;
             CatchEscapePod *currentPod = (CatchEscapePod*) current;
             for (int j = i+1; j < [self.children count]; j++)
             {
-                GameObject* next = [self.children objectAtIndex:i];
+                GameObject* next = [self.children objectAtIndex:j];
                 if ([next isKindOfClass:[CatchEscapePod class]])
                 {
                     CatchEscapePod* nextPod = (CatchEscapePod*) next;
                     if (ccpDistance([currentPod getCenter], [nextPod getCenter]) < (currentPod.radius * 2))
                     {
-                        // Make them bounce here
-                    }   
+                        float xSpeed = (abs([currentPod getXSpeed]) + abs([nextPod getXSpeed])) / 2;
+                        float ySpeed = (abs([currentPod getYSpeed]) + abs([nextPod getYSpeed])) / 2;
+                        
+                        if (xSpeed < .75) xSpeed = 1;
+                        if (ySpeed < .75) ySpeed = 1;
+                        
+                        Boolean currIsAbove = currentPod.position.y > nextPod.position.y;
+                        Boolean currIsRight = currentPod.position.x > nextPod.position.x;
+                        
+                        if (currIsAbove && currIsRight)
+                        {
+                            [currentPod newSpeed:xSpeed :ySpeed];
+                            [nextPod newSpeed:-xSpeed :-ySpeed];
+                        }
+                        else if (!currIsAbove && currIsRight)
+                        {
+                            [currentPod newSpeed:xSpeed :-ySpeed];
+                            [nextPod newSpeed:-xSpeed :ySpeed];
+                        }
+                        else if (currIsAbove && !currIsRight)
+                        {
+                            [currentPod newSpeed:-xSpeed :ySpeed];
+                            [nextPod newSpeed:xSpeed :-ySpeed];
+                        }
+                        else
+                        {
+                            [currentPod newSpeed:-xSpeed :-ySpeed];
+                            [nextPod newSpeed:xSpeed :ySpeed];
+                        }
+                    }
                 }
             }
         }
