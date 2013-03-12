@@ -27,21 +27,7 @@ int makeVisibleThisOne = 1;
 CGPoint entryPoint;
 
 - (void) handleTimer:(NSTimer *) theTimer
-{/*
-    if( makeVisibleThisOne >= [escapePodArray count]) {
-        makeVisibleThisOne = 0;
-    }
-    
-    if( makeVisibleThisOne < [escapePodArray count]) {
-        CatchEscapePod *shipToAffect = [escapePodArray objectAtIndex:makeVisibleThisOne];
-        if(shipToAffect) {
-            CGPoint shipPos = [shipToAffect getPos];
-            [[GameScene sharedScene] gotShipNumber:[shipToAffect getMyNumber] startAtX:shipPos.x startAtY:shipPos.y];
-
-            [shipToAffect collectThisShip];
-        }
-        makeVisibleThisOne++;
-    }*/
+{
 }
 
 - (void) caughtShip:(CatchEscapePod*)pod
@@ -56,6 +42,7 @@ CGPoint entryPoint;
         makeVisibleThisOne++;
     } else {
         // Make them lose
+        [[GameScene sharedScene] handleGameOver];
     }
 }
 
@@ -74,6 +61,8 @@ CGPoint entryPoint;
 - (void) onEnter
 {
     [super onEnter];
+    
+    makeVisibleThisOne = 1;
     
     // Schedule a selector that is called every frame
     [self schedule:@selector(update:)];
@@ -114,6 +103,12 @@ CGPoint entryPoint;
 
 - (void) update:(ccTime)delta
 {
+    [[GameScene sharedScene] moveIncoming];
+    
+    if( [[GameScene sharedScene] getGameIsInPlay] == NO ) {
+        return;
+    }
+    
     // Iterate through all objects in the level layer
     CCNode* child;
     Boolean entryZoneClear = true;

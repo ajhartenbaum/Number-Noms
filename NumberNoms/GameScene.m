@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 #import "CCBReader.h"
+#import "SimpleAudioEngine.h"
 
 static GameScene* sharedScene;
 
@@ -21,11 +22,14 @@ static GameScene* sharedScene;
 @synthesize score;
 @synthesize dotsArray;
 
+bool gameIsInPlay;
 CCLabelTTF *afterShipLabel;
 CCLabelTTF *incomingAfterShipLabel;
 CCSprite *incomingEpPic;
 CCSprite *sidebarEpPic;
 CCLabelTTF *afterLabel;
+
+CCLabelTTF *endScreenText = NULL;
 float xIncomingEPSpeed;
 float yIncomingEPSpeed;
 #define INCOMING_COLLECTED_SPEED 18
@@ -84,6 +88,7 @@ float yIncomingEPSpeed;
         afterLabel.position = ccp(100,400);
         afterLabel.color = ccc3(0,0,0);
         [self addChild: afterLabel];
+        
     }
     
     [self setScore:numberToAnimate+1]; // when it says "After 9" we want to show 10 dots
@@ -102,9 +107,10 @@ float yIncomingEPSpeed;
 
 - (void) didLoadFromCCB
 {
+    gameIsInPlay = YES;
     sharedScene = self;
     
-    self.score = 3;
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"greatmusic.mp3"];
     
     // Load the level
     level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
@@ -165,7 +171,8 @@ float yIncomingEPSpeed;
         score = 0;
     }
     if(score > 50) {
-        score = 0; // stop at 50 instead of resetting?
+        score = 50; // stop at 50 instead of resetting?
+        [self handleLevelComplete];
     }
     
     // [goalLabel setString:[NSString stringWithFormat:@"%d",s]];
@@ -178,20 +185,46 @@ float yIncomingEPSpeed;
     }
 }
 
+- (void) stopMusicAndGotoMainMenu
+{
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+}
+
 - (void) handleGameOver
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+    if(gameIsInPlay == YES) {
+        endScreenText = [CCLabelTTF labelWithString:@"INCORRECT!" fontName:@"Arial" fontSize:54];
+        endScreenText.position = ccp(512,384);
+        endScreenText.color = ccc3(255,255,255);
+        [self addChild: endScreenText];
+        gameIsInPlay = NO;
+    }
+
+    // [self stopMusicAndGotoMainMenu];
 }
 
 - (void) handleLevelComplete
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+    if(gameIsInPlay == YES) {
+        endScreenText = [CCLabelTTF labelWithString:@"GOT ALL 50!" fontName:@"Arial" fontSize:54];
+        endScreenText.position = ccp(512,384);
+        endScreenText.color = ccc3(255,255,255);
+        [self addChild: endScreenText];
+        gameIsInPlay = NO;
+    }
+
+    //[self stopMusicAndGotoMainMenu];
+}
+
+- (Boolean) getGameIsInPlay
+{
+    return gameIsInPlay;
 }
 
 - (void) pressedClose:(id)sender
 {
-    
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+    [self stopMusicAndGotoMainMenu];
 }
 
 @end

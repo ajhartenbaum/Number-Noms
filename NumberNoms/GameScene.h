@@ -31,5 +31,6 @@
 - (void) moveIncoming;
 - (void) handleGameOver;
 - (void) handleLevelComplete;
+- (Boolean) getGameIsInPlay;
 
 @end

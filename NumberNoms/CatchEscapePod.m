@@ -24,9 +24,11 @@
     self = [super init];
     if (!self) return NULL;
     
-    epxSpeed=(float)rand() / RAND_MAX * 1.5 + .15;
-    epySpeed=(float)rand() / RAND_MAX * 1.5 + .15;
-    
+    float randAng = ((float)(rand() % 1000) / 1000.0) * M_PI * 2.0f;
+    float randSpeed = ((float)(rand() % 1000) / 1000.0) * 3.75 + 2.75;
+    epxSpeed=sinf(randAng)*randSpeed;
+    epySpeed=cosf(randAng)*randSpeed;
+
     [self resetPosition];
   
     //if (sharedScene.){
