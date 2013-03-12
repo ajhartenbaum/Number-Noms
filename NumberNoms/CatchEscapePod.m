@@ -28,8 +28,11 @@
     epySpeed=(float)rand() / RAND_MAX * 1.5 + .15;
     
     [self resetPosition];
+  
+    //if (sharedScene.){
+        CCSprite *epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+    //}
     
-    CCSprite *epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
     epPic.position = ccp(0,0);
     [self addChild:epPic];
     

@@ -29,7 +29,7 @@ CCLabelTTF *label;
     
     self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius+STARTTARGETX, self.radius+STARTTARGETY);
     
-    CCSprite *epPic = [CCSprite spriteWithFile:@"sheep-1.png"];
+    CCSprite *epPic = [CCSprite spriteWithFile:@"Rocket.png"];
     epPic.position = ccp(0,0);
     epPic.scale = 0.3;
     [self addChild:epPic];
