@@ -14,6 +14,8 @@
 
 @implementation CatchEscapePod
 
+extern int leveltheme2;
+
 - (void) resetPosition
 {
     self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius, self.radius);
@@ -31,9 +33,17 @@
 
     [self resetPosition];
   
-    //if (sharedScene.){
-        CCSprite *epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
-    //}
+    CCSprite *epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+    if (leveltheme2==1){
+        epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+    }
+    else if (leveltheme2==2){
+        epPic = [CCSprite spriteWithFile:@"coin.png"];
+        epPic.scale = 0.4;
+    }
+    else{
+        epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+    }
     
     epPic.position = ccp(0,0);
     [self addChild:epPic];

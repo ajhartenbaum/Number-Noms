@@ -6,6 +6,7 @@ BrokenShip.png
 castle.png
 catchable with space.png
 catchable without space.png
+catchable.png
 CatchEscapePod.ccbi
 CatchSheep.ccbi
 ccbDefaultImages-hd.plist
@@ -22,13 +23,22 @@ check.png
 checkpressed.png
 close-button-pressed.png
 close-button.png
+coin-filled-only.png
+coin-filled-outline.png
+coin-outline.png
 coin.png
+coud.png
 CreditScene.ccbi
 CreditsScene.ccbi
 Default-Landscape~ipad.png
 Default.png
 DoneButton.png
 dragon.png
+dragonbackground.png
+DragonLevel.ccbi
+EndBadCatchScene.ccbi
+EndQuitScene.ccbi
+EndReachHundredScene.ccbi
 EscapePod.png
 fps_images-hd.png
 fps_images-ipadhd.png
@@ -51,6 +61,7 @@ logowithbg.png
 MainMenu2Scene.ccbi
 MainMenuScene.ccbi
 NomsLogo.png
+numnomuni.png
 options.png
 OptionScene.ccbi
 optionspressed.png
@@ -72,10 +83,12 @@ spacebackground.png
 SpaceGameLayer.ccbi
 SpaceLevel.ccbi
 SpaceRocket.ccbi
+stamp.png
 tempCreditsButton.png
 ThemeSelectScene.ccbi
 ThemeSelectScreen.ccbi
 ThiefSprite.ccbi
 this-many-dot.png
+UnicornLevel.ccbi
 yellowcircle.png
 yellowcircled-pressed.png

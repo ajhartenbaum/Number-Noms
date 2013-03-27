@@ -11,13 +11,19 @@
 
 @implementation ThemeSelectScene
 
+
+extern int leveltheme2;
+
 - (void) pressedRocket:(id)sender
 {
+    [self setTheme:1];
+    
     // Load the game scene
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
     
     // Go to the game scene
     [[CCDirector sharedDirector] replaceScene:gameScene];
+    
 }
 
 - (void) pressedCat:(id)sender
@@ -33,12 +39,24 @@
 
 - (void) pressedDragon:(id)sender
 {
-    /*
+    [self setTheme:2];
+    
      // Load the game scene
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
     
     // Go to the game scene
     [[CCDirector sharedDirector] replaceScene:gameScene];
+     
+}
+
+- (void) pressedUnicorn:(id)sender
+{
+    /*
+     // Load the game scene
+     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
+     
+     // Go to the game scene
+     [[CCDirector sharedDirector] replaceScene:gameScene];
      */
 }
 
@@ -46,6 +64,11 @@
 {
     
     [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+}
+
+- (void) setTheme:(int)s
+{
+    leveltheme2=s;
 }
 
 

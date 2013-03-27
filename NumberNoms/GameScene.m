@@ -9,6 +9,7 @@
 #import "GameScene.h"
 #import "CCBReader.h"
 #import "SimpleAudioEngine.h"
+#import "ThemeSelectScene.h"
 
 static GameScene* sharedScene;
 
@@ -33,6 +34,8 @@ CCLabelTTF *endScreenText = NULL;
 float xIncomingEPSpeed;
 float yIncomingEPSpeed;
 #define INCOMING_COLLECTED_SPEED 18
+
+extern int leveltheme2;
 
 - (int) interfaceBarWidth
 {
@@ -113,7 +116,21 @@ float yIncomingEPSpeed;
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"greatmusic.mp3"];
     
     // Load the level
-    level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
+    //level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
+    
+    
+    if(leveltheme2==1){
+        // Load the level
+        level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
+    }
+    else if(leveltheme2==2){
+        // Load the level
+        level = [CCBReader nodeGraphFromFile:@"DragonLevel.ccbi"];
+    }
+    else{
+        // Load the level
+        level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
+    }
     
     // And add it to the game scene
     [levelLayer addChild:level];
@@ -131,21 +148,46 @@ float yIncomingEPSpeed;
     
     [self setScore:1];
     
-    sidebarEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
-    sidebarEpPic.position = ccp(100.0,300.0);
+    if(leveltheme2==1){
+        sidebarEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+        sidebarEpPic.position = ccp(100.0,300.0);
+    }
+    else if(leveltheme2==2){
+        sidebarEpPic = [CCSprite spriteWithFile:@"coin.png"];
+        sidebarEpPic.scale = 0.4;
+        sidebarEpPic.position = ccp(100.0,300.0);
+    }
+    else{
+        sidebarEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+        sidebarEpPic.position = ccp(100.0,300.0);
+    }
     [self addChild:sidebarEpPic];
     
     afterShipLabel = [CCLabelTTF labelWithString:@"0" fontName:@"Times New Roman" fontSize:64];
+    //if(leveltheme2==2){ afterShipLabel = [CCLabelTTF labelWithString:@"0" fontName:@"Times New Roman" fontSize:160];}
     afterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5,
                                   sidebarEpPic.boundingBox.size.height*0.5);
     afterShipLabel.color = ccc3(0,0,0);
-    [sidebarEpPic addChild: afterShipLabel];    
-
-    incomingEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
-    incomingEpPic.position = ccp(175.0,200.0);
+    [sidebarEpPic addChild: afterShipLabel];
+    
+    if(leveltheme2==1){
+        incomingEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+        incomingEpPic.position = ccp(175.0,200.0);
+    }
+    else if(leveltheme2==2){
+        incomingEpPic = [CCSprite spriteWithFile:@"coin.png"];
+        incomingEpPic.scale = 0.4;
+        incomingEpPic.position = ccp(175.0,200.0);
+    }
+    else{
+        incomingEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+        incomingEpPic.position = ccp(175.0,200.0);
+    }
     [self addChild:incomingEpPic];
     
+    
     incomingAfterShipLabel = [CCLabelTTF labelWithString:@"1" fontName:@"Arial" fontSize:64];
+    //if(leveltheme2==2){ incomingAfterShipLabel = [CCLabelTTF labelWithString:@"1" fontName:@"Arial" fontSize:160];}
     incomingAfterShipLabel.position = ccp(incomingEpPic.boundingBox.size.width*0.5,
                                             incomingEpPic.boundingBox.size.height*0.5);
     incomingAfterShipLabel.color = ccc3(0,0,0);

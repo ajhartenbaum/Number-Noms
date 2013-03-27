@@ -13,6 +13,8 @@
 
 @implementation AppController
 
+int leveltheme2 = 0;
+
 
 @synthesize window=window_, navController=navController_, director=director_;
 
