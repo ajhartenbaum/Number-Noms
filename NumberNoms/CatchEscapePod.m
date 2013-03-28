@@ -41,6 +41,14 @@ extern int leveltheme2;
         epPic = [CCSprite spriteWithFile:@"coin.png"];
         epPic.scale = 0.4;
     }
+    else if (leveltheme2==3){
+        epPic = [CCSprite spriteWithFile:@"catchable.png"];
+        epPic.scale = 0.4;
+    }
+    else if (leveltheme2==4){
+        epPic = [CCSprite spriteWithFile:@"yarnspace.png"];
+        epPic.scale = 0.3;
+    }
     else{
         epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
     }

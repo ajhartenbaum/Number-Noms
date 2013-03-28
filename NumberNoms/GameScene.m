@@ -113,7 +113,11 @@ extern int leveltheme2;
     gameIsInPlay = YES;
     sharedScene = self;
     
-    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"greatmusic.mp3"];
+    if(leveltheme2==1)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];
+    if(leveltheme2==2)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];
+    if(leveltheme2==3)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
+    if(leveltheme2==4)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
+    else{ [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];}
     
     // Load the level
     //level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
@@ -126,6 +130,14 @@ extern int leveltheme2;
     else if(leveltheme2==2){
         // Load the level
         level = [CCBReader nodeGraphFromFile:@"DragonLevel.ccbi"];
+    }
+    else if(leveltheme2==3){
+        // Load the level
+        level = [CCBReader nodeGraphFromFile:@"UnicornLevel.ccbi"];
+    }
+    else if(leveltheme2==4){
+        // Load the level
+        level = [CCBReader nodeGraphFromFile:@"KittenLevel.ccbi"];
     }
     else{
         // Load the level
@@ -157,6 +169,16 @@ extern int leveltheme2;
         sidebarEpPic.scale = 0.4;
         sidebarEpPic.position = ccp(100.0,300.0);
     }
+    else if(leveltheme2==3){
+        sidebarEpPic = [CCSprite spriteWithFile:@"catchable.png"];
+        sidebarEpPic.scale = 0.4;
+        sidebarEpPic.position = ccp(100.0,300.0);
+    }
+    else if(leveltheme2==3){
+        sidebarEpPic = [CCSprite spriteWithFile:@"yarnspace.png"];
+        sidebarEpPic.scale = 0.3;
+        sidebarEpPic.position = ccp(100.0,300.0);
+    }
     else{
         sidebarEpPic = [CCSprite spriteWithFile:@"EscapePod.png"];
         sidebarEpPic.position = ccp(100.0,300.0);
@@ -177,6 +199,16 @@ extern int leveltheme2;
     else if(leveltheme2==2){
         incomingEpPic = [CCSprite spriteWithFile:@"coin.png"];
         incomingEpPic.scale = 0.4;
+        incomingEpPic.position = ccp(175.0,200.0);
+    }
+    else if(leveltheme2==2){
+        incomingEpPic = [CCSprite spriteWithFile:@"catchable.png"];
+        incomingEpPic.scale = 0.4;
+        incomingEpPic.position = ccp(175.0,200.0);
+    }
+    else if(leveltheme2==2){
+        incomingEpPic = [CCSprite spriteWithFile:@"yarnspace.png"];
+        incomingEpPic.scale = 0.3;
         incomingEpPic.position = ccp(175.0,200.0);
     }
     else{

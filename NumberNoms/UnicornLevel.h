@@ -7,7 +7,14 @@
 //
 
 #import "CCLayer.h"
+#import "CatchSheep.h"
+
 
 @interface UnicornLevel : CCLayer
+{
+    NSMutableArray *escapePodArray;
+}
+
+@property (nonatomic, retain) NSMutableArray *escapePodArray;
 
 @end

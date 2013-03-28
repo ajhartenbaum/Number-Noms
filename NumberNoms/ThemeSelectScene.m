@@ -28,13 +28,13 @@ extern int leveltheme2;
 
 - (void) pressedCat:(id)sender
 {
-   /*
+    [self setTheme:4];
+    
     // Load the game scene
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
     
     // Go to the game scene
     [[CCDirector sharedDirector] replaceScene:gameScene];
-    */
 }
 
 - (void) pressedDragon:(id)sender
@@ -51,13 +51,13 @@ extern int leveltheme2;
 
 - (void) pressedUnicorn:(id)sender
 {
-    /*
-     // Load the game scene
-     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
-     
-     // Go to the game scene
-     [[CCDirector sharedDirector] replaceScene:gameScene];
-     */
+    [self setTheme:3];
+    
+    // Load the game scene
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
+    
+    // Go to the game scene
+    [[CCDirector sharedDirector] replaceScene:gameScene];
 }
 
 - (void) pressedBack:(id)sender

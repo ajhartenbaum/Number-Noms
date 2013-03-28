@@ -1,11 +1,11 @@
 background.jpg
+background.png
 backsprite.png
 backspritepresed.png
 basket.png
 BrokenShip.png
 castle.png
-catchable with space.png
-catchable without space.png
+catbg.png
 catchable.png
 CatchEscapePod.ccbi
 CatchSheep.ccbi
@@ -28,6 +28,7 @@ coin-filled-outline.png
 coin-outline.png
 coin.png
 coud.png
+credits.png
 CreditScene.ccbi
 CreditsScene.ccbi
 Default-Landscape~ipad.png
@@ -89,6 +90,9 @@ ThemeSelectScene.ccbi
 ThemeSelectScreen.ccbi
 ThiefSprite.ccbi
 this-many-dot.png
+unicornbg.png
 UnicornLevel.ccbi
+yarnnospace.png
+yarnspace.png
 yellowcircle.png
 yellowcircled-pressed.png

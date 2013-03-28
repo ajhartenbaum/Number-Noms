@@ -87,18 +87,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>background.jpg</string>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
-						<string>blendFunc</string>
-						<key>type</key>
-						<string>Blendmode</string>
-						<key>value</key>
-						<array>
-							<integer>770</integer>
-							<integer>771</integer>
+							<string>unicornbg.png</string>
 						</array>
 					</dict>
 				</array>
@@ -125,7 +114,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>336</real>
+							<real>350</real>
 							<real>102</real>
 							<integer>0</integer>
 						</array>
