@@ -87,7 +87,7 @@ extern int leveltheme2;
     
     if(numberToAnimate == 1) {
         [self removeChild:afterLabel cleanup:YES];
-        afterLabel = [CCLabelTTF labelWithString:@"After" fontName:@"Arial" fontSize:64];
+        afterLabel = [CCLabelTTF labelWithString:@"Caught" fontName:@"Arial" fontSize:64];
         afterLabel.position = ccp(100,400);
         afterLabel.color = ccc3(0,0,0);
         [self addChild: afterLabel];
@@ -174,7 +174,7 @@ extern int leveltheme2;
         sidebarEpPic.scale = 0.4;
         sidebarEpPic.position = ccp(100.0,300.0);
     }
-    else if(leveltheme2==3){
+    else if(leveltheme2==4){
         sidebarEpPic = [CCSprite spriteWithFile:@"yarnspace.png"];
         sidebarEpPic.scale = 0.3;
         sidebarEpPic.position = ccp(100.0,300.0);
@@ -201,12 +201,12 @@ extern int leveltheme2;
         incomingEpPic.scale = 0.4;
         incomingEpPic.position = ccp(175.0,200.0);
     }
-    else if(leveltheme2==2){
+    else if(leveltheme2==3){
         incomingEpPic = [CCSprite spriteWithFile:@"catchable.png"];
         incomingEpPic.scale = 0.4;
         incomingEpPic.position = ccp(175.0,200.0);
     }
-    else if(leveltheme2==2){
+    else if(leveltheme2==4){
         incomingEpPic = [CCSprite spriteWithFile:@"yarnspace.png"];
         incomingEpPic.scale = 0.3;
         incomingEpPic.position = ccp(175.0,200.0);
@@ -232,7 +232,7 @@ extern int leveltheme2;
     topLabel.color = ccc3(0,0,0);
     [self addChild: topLabel];
     
-    afterLabel = [CCLabelTTF labelWithString:@"Get" fontName:@"Arial" fontSize:64];
+    afterLabel = [CCLabelTTF labelWithString:@"" fontName:@"Arial" fontSize:64];
     afterLabel.position = ccp(100,400);
     afterLabel.color = ccc3(0,0,0);
     [self addChild: afterLabel];

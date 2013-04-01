@@ -11,8 +11,8 @@
 #import "SpaceGameLayer.h"
 #import "CCBAnimationManager.h"
 
-#define STARTTARGETX 200
-#define STARTTARGETY 200
+#define STARTTARGETX 600
+#define STARTTARGETY 600
 #define STARTSPEED 5
 
 @implementation ThiefSprite

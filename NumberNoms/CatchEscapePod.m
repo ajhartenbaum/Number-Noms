@@ -27,7 +27,9 @@ extern int leveltheme2;
     if (!self) return NULL;
     
     float randAng = ((float)(rand() % 1000) / 1000.0) * M_PI * 2.0f;
-    float randSpeed = ((float)(rand() % 1000) / 1000.0) * 3.75 + 2.75;
+    //float randSpeed = ((float)(rand() % 1000) / 1000.0) * 3.75 + 2.75;
+    float randSpeed = 3.0;
+
     epxSpeed=sinf(randAng)*randSpeed;
     epySpeed=cosf(randAng)*randSpeed;
 
