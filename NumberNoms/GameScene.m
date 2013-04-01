@@ -114,9 +114,9 @@ extern int leveltheme2;
     sharedScene = self;
     
     if(leveltheme2==1)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];
-    if(leveltheme2==2)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];
-    if(leveltheme2==3)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
-    if(leveltheme2==4)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
+    else if(leveltheme2==2)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForDwaggins.mp3"];
+    else if(leveltheme2==3)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
+    else if(leveltheme2==4)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
     else{ [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];}
     
     // Load the level
