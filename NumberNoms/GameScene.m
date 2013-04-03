@@ -34,6 +34,7 @@ CCLabelTTF *endScreenText = NULL;
 float xIncomingEPSpeed;
 float yIncomingEPSpeed;
 #define INCOMING_COLLECTED_SPEED 18
+float endcounter=0;
 
 extern int leveltheme2;
 
@@ -281,11 +282,14 @@ extern int leveltheme2;
 - (void) handleGameOver
 {
     if(gameIsInPlay == YES) {
-        endScreenText = [CCLabelTTF labelWithString:@"INCORRECT!" fontName:@"Arial" fontSize:54];
+        /*endScreenText = [CCLabelTTF labelWithString:@"INCORRECT!" fontName:@"Arial" fontSize:54];
         endScreenText.position = ccp(512,384);
         endScreenText.color = ccc3(255,255,255);
-        [self addChild: endScreenText];
+        [self addChild: endScreenText];*/
         gameIsInPlay = NO;
+        
+        [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndBadCatchScene.ccbi"]];
+        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     }
 
     // [self stopMusicAndGotoMainMenu];
@@ -294,14 +298,18 @@ extern int leveltheme2;
 - (void) handleLevelComplete
 {
     if(gameIsInPlay == YES) {
-        endScreenText = [CCLabelTTF labelWithString:@"GOT ALL 50!" fontName:@"Arial" fontSize:54];
+        /*endScreenText = [CCLabelTTF labelWithString:@"GOT ALL 50!" fontName:@"Arial" fontSize:54];
         endScreenText.position = ccp(512,384);
         endScreenText.color = ccc3(255,255,255);
-        [self addChild: endScreenText];
+        [self addChild: endScreenText];*/
         gameIsInPlay = NO;
     }
 
     //[self stopMusicAndGotoMainMenu];
+
+    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndReachHundredScene.ccbi"]];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+
 }
 
 - (Boolean) getGameIsInPlay

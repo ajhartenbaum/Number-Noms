@@ -7,6 +7,7 @@
 //
 
 #import "CCLayer.h"
+#import "CCBReader.h"
 
 @interface EndReachHundredScene : CCLayer
 
