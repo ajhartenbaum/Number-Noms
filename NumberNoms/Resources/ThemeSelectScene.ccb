@@ -79,8 +79,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>520</real>
-							<real>630</real>
+							<real>512</real>
+							<real>422</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -102,8 +102,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.1030945777893066</real>
-							<real>1.7434508800506592</real>
+							<real>0.97254246473312378</real>
+							<real>0.74162149429321289</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -124,7 +124,18 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>logowithbg.png</string>
+							<string>numberedbackground.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>blendFunc</string>
+						<key>type</key>
+						<string>Blendmode</string>
+						<key>value</key>
+						<array>
+							<integer>770</integer>
+							<integer>771</integer>
 						</array>
 					</dict>
 				</array>

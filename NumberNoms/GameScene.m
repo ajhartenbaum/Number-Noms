@@ -151,7 +151,7 @@ extern int leveltheme2;
    
     for(int ii=0; ii<5; ii++) {
         for(int i=0; i<10; i++) {
-            CCSprite *dotPic = [CCSprite spriteWithFile:@"this-many-dot.png"];
+            CCSprite *dotPic = [CCSprite spriteWithFile:@"coin-filled-only.png"];
             dotPic.position = ccp(XSTART+i*XGAP,YSTART-ii*YGAP);
             [self addChild: dotPic];
             [dotsArray addObject:dotPic];

@@ -59,7 +59,7 @@ extern int leveltheme2;
     [self addChild:epPic];
     
     label = [CCLabelTTF labelWithString:@"" fontName:@"Times New Roman" fontSize:64];
-    if(leveltheme2==3) label = [CCLabelTTF labelWithString:@"" fontName:@"Times New Roman" fontSize:50];
+    if(leveltheme2==3) label = [CCLabelTTF labelWithString:@"" fontName:@"Times New Roman" fontSize:43];
     label.position = ccp(0,0);
     if(leveltheme2==3) label.position=ccp(-25, -14);
     label.color = ccc3(0,0,0);

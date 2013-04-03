@@ -28,6 +28,8 @@ coin-filled-outline.png
 coin-outline.png
 coin.png
 coud.png
+creditbutton-pressed.png
+creditButton.png
 credits.png
 CreditScene.ccbi
 CreditsScene.ccbi
@@ -49,6 +51,8 @@ high-score-1.png
 high-score.png
 high-scorepressed.png
 HighScoreScene.ccbi
+homesprite.png
+homespritepressed.png
 Icon-72.png
 Icon-Small-50.png
 Icon-Small.png
@@ -61,16 +65,23 @@ kitty1.png
 logowithbg.png
 MainMenu2Scene.ccbi
 MainMenuScene.ccbi
+music.png
 NomsLogo.png
+numberedbackground.png
 numnomuni.png
+off.png
+on.png
 options.png
 OptionScene.ccbi
 optionspressed.png
+optionstext.png
 pen.png
 play-button-down.png
 play-button.png
 play-sprite.png
 play-spritepressed.png
+replaysprite.png
+replayspritepressed.png
 Rocket.png
 SampleBin.png
 sheep-1.png
@@ -80,6 +91,7 @@ sheep-outline.png
 sheep.png
 sheepbackground.jpg
 Sidebar.png
+sound.png
 spacebackground.png
 SpaceGameLayer.ccbi
 SpaceLevel.ccbi
@@ -92,6 +104,7 @@ ThiefSprite.ccbi
 this-many-dot.png
 unicornbg.png
 UnicornLevel.ccbi
+winscreen.png
 yarnnospace.png
 yarnspace.png
 yellowcircle.png
