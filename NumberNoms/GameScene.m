@@ -53,8 +53,16 @@ extern int leveltheme2;
     
     [sidebarEpPic removeChild:afterShipLabel cleanup:YES];
     afterShipLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%@",[incomingAfterShipLabel string] ] fontName:@"Times New Roman" fontSize:64];
+    if(leveltheme2==3){
+        afterShipLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%@",[incomingAfterShipLabel string] ] fontName:@"Times New Roman" fontSize:43];
+    }
     afterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5,
                                   sidebarEpPic.boundingBox.size.height*0.5);
+    if(leveltheme2==3){
+        afterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5 -25,
+        sidebarEpPic.boundingBox.size.height*0.5 -14) ;
+
+    }
     afterShipLabel.color = ccc3(0,0,0);
     [sidebarEpPic addChild: afterShipLabel];
     
@@ -166,17 +174,17 @@ extern int leveltheme2;
     }
     else if(leveltheme2==2){
         sidebarEpPic = [CCSprite spriteWithFile:@"coin.png"];
-        sidebarEpPic.scale = 0.4;
+        //sidebarEpPic.scale = 0.4;
         sidebarEpPic.position = ccp(100.0,300.0);
     }
     else if(leveltheme2==3){
         sidebarEpPic = [CCSprite spriteWithFile:@"catchable.png"];
-        sidebarEpPic.scale = 0.4;
+        //sidebarEpPic.scale = 0.4;
         sidebarEpPic.position = ccp(100.0,300.0);
     }
     else if(leveltheme2==4){
         sidebarEpPic = [CCSprite spriteWithFile:@"yarnspace.png"];
-        sidebarEpPic.scale = 0.3;
+        //sidebarEpPic.scale = 0.3;
         sidebarEpPic.position = ccp(100.0,300.0);
     }
     else{
@@ -186,9 +194,11 @@ extern int leveltheme2;
     [self addChild:sidebarEpPic];
     
     afterShipLabel = [CCLabelTTF labelWithString:@"0" fontName:@"Times New Roman" fontSize:64];
-    //if(leveltheme2==2){ afterShipLabel = [CCLabelTTF labelWithString:@"0" fontName:@"Times New Roman" fontSize:160];}
+    if(leveltheme2==3) afterShipLabel = [CCLabelTTF labelWithString:@"0" fontName:@"Times New Roman" fontSize:43];
     afterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5,
                                   sidebarEpPic.boundingBox.size.height*0.5);
+    if(leveltheme2==3) {afterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5 -25,
+                                                      sidebarEpPic.boundingBox.size.height*0.5 -14) ;}
     afterShipLabel.color = ccc3(0,0,0);
     [sidebarEpPic addChild: afterShipLabel];
     
@@ -198,17 +208,17 @@ extern int leveltheme2;
     }
     else if(leveltheme2==2){
         incomingEpPic = [CCSprite spriteWithFile:@"coin.png"];
-        incomingEpPic.scale = 0.4;
+        //incomingEpPic.scale = 0.4;
         incomingEpPic.position = ccp(175.0,200.0);
     }
     else if(leveltheme2==3){
         incomingEpPic = [CCSprite spriteWithFile:@"catchable.png"];
-        incomingEpPic.scale = 0.4;
+        //incomingEpPic.scale = 0.4;
         incomingEpPic.position = ccp(175.0,200.0);
     }
     else if(leveltheme2==4){
         incomingEpPic = [CCSprite spriteWithFile:@"yarnspace.png"];
-        incomingEpPic.scale = 0.3;
+        //incomingEpPic.scale = 0.3;
         incomingEpPic.position = ccp(175.0,200.0);
     }
     else{
@@ -219,9 +229,12 @@ extern int leveltheme2;
     
     
     incomingAfterShipLabel = [CCLabelTTF labelWithString:@"1" fontName:@"Arial" fontSize:64];
-    //if(leveltheme2==2){ incomingAfterShipLabel = [CCLabelTTF labelWithString:@"1" fontName:@"Arial" fontSize:160];}
+    if(leveltheme2==3) incomingAfterShipLabel = [CCLabelTTF labelWithString:@"1" fontName:@"Arial" fontSize:43];
     incomingAfterShipLabel.position = ccp(incomingEpPic.boundingBox.size.width*0.5,
                                             incomingEpPic.boundingBox.size.height*0.5);
+    if(leveltheme2==3) {incomingAfterShipLabel.position = ccp(incomingEpPic.boundingBox.size.width*0.5 -25,
+                                                              incomingEpPic.boundingBox.size.height*0.5 -14) ;}
+
     incomingAfterShipLabel.color = ccc3(0,0,0);
     [incomingEpPic addChild: incomingAfterShipLabel];
 
