@@ -121,13 +121,14 @@ CGPoint entryPoint3;
             // Update all game objects
             [gameObject update];
             
+            if (ccpDistance([gameObject getCenter], entryPoint3) < (gameObject.radius * 4)) //TODO Should be 2, but radius needs fixed
+            {
+                entryZoneClear = false;
+            }
+            
             if ([child isKindOfClass:[CatchEscapePod class]]) {
                 CatchEscapePod* escapePod = (CatchEscapePod*)gameObject;
-                
-                if (ccpDistance([escapePod getCenter], entryPoint3) < (escapePod.radius * 4)) //TODO Should be 2, but radius needs fixed
-                {
-                    entryZoneClear = false;
-                }
+
                 if (ccpDistance([escapePod getCenter], unispr.position) < (escapePod.radius + unispr.radius))
                 {
                     [self caughtShip:escapePod];

@@ -23,7 +23,7 @@ NSMutableArray *entryQueue4;
 NSTimer *timer4;
 ThiefSprite* kitspr;
 int makeVisibleThisOne4 = 1;
-CGPoint entryPoint4;
+CGPoint entryPoint;
 
 - (void) handleTimer:(NSTimer *) theTimer
 {
@@ -89,7 +89,7 @@ CGPoint entryPoint4;
     // CatchSheep *ep1 = nil;
     
     int shipRadius = [entryQueue4[0] radius];
-    entryPoint4 = ccp(shipRadius + 240, shipRadius);
+    entryPoint = ccp(shipRadius + 240, shipRadius);
 }
 
 - (void) onExit
@@ -121,13 +121,14 @@ CGPoint entryPoint4;
             // Update all game objects
             [gameObject update];
             
+            if (ccpDistance([gameObject getCenter], entryPoint) < (gameObject.radius * 4)) //TODO Should be 2, but radius needs fixed
+            {
+                entryZoneClear = false;
+            }
+            
             if ([child isKindOfClass:[CatchEscapePod class]]) {
                 CatchEscapePod* escapePod = (CatchEscapePod*)gameObject;
-                
-                if (ccpDistance([escapePod getCenter], entryPoint4) < (escapePod.radius * 4)) //TODO Should be 2, but radius needs fixed
-                {
-                    entryZoneClear = false;
-                }
+
                 if (ccpDistance([escapePod getCenter], kitspr.position) < (escapePod.radius + kitspr.radius))
                 {
                     [self caughtShip:escapePod];
