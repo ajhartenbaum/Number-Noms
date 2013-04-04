@@ -11,8 +11,6 @@
 #import "SpaceGameLayer.h"
 #import "CCBAnimationManager.h"
 
-#define STARTTARGETX 600
-#define STARTTARGETY 600
 #define STARTSPEED 5
 
 @implementation ThiefSprite
@@ -30,7 +28,7 @@ extern int leveltheme2;
     self = [super init];
     if (!self) return NULL;
     
-    self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius+STARTTARGETX, self.radius+STARTTARGETY);
+    self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius+600, self.radius+600);
     
     if(leveltheme2==1){
         epPic = [CCSprite spriteWithFile:@"Rocket.png"];
@@ -70,8 +68,8 @@ extern int leveltheme2;
     label.color = ccc3(0,0,0);
     [self addChild: label];*/
     
-    xTarget = STARTTARGETX;
-    yTarget = STARTTARGETY;
+    xTarget = self.position.x;
+    yTarget = self.position.y;
     ySpeed = STARTSPEED;
     
     return self;
