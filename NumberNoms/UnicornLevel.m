@@ -24,6 +24,8 @@ NSTimer *timer3;
 ThiefSprite* unispr;
 int makeVisibleThisOne3 = 1;
 CGPoint entryPoint3;
+int next, grabbed;
+
 
 - (void) handleTimer:(NSTimer *) theTimer
 {
@@ -41,6 +43,8 @@ CGPoint entryPoint3;
         makeVisibleThisOne3++;
     } else {
         // Make them lose
+        next = makeVisibleThisOne3;
+        grabbed = [pod getMyNumber];
         [[GameScene sharedScene] handleGameOver];
     }
 }
