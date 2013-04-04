@@ -136,11 +136,24 @@ CGPoint entryPoint;
                     [self caughtShip:escapePod];
                 }
                 
-                if (((escapePod.position.x + escapePod.radius * 2) > 1028) || ((escapePod.position.x) < 240))
+                if (escapePod.position.x + escapePod.radius * 2 > 1028 &&
+                    [escapePod getXSpeed] > 0.0)
                 {
                     [escapePod xSpeedReverse];
                 }
-                else if (((escapePod.position.y + escapePod.radius * 2) > 768) || ((escapePod.position.y) < 0))
+                if ((escapePod.position.x) < 240 &&
+                    [escapePod getXSpeed] < 0.0)
+                {
+                    [escapePod xSpeedReverse];
+                }
+                
+                if (escapePod.position.y + escapePod.radius * 2 > 768 &&
+                    [escapePod getYSpeed] > 0.0)
+                {
+                    [escapePod ySpeedReverse];
+                }
+                if (escapePod.position.y < 0 &&
+                    [escapePod getYSpeed] < 0.0)
                 {
                     [escapePod ySpeedReverse];
                 }

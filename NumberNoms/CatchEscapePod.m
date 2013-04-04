@@ -18,7 +18,9 @@ extern int leveltheme2;
 
 - (void) resetPosition
 {
-    self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius, self.radius);
+    self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius
+                        +((float)(rand() % 1000) / 1000.0) * 250.0f,
+                        self.radius+((float)(rand() % 1000) / 1000.0) * 55.0f);
 }
 
 - (id) init
