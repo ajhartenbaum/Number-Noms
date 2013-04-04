@@ -19,15 +19,15 @@ CCLabelTTF *caughtLabel = NULL;
 {
     [super onEnter];
     
-    caughtLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", grabbed] fontName:@"Arial" fontSize:64];
-    caughtLabel.position = ccp(752,600);
-    caughtLabel.color = ccc3(255,255,255);
+    caughtLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", grabbed] fontName:@"Arial" fontSize:120];
+    caughtLabel.position = ccp(752,625);
+    caughtLabel.color = ccc3(255,0,0);
     [self addChild: caughtLabel];
     
     
-    nextLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", next] fontName:@"Arial" fontSize:64];
-    nextLabel.position = ccp(752,450);
-    nextLabel.color = ccc3(255,255,255);
+    nextLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", next] fontName:@"Arial" fontSize:120];
+    nextLabel.position = ccp(752,455);
+    nextLabel.color = ccc3(2,128,21);
     [self addChild: nextLabel];
 }
 
