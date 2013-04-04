@@ -328,7 +328,7 @@ extern int leveltheme2;
         endScreenText = [CCLabelTTF labelWithString:@"INCORRECT!" fontName:@"Arial" fontSize:54];
         endScreenText.position = ccp(512,384);
         endScreenText.color = ccc3(255,255,255);
-        [self addChild: endScreenText];
+        //[self addChild: endScreenText];
         gameIsInPlay = NO;
     }
 
