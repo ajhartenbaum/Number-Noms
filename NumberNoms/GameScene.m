@@ -35,6 +35,7 @@ float xIncomingEPSpeed;
 float yIncomingEPSpeed;
 #define INCOMING_COLLECTED_SPEED 18
 float endcounter=0;
+bool setupCaughtIconAndNumber = false;
 
 extern int leveltheme2;
 
@@ -64,6 +65,20 @@ extern int leveltheme2;
         sidebarEpPic.boundingBox.size.height*0.5 -14) ;
 
     }
+    
+    if(setupCaughtIconAndNumber) {
+        [self removeChild:afterLabel cleanup:YES];
+        afterLabel = [CCLabelTTF labelWithString:@"Caught" fontName:@"Arial" fontSize:64];
+        afterLabel.position = ccp(100,400);
+        afterLabel.color = ccc3(0,0,0);
+        [self addChild: afterLabel];
+        
+        if(sidebarEpPic.visible == false) {
+            sidebarEpPic.visible = true;
+        }
+        setupCaughtIconAndNumber = false;
+    }
+    
     afterShipLabel.color = ccc3(0,0,0);
     [sidebarEpPic addChild: afterShipLabel];
     
@@ -95,12 +110,7 @@ extern int leveltheme2;
     }
     
     if(numberToAnimate == 1) {
-        [self removeChild:afterLabel cleanup:YES];
-        afterLabel = [CCLabelTTF labelWithString:@"Caught" fontName:@"Arial" fontSize:64];
-        afterLabel.position = ccp(100,400);
-        afterLabel.color = ccc3(0,0,0);
-        [self addChild: afterLabel];
-        
+        setupCaughtIconAndNumber = true;
     }
     
     [self setScore:numberToAnimate+1]; // when it says "After 9" we want to show 10 dots
@@ -121,6 +131,8 @@ extern int leveltheme2;
 {
     gameIsInPlay = YES;
     sharedScene = self;
+    
+    setupCaughtIconAndNumber = false;
     
     if(leveltheme2==1)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];
     else if(leveltheme2==2)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForDwaggins.mp3"];
@@ -193,6 +205,7 @@ extern int leveltheme2;
         sidebarEpPic.position = ccp(100.0,300.0);
     }
     [self addChild:sidebarEpPic];
+    sidebarEpPic.visible = false;
     
     afterShipLabel = [CCLabelTTF labelWithString:@"0" fontName:@"Times New Roman" fontSize:64];
     if(leveltheme2==3) afterShipLabel = [CCLabelTTF labelWithString:@"0" fontName:@"Times New Roman" fontSize:43];
