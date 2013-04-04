@@ -224,7 +224,11 @@ CGPoint entryPoint4;
     UITouch* touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInView: [touch view]];
     
-    [kitspr setXTarget:touchLocation.x];
+    float fixedX = touchLocation.x;
+    if(fixedX < 250.0) {
+        fixedX = 250.0;
+    }
+    [kitspr setXTarget:fixedX];
     
     CGSize s = [[CCDirector sharedDirector] winSize];
     [kitspr setYTarget:-touchLocation.y+s.height];

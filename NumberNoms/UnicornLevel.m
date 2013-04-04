@@ -224,7 +224,11 @@ CGPoint entryPoint3;
     UITouch* touch = [touches anyObject];
     CGPoint touchLocation = [touch locationInView: [touch view]];
     
-    [unispr setXTarget:touchLocation.x];
+    float fixedX = touchLocation.x;
+    if(fixedX < 250.0) {
+        fixedX = 250.0;
+    }
+    [unispr setXTarget:fixedX];
     
     CGSize s = [[CCDirector sharedDirector] winSize];
     [unispr setYTarget:-touchLocation.y+s.height];
