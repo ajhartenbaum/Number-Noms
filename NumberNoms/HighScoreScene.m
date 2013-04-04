@@ -16,21 +16,26 @@ CCLabelTTF *endScreenText2 = NULL;
 
 - (void) didLoadFromCCB
 {
-    endScreenText2 = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%i", [GameScene highscore]] fontName:@"Arial" fontSize:54];
-    endScreenText2.position = ccp(512,384);
+    endScreenText2 = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%i", [GameScene highscore]] fontName:@"Arial" fontSize:150];
+    endScreenText2.position = ccp(512,350);
     endScreenText2.color = ccc3(255,255,255);
     [self addChild: endScreenText2];
 }
 
 - (void) pressedBack:(id)sender
 {
-    // Load the game scene
-    //CCScene* mainScene = [CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"];
-    
-    // Go to the game scene
-    //[[CCDirector sharedDirector] replaceScene:mainScene];
-    
     [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+}
+
+- (void) pressedReset:(id)sender
+{
+    [[GameScene sharedScene] setHighscore:0];
+    [self removeChild:endScreenText2 cleanup:YES];
+    endScreenText2 = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%i", [GameScene highscore]] fontName:@"Arial" fontSize:150];
+    endScreenText2.position = ccp(512,350);
+    endScreenText2.color = ccc3(255,255,255);
+    [self addChild: endScreenText2];
+    
 }
 
 
