@@ -12,6 +12,7 @@
 #import "ThemeSelectScene.h"
 
 static GameScene* sharedScene;
+static int highscore = 0;
 
 #define XSTART 22
 #define XGAP 19
@@ -44,6 +45,11 @@ extern int leveltheme2;
 - (int) interfaceBarWidth
 {
     return 220;
+}
+
++ (int) highscore;
+{
+    return highscore;
 }
 
 + (GameScene*) sharedScene
@@ -316,6 +322,9 @@ extern int leveltheme2;
         if(countDownTilGameOver <= 0.0) {
             countDownTilGameOver = 1.0;
         }
+        if([GameScene highscore] < score-1) {
+            [[GameScene sharedScene] setHighscore:score-1];
+        }
         endScreenText = [CCLabelTTF labelWithString:@"INCORRECT!" fontName:@"Arial" fontSize:54];
         endScreenText.position = ccp(512,384);
         endScreenText.color = ccc3(255,255,255);
@@ -333,14 +342,20 @@ extern int leveltheme2;
         endScreenText.position = ccp(512,384);
         endScreenText.color = ccc3(255,255,255);
         [self addChild: endScreenText];*/
+        if([GameScene highscore] < score) {
+            [[GameScene sharedScene] setHighscore:score];
+        }
         gameIsInPlay = NO;
     }
-
-    //[self stopMusicAndGotoMainMenu];
 
     [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndReachHundredScene.ccbi"]];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 
+}
+
+- (void) setHighscore:(int)newHS
+{
+    highscore = newHS;
 }
 
 - (Boolean) getGameIsInPlay
@@ -355,6 +370,9 @@ extern int leveltheme2;
 
 - (void) pressedClose:(id)sender
 {
+    if([GameScene highscore] < score-1) {
+        [[GameScene sharedScene] setHighscore:score-1];
+    }
     [self stopMusicAndGotoMainMenu];
 }
 

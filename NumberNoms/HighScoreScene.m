@@ -7,9 +7,20 @@
 //
 
 #import "HighScoreScene.h"
+#import "GameScene.h"
 #import "CCBReader.h"
 
 @implementation HighScoreScene
+
+CCLabelTTF *endScreenText2 = NULL;
+
+- (void) didLoadFromCCB
+{
+    endScreenText2 = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%i", [GameScene highscore]] fontName:@"Arial" fontSize:54];
+    endScreenText2.position = ccp(512,384);
+    endScreenText2.color = ccc3(255,255,255);
+    [self addChild: endScreenText2];
+}
 
 - (void) pressedBack:(id)sender
 {

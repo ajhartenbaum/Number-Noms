@@ -25,9 +25,11 @@
 
 - (int) interfaceBarWidth;
 
++ (int) highscore;
 + (GameScene*) sharedScene;
 - (void) gotShipNumber:(int)numberToAnimate startAtX:(float)atX  startAtY:(float)atY;
 
+- (void) setHighscore:(int)newHS;
 - (void) moveIncoming;
 - (void) handleGameOver;
 - (void) handleLevelComplete;
