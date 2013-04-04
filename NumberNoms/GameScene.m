@@ -37,6 +37,8 @@ float yIncomingEPSpeed;
 float endcounter=0;
 bool setupCaughtIconAndNumber = false;
 
+float countDownTilGameOver = 0.0;
+
 extern int leveltheme2;
 
 - (int) interfaceBarWidth
@@ -85,7 +87,7 @@ extern int leveltheme2;
     incomingEpPic.visible = false;
 }
 
-- (void) moveIncoming
+- (void) moveIncoming // called every frame
 {
     float dx = sidebarEpPic.position.x - incomingEpPic.position.x;
     float dy = sidebarEpPic.position.y - incomingEpPic.position.y;
@@ -101,6 +103,14 @@ extern int leveltheme2;
     }
     
     incomingEpPic.position = ccp(incomingEpPic.position.x + xIncomingEPSpeed ,incomingEpPic.position.y + yIncomingEPSpeed);
+    
+    // hacky crummy placement:
+    if(countDownTilGameOver > 0.0) { // round is over/frozen, count down then exit
+        countDownTilGameOver -= 0.02;
+        if(countDownTilGameOver < 0.0) {
+            [self handleGameOverTimeOut];
+        }
+    }
 }
 
 - (void) gotShipNumber:(int)numberToAnimate startAtX:(float)atX  startAtY:(float)atY
@@ -131,6 +141,8 @@ extern int leveltheme2;
 {
     gameIsInPlay = YES;
     sharedScene = self;
+    
+    countDownTilGameOver = 0.0;
     
     setupCaughtIconAndNumber = false;
     
@@ -292,17 +304,23 @@ extern int leveltheme2;
     [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
 }
 
+- (void) handleGameOverTimeOut
+{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndBadCatchScene.ccbi"]];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];    
+}
+
 - (void) handleGameOver
 {
     if(gameIsInPlay == YES) {
-        /*endScreenText = [CCLabelTTF labelWithString:@"INCORRECT!" fontName:@"Arial" fontSize:54];
+        if(countDownTilGameOver <= 0.0) {
+            countDownTilGameOver = 1.0;
+        }
+        endScreenText = [CCLabelTTF labelWithString:@"INCORRECT!" fontName:@"Arial" fontSize:54];
         endScreenText.position = ccp(512,384);
         endScreenText.color = ccc3(255,255,255);
-        [self addChild: endScreenText];*/
+        [self addChild: endScreenText];
         gameIsInPlay = NO;
-        
-        [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndBadCatchScene.ccbi"]];
-        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     }
 
     // [self stopMusicAndGotoMainMenu];
@@ -328,6 +346,11 @@ extern int leveltheme2;
 - (Boolean) getGameIsInPlay
 {
     return gameIsInPlay;
+}
+
+- (float) getCountDownTilGameOver
+{
+    return countDownTilGameOver;
 }
 
 - (void) pressedClose:(id)sender
