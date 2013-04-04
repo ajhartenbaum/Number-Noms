@@ -256,11 +256,7 @@ CGPoint entryPoint3;
 
 - (void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch* touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInView: [touch view]];
-
-    
-    
+    [self ccTouchesBegan:touches withEvent:event];
 }
 
 @end

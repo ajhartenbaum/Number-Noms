@@ -256,13 +256,7 @@ CGPoint entryPoint2;
 
 - (void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    UITouch* touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInView: [touch view]];
-    
-    /* dragon.xTarget = touchLocation.x;
-     dragon.yTarget = touchLocation.y;*/
-
-
+    [self ccTouchesBegan:touches withEvent:event];
 }
 
 @end
