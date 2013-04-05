@@ -17,7 +17,8 @@
     CCScene* themeScene = [CCBReader sceneWithNodeGraphFromFile:@"ThemeSelectScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:themeScene];
+    //[[CCDirector sharedDirector] replaceScene:themeScene];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:themeScene]];
 }
 
 - (void) pressedHighScore:(id)sender
@@ -26,16 +27,17 @@
     CCScene* scoreScene = [CCBReader sceneWithNodeGraphFromFile:@"HighScoreScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:scoreScene];
+    //[[CCDirector sharedDirector] replaceScene:scoreScene];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:scoreScene]];
 }
 
 - (void) pressedOptions:(id)sender
 {
     // Load the game scene
      CCScene* optScene = [CCBReader sceneWithNodeGraphFromFile:@"OptionScene.ccbi"];
-    
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:optScene]];
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:optScene];
+    //[[CCDirector sharedDirector] replaceScene:optScene];
 }
 
 - (void) pressedCredits:(id)sender
@@ -44,7 +46,8 @@
     CCScene* credScene = [CCBReader sceneWithNodeGraphFromFile:@"CreditsScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:credScene];
+    //[[CCDirector sharedDirector] replaceScene:credScene];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:credScene]];
 }
 
 @end

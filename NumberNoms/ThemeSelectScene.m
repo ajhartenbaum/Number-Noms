@@ -22,7 +22,8 @@ extern int leveltheme2;
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+    //[[CCDirector sharedDirector] replaceScene:gameScene];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:gameScene]];
     
 }
 
@@ -34,7 +35,8 @@ extern int leveltheme2;
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+    //[[CCDirector sharedDirector] replaceScene:gameScene];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:gameScene]];
 }
 
 - (void) pressedDragon:(id)sender
@@ -45,7 +47,8 @@ extern int leveltheme2;
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+    //[[CCDirector sharedDirector] replaceScene:gameScene];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:gameScene]];
      
 }
 
@@ -57,13 +60,15 @@ extern int leveltheme2;
     CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
     
     // Go to the game scene
-    [[CCDirector sharedDirector] replaceScene:gameScene];
+    //[[CCDirector sharedDirector] replaceScene:gameScene];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:gameScene]];
 }
 
 - (void) pressedBack:(id)sender
 {
     
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]]];
 }
 
 - (void) setTheme:(int)s

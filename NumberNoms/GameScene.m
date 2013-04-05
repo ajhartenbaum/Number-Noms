@@ -307,12 +307,14 @@ extern int leveltheme2;
 - (void) stopMusicAndGotoMainMenu
 {
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]]];
 }
 
 - (void) handleGameOverTimeOut
 {
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndBadCatchScene.ccbi"]];
+    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndBadCatchScene.ccbi"]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:[CCBReader sceneWithNodeGraphFromFile:@"EndBadCatchScene.ccbi"]]];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];    
 }
 
@@ -348,7 +350,8 @@ extern int leveltheme2;
         gameIsInPlay = NO;
     }
 
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndReachHundredScene.ccbi"]];
+    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"EndReachHundredScene.ccbi"]];
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:[CCBReader sceneWithNodeGraphFromFile:@"EndReachHundredScene.ccbi"]]];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 
 }
