@@ -20,14 +20,14 @@ CCLabelTTF *caughtLabel = NULL;
     [super onEnter];
     
     caughtLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", grabbed] fontName:@"Arial" fontSize:120];
-    caughtLabel.position = ccp(752,625);
-    caughtLabel.color = ccc3(255,0,0);
+    caughtLabel.position = ccp(752,455);
+    caughtLabel.color = ccc3(2,128,21);
     [self addChild: caughtLabel];
     
     
     nextLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d", next] fontName:@"Arial" fontSize:120];
-    nextLabel.position = ccp(752,455);
-    nextLabel.color = ccc3(2,128,21);
+    nextLabel.position = ccp(752,615);
+    nextLabel.color = ccc3(255,0,0);
     [self addChild: nextLabel];
 }
 
@@ -36,6 +36,11 @@ CCLabelTTF *caughtLabel = NULL;
 {
     
     //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
+    //I Love cheese so much I want to eat some cheese right now!!!!!!!!!
+    //This game is totally awesome and I want to play it all night long
+    //Also I want lots of pizza!!!!!!!!! It's so dwlicious and I want to eat it!!!! Lots of pizza and lots and lots of pizza for EVERYONE!!!!!!!
+    //So what's new?
+    //Okay so I need to do some serious thinking
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]]];
 }
 
