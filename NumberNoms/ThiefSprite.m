@@ -33,7 +33,7 @@ extern int leveltheme2;
     if(leveltheme2==1){
         epPic = [CCSprite spriteWithFile:@"Rocket.png"];
         epPic.position = ccp(0,0);
-        epPic.scale = 0.3;
+        epPic.scale = 0.375;
         [self addChild:epPic];
     }
     else if(leveltheme2==2){
@@ -81,7 +81,15 @@ extern int leveltheme2;
     float dy = yTarget - self.position.y;
     float dist = sqrt(dx*dx + dy*dy);
     
-    if(leveltheme2==1 || leveltheme2==4){
+    if(leveltheme2==3){
+        if(xSpeed < 0.0) {
+            epPic.flipX = false;
+        }
+        if(xSpeed > 0.0) {
+            epPic.flipX = true;
+        }
+
+    } else if(leveltheme2==1 || leveltheme2==4){
         epPic.rotation = CC_RADIANS_TO_DEGREES(atan2(yTarget-self.position.y, self.position.x - xTarget))-90.0;
     }
     
