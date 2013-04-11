@@ -49,6 +49,8 @@ extern int leveltheme2;
 
 + (int) highscore;
 {
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    highscore = (int)[defs integerForKey:@"score"];
     return highscore;
 }
 
@@ -148,6 +150,9 @@ extern int leveltheme2;
     gameIsInPlay = YES;
     sharedScene = self;
     
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    highscore = (int)[defs integerForKey:@"score"];
+    
     countDownTilGameOver = 0.0;
     
     setupCaughtIconAndNumber = false;
@@ -160,7 +165,6 @@ extern int leveltheme2;
     
     // Load the level
     //level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
-    
     
     if(leveltheme2==1){
         // Load the level
@@ -359,6 +363,9 @@ extern int leveltheme2;
 - (void) setHighscore:(int)newHS
 {
     highscore = newHS;
+    NSUserDefaults *defs = [NSUserDefaults standardUserDefaults];
+    [defs setInteger:highscore forKey:@"score"];
+    [defs synchronize];
 }
 
 - (Boolean) getGameIsInPlay
