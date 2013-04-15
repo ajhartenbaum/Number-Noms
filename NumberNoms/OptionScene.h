@@ -9,5 +9,11 @@
 #import "CCLayer.h"
 
 @interface OptionScene : CCLayer
+{
+    CCMenuItem* onbutton;
+    CCMenuItem* offbutton;
+    CCMenuItem* onback;
+    CCMenuItem* offback;
+}
 
 @end

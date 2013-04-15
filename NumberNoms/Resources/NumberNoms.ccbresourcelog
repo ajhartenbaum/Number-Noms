@@ -3,6 +3,8 @@ background.png
 backsprite.png
 backspritepresed.png
 basket.png
+bluecircle-pressed.png
+bluecircle.png
 BrokenShip.png
 castle.png
 catbg.png
@@ -69,7 +71,9 @@ music.png
 NomsLogo.png
 numberedbackground.png
 numnomuni.png
+off-pressed.png
 off.png
+on-pressed.png
 on.png
 options.png
 OptionScene.ccbi

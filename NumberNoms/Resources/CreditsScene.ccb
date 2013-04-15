@@ -13,7 +13,14 @@
 	<key>fileVersion</key>
 	<integer>4</integer>
 	<key>guides</key>
-	<array/>
+	<array>
+		<dict>
+			<key>orientation</key>
+			<integer>0</integer>
+			<key>position</key>
+			<real>432</real>
+		</dict>
+	</array>
 	<key>nodeGraph</key>
 	<dict>
 		<key>baseClass</key>
@@ -609,8 +616,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>230</real>
-							<real>472</real>
+							<real>376</real>
+							<real>468</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -725,8 +732,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>232</real>
-							<real>366</real>
+							<real>372</real>
+							<real>364</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -844,8 +851,8 @@ Chris DeLeon</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>766</real>
-							<real>472</real>
+							<real>670</real>
+							<real>468</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -960,8 +967,8 @@ Chris DeLeon</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>792</real>
-							<real>352</real>
+							<real>692</real>
+							<real>350</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1114,8 +1121,8 @@ Vu Ha</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>460</real>
-							<real>200</real>
+							<real>364</real>
+							<real>196</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1237,8 +1244,8 @@ Vu Ha</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>460</real>
-							<real>148</real>
+							<real>366</real>
+							<real>142</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1353,8 +1360,8 @@ Vu Ha</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>824</real>
-							<real>134</real>
+							<real>938</real>
+							<real>654</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1425,8 +1432,8 @@ Vu Ha</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>164</real>
-							<real>128</real>
+							<real>910</real>
+							<real>96</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1497,8 +1504,8 @@ Vu Ha</string>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>486</real>
-							<real>390</real>
+							<real>132</real>
+							<real>76</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1520,11 +1527,19 @@ Vu Ha</string>
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.36120715737342834</real>
-							<real>0.36637890338897705</real>
+							<real>0.60000002384185791</real>
+							<real>0.60000002384185791</real>
 							<false/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>50</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1544,6 +1559,238 @@ Vu Ha</string>
 							<string></string>
 							<string>Rocket.png</string>
 						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCLabelTTF</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCLabelTTF</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>694</real>
+							<real>196</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontName</string>
+						<key>type</key>
+						<string>FontTTF</string>
+						<key>value</key>
+						<string>Helvetica</string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontSize</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>40</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>dimensions</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>horizontalAlignment</string>
+						<key>type</key>
+						<string>IntegerLabeled</string>
+						<key>value</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>verticalAlignment</string>
+						<key>type</key>
+						<string>IntegerLabeled</string>
+						<key>value</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>string</string>
+						<key>type</key>
+						<string>Text</string>
+						<key>value</key>
+						<string>Producer</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCLabelTTF</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCLabelTTF</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>688</real>
+							<real>142</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<false/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontName</string>
+						<key>type</key>
+						<string>FontTTF</string>
+						<key>value</key>
+						<string>Helvetica</string>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>fontSize</string>
+						<key>type</key>
+						<string>FloatScale</string>
+						<key>value</key>
+						<array>
+							<real>28</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>dimensions</string>
+						<key>type</key>
+						<string>Size</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>horizontalAlignment</string>
+						<key>type</key>
+						<string>IntegerLabeled</string>
+						<key>value</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>verticalAlignment</string>
+						<key>type</key>
+						<string>IntegerLabeled</string>
+						<key>value</key>
+						<integer>0</integer>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>string</string>
+						<key>type</key>
+						<string>Text</string>
+						<key>value</key>
+						<string>Alissa Hartenbaum</string>
 					</dict>
 				</array>
 			</dict>

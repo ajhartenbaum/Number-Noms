@@ -8,6 +8,7 @@
 
 #import "OptionScene.h"
 #import "CCBReader.h"
+#import "SimpleAudioEngine.h"
 
 @implementation OptionScene
 
@@ -16,6 +17,29 @@
     
     //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]]];
+}
+
+- (void) pressedOn:(id)sender
+{
+    [onbutton setIsEnabled:NO];
+    [onback setIsEnabled:NO];
+    
+    [offbutton setIsEnabled:YES];
+    [offback setIsEnabled:YES];
+    
+    [[SimpleAudioEngine sharedEngine] setMute:0];
+}
+
+- (void) pressedOff:(id)sender
+{
+    [onbutton setIsEnabled:YES];
+    [onback setIsEnabled:YES];
+    
+    [offbutton setIsEnabled:NO];
+    [offback setIsEnabled:NO];
+    
+    [[SimpleAudioEngine sharedEngine] setMute:1];
+
 }
 
 

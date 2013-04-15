@@ -808,7 +808,7 @@
 						<key>value</key>
 						<array>
 							<real>718</real>
-							<real>566</real>
+							<real>544</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -830,9 +830,9 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
-							<false/>
+							<real>0.69999998807907104</real>
+							<real>0.69999998807907104</real>
+							<true/>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -856,6 +856,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>
@@ -1341,8 +1343,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
