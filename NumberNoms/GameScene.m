@@ -152,11 +152,11 @@ extern int leveltheme2;
     
     setupCaughtIconAndNumber = false;
     
-    if(leveltheme2==1)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];
+    if(leveltheme2==1)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpaceLoop.wav"];
     else if(leveltheme2==2)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForDwaggins.mp3"];
-    else if(leveltheme2==3)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
+    else if(leveltheme2==3)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForPonies.mp3"];
     else if(leveltheme2==4)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
-    else{ [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpace!.mp3"];}
+    else{ [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpaceLoop.mp3"];}
     
     // Load the level
     //level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
