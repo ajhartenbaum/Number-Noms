@@ -16,6 +16,24 @@
 
 extern int leveltheme2;
 
+#define EASY
+
+#ifdef EASY
+#define NUM_TO_SPAWN 4
+#endif
+
+#ifdef MEDIUM
+#define NUM_TO_SPAWN 7
+#endif
+
+#ifdef HARD
+#define NUM_TO_SPAWN 10
+#endif
+
+#ifndef NUM_TO_SPAWN
+#define NUM_TO_SPAWN 7
+#endif
+
 - (void) resetPosition
 {
     self.position = ccp([[GameScene sharedScene] interfaceBarWidth]+self.radius
@@ -108,7 +126,7 @@ extern int leveltheme2;
 {
     //visible_ = false;
     
-    [self setLabel:myNumber+10];
+    [self setLabel:myNumber+NUM_TO_SPAWN];
     [self resetPosition];
 }
 

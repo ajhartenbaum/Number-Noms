@@ -14,7 +14,23 @@
 #import "GameObject.h"
 //#import "CatchSheep.h"
 
-#define NUM_TO_SPAWN 10
+#define EASY
+
+#ifdef EASY
+    #define NUM_TO_SPAWN 4
+#endif
+
+#ifdef MEDIUM
+    #define NUM_TO_SPAWN 7
+#endif
+
+#ifdef HARD
+    #define NUM_TO_SPAWN 10
+#endif
+
+#ifndef NUM_TO_SPAWN
+    #define NUM_TO_SPAWN 7
+#endif
 
 @implementation SpaceLevel
 
@@ -77,8 +93,8 @@ int next, grabbed;
     [self addChild:thfspr];
     
     //timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
-    escapePodArray = [[NSMutableArray alloc] initWithCapacity:10];
-    entryQueue = [[NSMutableArray alloc] initWithCapacity:10];    
+    escapePodArray = [[NSMutableArray alloc] initWithCapacity:NUM_TO_SPAWN];
+    entryQueue = [[NSMutableArray alloc] initWithCapacity:NUM_TO_SPAWN];
     
     for (int i = 1; i <= NUM_TO_SPAWN; i++)
     {
