@@ -45,6 +45,7 @@ EndBadCatchScene.ccbi
 EndQuitScene.ccbi
 EndReachHundredScene.ccbi
 EscapePod.png
+fingerTrail.png
 fps_images-hd.png
 fps_images-ipadhd.png
 fps_images.png
@@ -62,6 +63,7 @@ Icon-Small@2x.png
 Icon.png
 Icon@2x.png
 Info.plist
+InstructionScene.ccbi
 KittenLevel.ccbi
 kitty1.png
 logowithbg.png
