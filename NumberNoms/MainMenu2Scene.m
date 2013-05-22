@@ -50,6 +50,15 @@
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:credScene]];
 }
 
+- (void) pressedInstruct:(id)sender
+{
+    // Load the game scene
+    CCScene* instrScene = [CCBReader sceneWithNodeGraphFromFile:@"InstructionScene.ccbi"];
+    
+    // Go to the game scene
+    [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:instrScene]];
+}
+
 @end
 
 
