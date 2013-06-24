@@ -8,10 +8,10 @@
 
 #import "GameScene.h"
 #import "SpaceLevel.h"
-#import "Catchable.h"
+//#import "Catchable.h"
 #import "CatchEscapePod.h"
 #import "ThiefSprite.h"
-#import "GameObject.h"
+//#import "GameObject.h"
 //#import "CatchSheep.h"
 
 #define EASY
@@ -34,54 +34,11 @@
 
 @implementation SpaceLevel
 
-@synthesize escapePodArray;
-
-NSMutableArray *entryQueue;
-NSTimer *timer;
-ThiefSprite* thfspr;
-int makeVisibleThisOne = 1;
-CGPoint entryPoint;
-int next, grabbed;
-
-- (void) handleTimer:(NSTimer *) theTimer
-{
-}
-
-- (void) caughtShip:(CatchEscapePod*)pod
-{    
-    if([pod getMyNumber] == makeVisibleThisOne) {
-        CGPoint shipPos = [pod getPos];
-        [[GameScene sharedScene] gotShipNumber:[pod getMyNumber] startAtX:shipPos.x startAtY:shipPos.y];
-            
-        [pod collectThisShip];
-        [entryQueue addObject:pod];
-        [self removeChild:pod cleanup:false];
-        makeVisibleThisOne++;
-    } else {
-        // Make them lose
-        next = makeVisibleThisOne;
-        grabbed = [pod getMyNumber];
-        [[GameScene sharedScene] handleGameOver];
-    }
-}
-
-- (CCNode*) pop: (NSMutableArray*) queue
-{
-    if (![queue count]) return nil;
-    
-    CCNode* head = [queue objectAtIndex:0];
-    if (head != nil) {
-        [[head retain] autorelease];
-        [queue removeObjectAtIndex:0];
-    }
-    return head;
-}
-
 - (void) onEnter
 {
     [super onEnter];
     
-    makeVisibleThisOne = 1;
+    currentTarget = 1;
     
     // Schedule a selector that is called every frame
     [self schedule:@selector(update:)];
@@ -89,8 +46,8 @@ int next, grabbed;
     // Make sure touches are enabled
     self.isTouchEnabled = YES;
     
-    thfspr = [[ThiefSprite alloc] init];
-    [self addChild:thfspr];
+    sprite = [[ThiefSprite alloc] init];
+    [self addChild:sprite];
     
     //timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
     escapePodArray = [[NSMutableArray alloc] initWithCapacity:NUM_TO_SPAWN];
@@ -150,7 +107,7 @@ int next, grabbed;
                 CatchEscapePod* escapePod = (CatchEscapePod*)gameObject;
                 
                 
-                if (ccpDistance([escapePod getCenter], thfspr.position) < (escapePod.radius + thfspr.radius))
+                if (ccpDistance([escapePod getCenter], sprite.position) < (escapePod.radius + sprite.radius))
                 {
                     [self caughtShip:escapePod];
                 }
@@ -187,10 +144,10 @@ int next, grabbed;
             CatchEscapePod *currentPod = (CatchEscapePod*) current;
             for (int j = i+1; j < [self.children count]; j++)
             {
-                GameObject* next = [self.children objectAtIndex:j];
-                if ([next isKindOfClass:[CatchEscapePod class]])
+                GameObject* nextObj = [self.children objectAtIndex:j];
+                if ([nextObj isKindOfClass:[CatchEscapePod class]])
                 {
-                    CatchEscapePod* nextPod = (CatchEscapePod*) next;
+                    CatchEscapePod* nextPod = (CatchEscapePod*) nextObj;
                     if (ccpDistance([currentPod getCenter], [nextPod getCenter]) < (currentPod.radius * 2))
                     {
                         float xSpeed = (abs([currentPod getXSpeed]) + abs([nextPod getXSpeed])) / 2;
@@ -271,19 +228,14 @@ int next, grabbed;
     if(fixedX < 250.0) {
         fixedX = 250.0;
     }
-    [thfspr setXTarget:fixedX];
+    [sprite setXTarget:fixedX];
 
     CGSize s = [[CCDirector sharedDirector] winSize];
-    [thfspr setYTarget:-touchLocation.y+s.height];
+    [sprite setYTarget:-touchLocation.y+s.height];
     // NSLog(@"%f,%f",touchLocation.x,touchLocation.y);
     
    /* dragon.xTarget = touchLocation.x;
     dragon.yTarget = touchLocation.y;*/
-}
-
-- (void) ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self ccTouchesBegan:touches withEvent:event];
 }
 
 @end

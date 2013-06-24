@@ -6,21 +6,8 @@
 //
 //
 
-#import "CCLayer.h"
-#import "CatchSheep.h"
+#import "GameLevel.h"
 
-//@class Catchable;
-//@class CatchEscapePod;
-
-@interface SpaceLevel : CCLayer
-{
-    //Catchable* escapePod;
-    //CatchEscapePod* ep1;
-    //CCLayer* binArea;
-    //CatchSheep* sheepy;
-    NSMutableArray *escapePodArray;
-}
-
-@property (nonatomic, retain) NSMutableArray *escapePodArray;
+@interface SpaceLevel : GameLevel {}
 
 @end

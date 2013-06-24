@@ -6,12 +6,7 @@
 //
 //
 
-#import "GameScene.h"
 #import "DragonLevel.h"
-#import "Catchable.h"
-#import "CatchEscapePod.h"
-#import "ThiefSprite.h"
-#import "GameObject.h"
 
 #define EASY
 
@@ -33,55 +28,13 @@
 
 @implementation DragonLevel
 
-@synthesize escapePodArray;
-
-NSMutableArray *entryQueue2;
-NSTimer *timer2;
-ThiefSprite* drgnspr;
-int makeVisibleThisOne2 = 1;
-CGPoint entryPoint2;
 int next, grabbed;
-
-
-- (void) handleTimer:(NSTimer *) theTimer
-{
-}
-
-- (void) caughtShip:(CatchEscapePod*)pod
-{
-    if([pod getMyNumber] == makeVisibleThisOne2) {
-        CGPoint shipPos = [pod getPos];
-        [[GameScene sharedScene] gotShipNumber:[pod getMyNumber] startAtX:shipPos.x startAtY:shipPos.y];
-        
-        [pod collectThisShip];
-        [entryQueue2 addObject:pod];
-        [self removeChild:pod cleanup:false];
-        makeVisibleThisOne2++;
-    } else {
-        // Make them lose
-        next = makeVisibleThisOne2;
-        grabbed = [pod getMyNumber];
-        [[GameScene sharedScene] handleGameOver];
-    }
-}
-
-- (CCNode*) pop: (NSMutableArray*) queue
-{
-    if (![queue count]) return nil;
-    
-    CCNode* head = [queue objectAtIndex:0];
-    if (head != nil) {
-        [[head retain] autorelease];
-        [queue removeObjectAtIndex:0];
-    }
-    return head;
-}
 
 - (void) onEnter
 {
     [super onEnter];
     
-    makeVisibleThisOne2 = 1;
+    currentTarget = 1;
     
     // Schedule a selector that is called every frame
     [self schedule:@selector(update:)];
@@ -89,12 +42,12 @@ int next, grabbed;
     // Make sure touches are enabled
     self.isTouchEnabled = YES;
     
-    drgnspr = [[ThiefSprite alloc] init];
-    [self addChild:drgnspr];
+    sprite = [[ThiefSprite alloc] init];
+    [self addChild:sprite];
     
     //timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(handleTimer:) userInfo:nil repeats:YES];
     escapePodArray = [[NSMutableArray alloc] initWithCapacity:NUM_TO_SPAWN];
-    entryQueue2 = [[NSMutableArray alloc] initWithCapacity:NUM_TO_SPAWN];
+    entryQueue = [[NSMutableArray alloc] initWithCapacity:NUM_TO_SPAWN];
     
     for (int i = 1; i <= NUM_TO_SPAWN; i++)
     {
@@ -102,14 +55,14 @@ int next, grabbed;
         [cep setLabel:i];
         //[self addChild:cep];
         [escapePodArray addObject:cep];
-        [entryQueue2 addObject:cep];
+        [entryQueue addObject:cep];
     }
     
-    [self addChild:[self pop:entryQueue2]];
+    [self addChild:[self pop:entryQueue]];
     // CatchSheep *ep1 = nil;
     
-    int shipRadius = [entryQueue2[0] radius];
-    entryPoint2 = ccp(shipRadius + 240, shipRadius);
+    int shipRadius = [entryQueue[0] radius];
+    entryPoint = ccp(shipRadius + 240, shipRadius);
 }
 
 - (void) onExit
@@ -141,7 +94,7 @@ int next, grabbed;
             // Update all game objects
             [gameObject update];
             
-            if (ccpDistance([gameObject getCenter], entryPoint2) < (gameObject.radius * 4)) //TODO Should be 2, but radius needs fixed
+            if (ccpDistance([gameObject getCenter], entryPoint) < (gameObject.radius * 4)) //TODO Should be 2, but radius needs fixed
             {
                 entryZoneClear = false;
             }
@@ -149,7 +102,7 @@ int next, grabbed;
             if ([child isKindOfClass:[CatchEscapePod class]]) {
                 CatchEscapePod* escapePod = (CatchEscapePod*)gameObject;
 
-                if (ccpDistance([escapePod getCenter], drgnspr.position) < (escapePod.radius + drgnspr.radius))
+                if (ccpDistance([escapePod getCenter], sprite.position) < (escapePod.radius + sprite.radius))
                 {
                     [self caughtShip:escapePod];
                 }
@@ -186,10 +139,10 @@ int next, grabbed;
             CatchEscapePod *currentPod = (CatchEscapePod*) current;
             for (int j = i+1; j < [self.children count]; j++)
             {
-                GameObject* next = [self.children objectAtIndex:j];
-                if ([next isKindOfClass:[CatchEscapePod class]])
+                GameObject* nextObj = [self.children objectAtIndex:j];
+                if ([nextObj isKindOfClass:[CatchEscapePod class]])
                 {
-                    CatchEscapePod* nextPod = (CatchEscapePod*) next;
+                    CatchEscapePod* nextPod = (CatchEscapePod*) nextObj;
                     if (ccpDistance([currentPod getCenter], [nextPod getCenter]) < (currentPod.radius * 2))
                     {
                         float xSpeed = (abs([currentPod getXSpeed]) + abs([nextPod getXSpeed])) / 2;
@@ -227,8 +180,8 @@ int next, grabbed;
         }
     }
     
-    if (entryZoneClear && [entryQueue2 count]) {
-        [self addChild:[self pop:entryQueue2]];
+    if (entryZoneClear && [entryQueue count]) {
+        [self addChild:[self pop:entryQueue]];
     }
     
     // Check for objects to remove
@@ -262,10 +215,10 @@ int next, grabbed;
     if(fixedX < 250.0) {
         fixedX = 250.0;
     }
-    [drgnspr setXTarget:fixedX];
+    [sprite setXTarget:fixedX];
     
     CGSize s = [[CCDirector sharedDirector] winSize];
-    [drgnspr setYTarget:-touchLocation.y+s.height];
+    [sprite setYTarget:-touchLocation.y+s.height];
     // NSLog(@"%f,%f",touchLocation.x,touchLocation.y);
     
     /* dragon.xTarget = touchLocation.x;

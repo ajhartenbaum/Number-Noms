@@ -6,15 +6,8 @@
 //
 //
 
-#import "CCLayer.h"
-#import "CatchSheep.h"
+#import "GameLevel.h"
 
-
-@interface KittenLevel : CCLayer
-{
-    NSMutableArray *escapePodArray;
-}
-
-@property (nonatomic, retain) NSMutableArray *escapePodArray;
+@interface KittenLevel : GameLevel {}
 
 @end
