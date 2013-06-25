@@ -1,3 +1,4 @@
+2013-05-26 22-21 copy.png
 background.jpg
 background.png
 backsprite.png
@@ -37,10 +38,16 @@ CreditScene.ccbi
 CreditsScene.ccbi
 Default-Landscape~ipad.png
 Default.png
+Difficulty.png
+DifficultyScene.ccbi
+DifficultyScreen.ccbi
 DoneButton.png
 dragon.png
 dragonbackground.png
 DragonLevel.ccbi
+easy.png
+easybutton-pressed.png
+easybutton.png
 EndBadCatchScene.ccbi
 EndQuitScene.ccbi
 EndReachHundredScene.ccbi
@@ -50,6 +57,9 @@ fps_images-hd.png
 fps_images-ipadhd.png
 fps_images.png
 GameScene.ccbi
+hard.png
+hardbutton-pressed.png
+hardbutton.png
 high-score-1.png
 high-score.png
 high-scorepressed.png
@@ -65,12 +75,17 @@ Icon@2x.png
 Info.plist
 instructbutton-pressed.png
 instructbutton.png
+instructions.png
 InstructionScene.ccbi
 KittenLevel.ccbi
 kitty1.png
+loading.png
 logowithbg.png
 MainMenu2Scene.ccbi
 MainMenuScene.ccbi
+medium.png
+mediumbutton-pressed.png
+mediumbutton.png
 music.png
 NomsLogo.png
 numberedbackground.png

@@ -12,6 +12,27 @@
 
 @implementation OptionScene
 
+- (void) onEnter
+{
+    [super onEnter];
+    
+    if([SimpleAudioEngine sharedEngine].mute==0){
+        [onbutton setIsEnabled:NO];
+        [onback setIsEnabled:NO];
+        
+        [offbutton setIsEnabled:YES];
+        [offback setIsEnabled:YES];
+    }
+    else{
+        [onbutton setIsEnabled:YES];
+        [onback setIsEnabled:YES];
+        
+        [offbutton setIsEnabled:NO];
+        [offback setIsEnabled:NO];
+    }
+    
+}
+
 - (void) pressedBack:(id)sender
 {
     
