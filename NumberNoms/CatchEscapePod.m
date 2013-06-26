@@ -55,7 +55,7 @@ extern int leveltheme2;
 
     [self resetPosition];
   
-    CCSprite *epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
+    CCSprite *epPic;
     if (leveltheme2==1){
         epPic = [CCSprite spriteWithFile:@"EscapePod.png"];
     }

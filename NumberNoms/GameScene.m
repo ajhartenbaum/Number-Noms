@@ -157,34 +157,37 @@ extern int leveltheme2;
     
     setupCaughtIconAndNumber = false;
     
-    if(leveltheme2==1)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpaceLoop.wav"];
-    else if(leveltheme2==2)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForDwaggins.mp3"];
-    else if(leveltheme2==3)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForPonies.mp3"];
-    else if(leveltheme2==4)[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
-    else{ [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpaceLoop.mp3"];}
-    
+    if(leveltheme2==1){
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpaceLoop.wav"];
+    }
+    else if(leveltheme2==2){
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForDwaggins.mp3"];
+    }
+    else if(leveltheme2==3){
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForPonies.mp3"];
+    }
+    else if(leveltheme2==4){
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"NumNomsForKittehs.mp3"];
+    }
+    else{
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"MoreSpaceLoop.mp3"];
+    }
     
     // Load the level
-    //level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
     
     if(leveltheme2==1){
-        // Load the level
         level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
     }
     else if(leveltheme2==2){
-        // Load the level
         level = [CCBReader nodeGraphFromFile:@"DragonLevel.ccbi"];
     }
     else if(leveltheme2==3){
-        // Load the level
         level = [CCBReader nodeGraphFromFile:@"UnicornLevel.ccbi"];
     }
     else if(leveltheme2==4){
-        // Load the level
         level = [CCBReader nodeGraphFromFile:@"KittenLevel.ccbi"];
     }
     else{
-        // Load the level
         level = [CCBReader nodeGraphFromFile:@"SpaceLevel.ccbi"];
     }
     
@@ -345,10 +348,6 @@ extern int leveltheme2;
 - (void) handleLevelComplete
 {
     if(gameIsInPlay == YES) {
-        /*endScreenText = [CCLabelTTF labelWithString:@"GOT ALL 50!" fontName:@"Arial" fontSize:54];
-        endScreenText.position = ccp(512,384);
-        endScreenText.color = ccc3(255,255,255);
-        [self addChild: endScreenText];*/
         if([GameScene highscore] < score) {
             [[GameScene sharedScene] setHighscore:score];
         }
