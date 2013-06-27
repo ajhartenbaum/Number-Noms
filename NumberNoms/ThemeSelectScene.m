@@ -19,10 +19,9 @@ extern int leveltheme2;
     [self setTheme:1];
     
     // Load the game scene
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"DifficultyScene.ccbi"];
     
     // Go to the game scene
-    //[[CCDirector sharedDirector] replaceScene:gameScene];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:gameScene]];
     
 }
@@ -32,10 +31,9 @@ extern int leveltheme2;
     [self setTheme:4];
     
     // Load the game scene
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"DifficultyScene.ccbi"];
     
     // Go to the game scene
-    //[[CCDirector sharedDirector] replaceScene:gameScene];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:gameScene]];
 }
 
@@ -44,10 +42,9 @@ extern int leveltheme2;
     [self setTheme:2];
     
      // Load the game scene
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"DifficultyScene.ccbi"];
     
     // Go to the game scene
-    //[[CCDirector sharedDirector] replaceScene:gameScene];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:gameScene]];
      
 }
@@ -57,17 +54,15 @@ extern int leveltheme2;
     [self setTheme:3];
     
     // Load the game scene
-    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"GameScene.ccbi"];
+    CCScene* gameScene = [CCBReader sceneWithNodeGraphFromFile:@"DifficultyScene.ccbi"];
     
     // Go to the game scene
-    //[[CCDirector sharedDirector] replaceScene:gameScene];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:gameScene]];
 }
 
 - (void) pressedBack:(id)sender
 {
     
-    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]];
     [[CCDirector sharedDirector] replaceScene:[CCTransitionCrossFade transitionWithDuration:1.0 scene:[CCBReader sceneWithNodeGraphFromFile:@"MainMenu2Scene.ccbi"]]];
 }
 
