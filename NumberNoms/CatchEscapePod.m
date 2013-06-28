@@ -14,25 +14,7 @@
 
 @implementation CatchEscapePod
 
-extern int leveltheme2;
-
-#define EASY
-
-#ifdef EASY
-#define NUM_TO_SPAWN 4
-#endif
-
-#ifdef MEDIUM
-#define NUM_TO_SPAWN 7
-#endif
-
-#ifdef HARD
-#define NUM_TO_SPAWN 10
-#endif
-
-#ifndef NUM_TO_SPAWN
-#define NUM_TO_SPAWN 7
-#endif
+extern int leveltheme2, difficulty;
 
 - (void) resetPosition
 {
@@ -126,7 +108,7 @@ extern int leveltheme2;
 {
     //visible_ = false;
     
-    [self setLabel:myNumber+NUM_TO_SPAWN];
+    [self setLabel:myNumber+difficulty];
     [self resetPosition];
 }
 
