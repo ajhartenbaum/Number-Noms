@@ -138,6 +138,13 @@ extern int leveltheme2;
     
     incomingAfterShipLabel.position = ccp(incomingEpPic.boundingBox.size.width*0.5,
                                           incomingEpPic.boundingBox.size.height*0.5);
+    //HANDLES UNICORN OFFSET when moving catchable to sidebar
+    if(leveltheme2==3){
+        incomingAfterShipLabel = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%i", numberToAnimate] fontName:@"Times New Roman" fontSize:43];
+        incomingAfterShipLabel.position = ccp(sidebarEpPic.boundingBox.size.width*0.5 -25,
+                                      sidebarEpPic.boundingBox.size.height*0.5 -14) ;
+        
+    }
     incomingAfterShipLabel.color = ccc3(0,0,0);
     [incomingEpPic addChild: incomingAfterShipLabel];
 
