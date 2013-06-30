@@ -11,6 +11,8 @@
 #import "SimpleAudioEngine.h"
 #import "ThemeSelectScene.h"
 
+extern int difficulty;
+
 static GameScene* sharedScene;
 static int highscore = 0;
 
@@ -304,8 +306,8 @@ extern int leveltheme2;
     if(score < 0) {
         score = 0;
     }
-    if(score > 50) {
-        score = 50; // stop at 50 instead of resetting?
+    if(score > 5*difficulty) {
+        score = 5*difficulty; // stop at 50 instead of resetting?
         [self handleLevelComplete];
     }
     
