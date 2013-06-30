@@ -19,8 +19,12 @@ int next, grabbed, difficulty;
         [[GameScene sharedScene] gotShipNumber:[pod getMyNumber] startAtX:shipPos.x startAtY:shipPos.y];
         
         [pod collectThisShip];
-        [entryQueue addObject:pod];
-        [self removeChild:pod cleanup:false];
+        if ([pod getMyNumber] <= difficulty * 5) {
+            [entryQueue addObject:pod];
+            [self removeChild:pod cleanup:false];
+        } else {
+            [self removeChild:pod cleanup:true];
+        }
         currentTarget++;
     } else {
         // Make them lose
