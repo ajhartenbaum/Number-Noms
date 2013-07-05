@@ -1,4 +1,7 @@
 2013-05-26 22-21 copy.png
+25.png
+35.png
+50.png
 background.jpg
 background.png
 backsprite.png
@@ -37,8 +40,10 @@ credits.png
 CreditScene.ccbi
 CreditsScene.ccbi
 Default-Landscape~ipad.png
+Default-Portrait~ipad.png
 Default.png
 Difficulty.png
+DifficultyCap.png
 DifficultyScene.ccbi
 DifficultyScreen.ccbi
 DoneButton.png
@@ -48,6 +53,7 @@ DragonLevel.ccbi
 easy.png
 easybutton-pressed.png
 easybutton.png
+easyCap.png
 EndBadCatchScene.ccbi
 EndQuitScene.ccbi
 EndReachHundredScene.ccbi
@@ -76,6 +82,7 @@ Info.plist
 instructbutton-pressed.png
 instructbutton.png
 instructions.png
+instructionsCap.png
 InstructionScene.ccbi
 KittenLevel.ccbi
 kitty1.png
@@ -88,9 +95,11 @@ MainMenuScene.ccbi
 medium.png
 mediumbutton-pressed.png
 mediumbutton.png
+mediumCap.png
 music.png
 NomsLogo.png
 numberedbackground.png
+numbers.png
 numnomuni.png
 off-pressed.png
 off.png

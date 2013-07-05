@@ -257,8 +257,6 @@
 								</array>
 							</dict>
 						</array>
-						<key>selected</key>
-						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -379,7 +377,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>514</real>
+							<real>528</real>
 							<real>644</real>
 							<integer>0</integer>
 						</array>
@@ -424,7 +422,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Difficulty.png</string>
+							<string>DifficultyCap.png</string>
 						</array>
 					</dict>
 				</array>
