@@ -11,6 +11,26 @@
 
 @implementation EndReachHundredScene
 
+extern int difficulty;
+
+- (void) onEnter
+{
+    [super onEnter];
+    
+    CCSprite *winningText;
+    
+    if (difficulty == 4)
+        winningText= [CCSprite spriteWithFile:@"winscreenEasy.png"];
+    else if (difficulty == 7)
+        winningText= [CCSprite spriteWithFile:@"winscreenMedium.png"];
+    else // difficulty == 10
+        winningText= [CCSprite spriteWithFile:@"winscreen.png"];
+    winningText.position = ccp(516, 534);
+    winningText.scale = .5;
+    [self addChild:winningText];
+}
+
+
 - (void) pressedHome:(id)sender
 {
     
