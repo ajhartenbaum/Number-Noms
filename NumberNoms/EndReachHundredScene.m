@@ -25,6 +25,7 @@ extern int difficulty;
         winningText= [CCSprite spriteWithFile:@"winscreenMedium.png"];
     else // difficulty == 10
         winningText= [CCSprite spriteWithFile:@"winscreen.png"];
+    
     winningText.position = ccp(516, 534);
     winningText.scale = .5;
     [self addChild:winningText];
